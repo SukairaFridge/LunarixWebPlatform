@@ -16,7 +16,6 @@ use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Support\Facades\RateLimiter;
 use App\Models\Alert;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\Backend;
 use Illuminate\Support\Facades\Event;
 use SocialiteProviders\Manager\SocialiteWasCalled;
 use SocialiteProviders\Discord\DiscordExtendSocialite;
@@ -49,7 +48,6 @@ class AppServiceProvider extends ServiceProvider
     Event::listen(SocialiteWasCalled::class, DiscordExtendSocialite::class);
     View::composer("*", function ($view) {
       $authController = app(AuthController::class);
-      $bn = app(Backend::class);
       $currentUser = $authController->getAuthenticatedUser(request());
       $latestAlert = Alert::where("isvisible", true)->latest()->first();
       $profileUser = $view->getData()["userprofile"] ?? null;
