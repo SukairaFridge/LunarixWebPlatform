@@ -27,9 +27,16 @@ class Groups
 
     public function showMine(Request $request)
     {
-        $group = Group::with(['owner:id,username', 'settings', 'latestStatus.author:id,username'])->findOrFail($request->query('gid'));
         $user = $request->user();
         abort_unless($user, 401);
+        if (! $request->filled('gid')) {
+            $latest = GroupUser::where('user_id', $user->id)->orderByDesc('id')->first();
+            if ($latest) {
+                return redirect('/My/Groups.aspx?gid='.$latest->group_id);
+            }
+            return $this->renderMyGroups($user);
+        }
+        $group = Group::with(['owner:id,username', 'settings', 'latestStatus.author:id,username'])->findOrFail($request->query('gid'));
         if ($request->isMethod('post')) {
             $this->handleAction($request, $group);
             return redirect($this->redirectTargetAfterAction($request, $group));
@@ -37,6 +44,16 @@ class Groups
         $membership = GroupUser::with('role')->where('group_id', $group->id)->where('user_id', $user->id)->first();
         abort_unless($membership, 403, 'You are not a member of this group.');
         return $this->renderShow($request, $group, $membership, 'groups.showmine');
+    }
+
+    private function myGroupsFor($user)
+    {
+        return GroupUser::with('group:id,name')->where('user_id', $user->id)->get()->pluck('group')->filter()->values();
+    }
+
+    private function renderMyGroups($user): View
+    {
+        return view('groups.showmine', ['group' => null, 'myGroups' => $this->myGroupsFor($user)]);
     }
 
     private function redirectTargetAfterAction(Request $request, Group $group): string
@@ -160,6 +177,8 @@ class Groups
             'enemies' => collect(),
             'clanMembers' => $clanMembers,
             'storeItems' => collect(),
+            'myGroups' => $user ? $this->myGroupsFor($user) : collect(),
+            'memberCount' => GroupUser::where('group_id', $group->id)->count(),
         ]);
     }
 }
