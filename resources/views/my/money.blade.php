@@ -316,7 +316,7 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
                             <option value="completed">Completed</option>
                             <option value="inactive">Inactive</option>
                         </select>
-						<a href="" target="_blank" id="trade-help-link" class="text-link">How do I send a trade?</a>
+            <a href="" target="_blank" id="trade-help-link" class="text-link">How do I send a trade?</a>
                         <span class="tool-tip" style="display:none;" data-js-trade-write-disabled ><img src="/images/UI/img-tail-left.png" class="left"/>Trading is currently disabled. Trades can be viewed, but they may not be changed. Please check back later.</span>
                     </div>
                     <div style="clear:both;float:none;"></div>
@@ -462,7 +462,7 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
 
 </div>
 <div id="TradeRequest" class="modalPopup unifiedModal smallModal TraderSystemRobux" UserID="{{ $currentUser->id ?? '0' }}" style="display:none;">
-	
+  
     <div style="height:38px;padding-top:2px;">
         <span>Trade Request</span>
     </div>
@@ -479,26 +479,26 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
         <div style="padding-left: 5px; float:left;display:inline;">
             <div class="OfferContainer" >
                 <div class="OfferList"  list-id="OfferList0">
-		            <div class="OfferHeaderWrapper">
-			            <h3 class="OfferHeader">ITEMS YOU WILL GIVE</h3>
+                <div class="OfferHeaderWrapper">
+                  <h3 class="OfferHeader">ITEMS YOU WILL GIVE</h3>
                         <div class="OfferValueContainer">
-                            Value: <img class="RBXImg" width="18" height="12" src="/images/Icons/img-robux.png" alt="RBX" /><span class="OfferValue" data-se="trade-give-value">0</span>
-		                </div>
-		            </div>                   
+                            Value: <img class="RBXImg" width="18" height="12" src="/images/Icons/img-bytes.png" alt="BYTE" /><span class="OfferValue" data-se="trade-give-value" style="color:#2a2c2d;">0</span>
+                    </div>
+                </div>                   
                     <div class="OfferItems"></div>
                 </div>
                     <img src="/images/trade_divider2.jpg" style="margin-left:-5px;" alt="" /> 
                 <div class="OfferList"  list-id="OfferList1">
-		            <div class="OfferHeaderWrapper">
-			            <h3 class="OfferHeader">ITEMS YOU WILL RECEIVE</h3>
+                <div class="OfferHeaderWrapper">
+                  <h3 class="OfferHeader">ITEMS YOU WILL RECEIVE</h3>
                         <div class="OfferValueContainer">
-                            Value: <img class="RBXImg" width="18" height="12" src="/images/Icons/img-robux.png" alt="RBX" /><span class="OfferValue" data-se="trade-receive-value">0</span>
-		                </div>
-		            </div>
+                            Value: <img class="RBXImg" width="18" height="12" src="/images/Icons/img-bytes.png" alt="BYTE" /><span class="OfferValue" data-se="trade-receive-value" style="color:#2a2c2d;">0</span>
+                    </div>
+                </div>
                     <div class="OfferItems"></div>  
                     <div class="FeeNoteContainer"><div class="FeeNote" data-js="feenote" style="display:none;"><span class="Asterisk" >*</span> A  30% fee was taken from the amount.</div></div>
-		        </div> 
-	        </div> 
+            </div> 
+          </div> 
             <div style="clear:both;"></div>
         </div>  
         <div style="clear:both;"></div>
@@ -531,38 +531,38 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
 
 <div class="InventoryItemContainerOuter"  data-se="trade-item" >
     <div fieldname="InventoryItemSize">
-		<div templateid="DefaultContent" class="InventoryItemContainerInner">
+    <div templateid="DefaultContent" class="InventoryItemContainerInner">
             <div class="HeaderButtonPlaceHolder"></div>
             <div class="InventoryNameWrapper">
-			    <a class="InventoryItemLink" href="#" target="_blank"><div class="InventoryItemName"></div></a>
+          <a class="InventoryItemLink" href="#" target="_blank"><div class="InventoryItemName"></div></a>
             </div>
-			<div class="ItemLinkDiv">
-				<img class="ItemImg" alt="Item Image" />
-			</div>
-			<div class="HoverContent">
-				<div><span class="ItemInfoLabel">Avg. Price:</span><img class="RBXImg" width="14" height="9" src="/images/cssspecific/lrx2/head_bux.png" alt="RBX" /><span class="ItemInfoData InventoryItemAveragePrice"></span></div>
-				<div><span class="ItemInfoLabel">Orig. Price:</span><img class="RBXImg" width="14" height="9" src="/images/cssspecific/lrx2/head_bux.png" alt="RBX"/><span class="ItemInfoData InventoryItemOriginalPrice"></span></div>
-				<div><span class="ItemInfoLabel">Serial # :&nbsp;</span><span class="InventoryItemSerial"></span><span class="ItemInfoLabel" style="margin:0 2px 0 2px;">/</span><span class="SerialNumberTotal"></span></div>
-				<div class="FooterButtonPlaceHolder"></div>
+      <div class="ItemLinkDiv">
+        <img class="ItemImg" alt="Item Image" />
+      </div>
+      <div class="HoverContent">
+        <div><span class="ItemInfoLabel">Avg. Price:</span><img class="RBXImg" width="14" height="9" src="/images/Icons/img-bytes.png" alt="BYTE" /><span class="ItemInfoData InventoryItemAveragePrice" style="color:#2a2c2d;"></span></div>
+        <div><span class="ItemInfoLabel">Orig. Price:</span><img class="RBXImg" width="14" height="9" src="/images/Icons/img-bytes.png" alt="BYTE"/><span class="ItemInfoData InventoryItemOriginalPrice" style="color:#2a2c2d;"></span></div>
+        <div><span class="ItemInfoLabel">Serial # :&nbsp;</span><span class="InventoryItemSerial"></span><span class="ItemInfoLabel" style="margin:0 2px 0 2px;">/</span><span class="SerialNumberTotal" style="color:#2a2c2d;"></span></div>
+        <div class="FooterButtonPlaceHolder"></div>
             </div>
             <img class="BloxxersClubOverlay">
-		</div>
-	</div>	
+    </div>
+  </div>  
 </div>
 
 </div>
 <div id="BlankTemplate" style="display:none;">
-    <div class="BlankItem LargeInventoryItem"  style="padding-right:4px;">
+    <div class="BlankItem LargeInventoryItem">
     </div>
 </div>
 <div id="RobuxTemplate" style="display:none;">
     <div class="RobuxTradeRequestItem" >
         <div class="RobuxAmountWrapper" style="">
-			<div><span class="RobuxAmount" ></span><span class="RobuxItemAsterisk" >*</span> </div>
-            <div>Robux</div>
+      <div><span class="RobuxAmount" ></span><span class="RobuxItemAsterisk" >*</span> </div>
+            <div>Bytes</div>
         </div>
-		<div style="margin:auto; width:51px;">
-			<img class="ItemImg"src="/images/ROBUX.jpg" />
+    <div style="margin:auto; width:51px;">
+      <img class="ItemImg"src="/images/Bytes.jpg" />
         </div>
     </div>
 </div>

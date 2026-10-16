@@ -193,5 +193,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/Upgrades/BCEligibility.aspx', [Eligibility::class, 'showBcPage'])->middleware('auth');
     Route::get('/My/NewUserAd.aspx', [AdUploader::class, 'show']);
 });
-Route::match(['get', 'post'], '/Groups/Group.aspx', [Groups::class, 'show']);
-Route::match(['get', 'post'], '/My/Groups.aspx', [Groups::class, 'showMine']);
+//Route::match(['get', 'post'], '/Groups/Group.aspx', [Groups::class, 'show']);
+//Route::match(['get', 'post'], '/My/Groups.aspx', [Groups::class, 'showMine']);

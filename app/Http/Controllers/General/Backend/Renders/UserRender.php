@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Storage;
 
 class UserRender
 {
+    private const STALE_DAYS = 7;
+    private const MAX_BATCH = 25;
+    private const THUMB_RENDER_TYPE = 'thumbnail';
+    private const THUMB_URL = '/Thumbs/Avatar.ashx?userId=%d&x=%d&y=%d&v=%s';
+    private const PROFILE_URL = '/User.aspx?id=%d';
+    private const THUMB_SIZES = ['tiny' => 48, 'small' => 100, 'medium' => 150, 'large' => 352];
     public function redirectRender(Request $request, string $renderType)
     {
         $placeholder = '/img/ph/user_placeholder.png';
@@ -85,5 +91,73 @@ class UserRender
         imagedestroy($src);
         imagedestroy($dst);
         return response($imageData, 200)->header('Content-Type', 'image/png')->header('Cache-Control', 'public, max-age=86400')->header('X-Render-Path', $path);
+    }
+
+    public function avatarThumbnails(Request $request)
+    {
+        $callback = (string) $request->query('jsoncallback', '');
+        if ($callback !== '' && ! preg_match('/^[A-Za-z_$][A-Za-z0-9_$.]{0,100}$/', $callback)) {
+            return response()->json(['error' => 'Invalid callback'], 400);
+        }
+        $params = json_decode((string) $request->query('params', '[]'), true);
+        if (! is_array($params)) {
+            return $this->jsonpResponse([], $callback);
+        }
+        $params = array_slice(array_values($params), 0, self::MAX_BATCH);
+        $ids = [];
+        foreach ($params as $p) {
+            $id = is_array($p) ? (int) ($p['userId'] ?? 0) : 0;
+            if ($id > 0) {
+                $ids[$id] = $id;
+            }
+        }
+        $ids = array_values($ids);
+        $usernames = $ids ? DB::table('users')->whereIn('id', $ids)->pluck('username', 'id') : collect();
+        $renders = $ids ? $this->latestThumbnailRenders($ids) : collect();
+        $disk = Storage::disk('renders');
+        $out = [];
+        foreach ($params as $p) {
+            $userId = is_array($p) ? (int) ($p['userId'] ?? 0) : 0;
+            if ($userId <= 0 || ! isset($usernames[$userId])) {
+                $out[] = null;
+                continue;
+            }
+            $size = self::THUMB_SIZES[strtolower((string) ($p['imageSize'] ?? 'medium'))] ?? self::THUMB_SIZES['medium'];
+            $render = $renders->get($userId);
+            $final = $this->thumbnailIsFinal($render, $disk);
+            $version = $final ? \Carbon\Carbon::parse($render->created_at)->timestamp : time();
+            $out[] = ['url' => sprintf(self::PROFILE_URL, $userId), 'name' => $usernames[$userId], 'thumbnailUrl' => sprintf(self::THUMB_URL, $userId, $size, $size, $version), 'thumbnailFinal' => $final, 'bcOverlayUrl' => null];
+        }
+        return $this->jsonpResponse($out, $callback);
+    }
+
+    private function latestThumbnailRenders(array $ids)
+    {
+        $latest = DB::table('user_renders')->select('user_id', DB::raw('MAX(created_at) as max_created'))->whereIn('user_id', $ids)->where('render_type', self::THUMB_RENDER_TYPE)->groupBy('user_id');
+        return DB::table('user_renders as r')->joinSub($latest, 'm', fn ($j) => $j->on('r.user_id', '=', 'm.user_id')->on('r.created_at', '=', 'm.max_created'))->where('r.render_type', self::THUMB_RENDER_TYPE)->select('r.*')->get()->keyBy('user_id');
+    }
+
+    private function thumbnailIsFinal($render, $disk): bool
+    {
+        if (! $render || (bool) $render->outdated) {
+            return false;
+        }
+        if (\Carbon\Carbon::parse($render->created_at, config('app.timezone'))->lessThan(now()->subDays(self::STALE_DAYS))) {
+            return false;
+        }
+        $path = trim((string) $render->render_path);
+        $path = preg_replace('#^https?://[^/]+/#i', '', $path);
+        $path = preg_replace('#^(?:Thumbs/)?synvo\.live/#i', '', $path);
+        $path = ltrim($path, '/');
+        return $path !== '' && $disk->exists($path);
+    }
+
+    private function jsonpResponse(array $data, string $callback)
+    {
+        $json = json_encode($data, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP);
+        if ($callback === '') {
+            return response($json, 200, ['Content-Type' => 'application/json']);
+        }
+        return response('/**/' . $callback . '(' . $json . ');', 200, ['Content-Type' => 'text/javascript; charset=utf-8', 'X-Content-Type-Options' => 'nosniff', 'Cache-Control' => 'no-store']);
     }
 }

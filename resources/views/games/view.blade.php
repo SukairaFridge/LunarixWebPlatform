@@ -456,7 +456,7 @@ $(function () {
         <li class="favorite-button-container lrx-tooltip" data-toggle="tooltip" title="" data-original-title="Add this game to favorites">
             <a>
                 
-                <span class="lrx-icon-favorite {{ $game['is_favorited'] ? 'selected' : '' }}" data-toggle-url="{{ route('games.favorite.toggle') }}" data-assetid="{{ $game['id'] }}" data-isguest="{{ auth()->check() ? 'False' : 'True' }}">
+                <span class="lrx-icon-favorite {{ $game['is_favorited'] ? 'selected' : '' }}" data-toggle-url="" data-assetid="{{ $game['id'] }}" data-isguest="{{ auth()->check() ? 'False' : 'True' }}">
                     
                 </span>
                 <span id="favorite-count" title="{{ number_format($game['favorite_count']) }}">{{ formatnum($game['favorite_count']) }}</span>

@@ -47,6 +47,7 @@ Route::get('/Thumbs/Asset.ashx', [AssetRender::class, 'redirectAssetRender']);
 Route::get('/Thumbs/{type}.ashx', [UserRender::class, 'redirectRender']);
 Route::get('/thumbs/asset.ashx', [AssetRender::class, 'redirectAssetRender']);
 Route::get('/thumbs/{type}.ashx', [UserRender::class, 'redirectRender']);
+Route::get('/avatar-thumbnails', [UserRender::class, 'avatarThumbnails']);
 Route::post('/Login/FulfillConstraint.aspx', function (Request $request) {
     $key = trim((string) $request->input('ctl00$cphLunarix$Textbox1', ''));
     $maintenanceKey = trim((string) config('app.maintenance_key'));

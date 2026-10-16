@@ -176,14 +176,14 @@
                 </li>
                 <li>
                     <a href="/My/Money.aspx#/#TradeItems_tab" id="nav-trade">
-                        <span class="lrx-icon-nav-trade"></span><span style="text-decoration: line-through;">Trade</span>
+                        <span class="lrx-icon-nav-trade"></span><span>Trade</span>
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                    <a href="/My/Groups.aspx" id="nav-group">
                         <span class="lrx-icon-nav-group"></span><span style="text-decoration: line-through;">Groups</span>
                     </a>
-                </li>
+                </li> --}}
                 <li>
                     <a href="/Forum/default.aspx" id="nav-forum">
                         <span class="lrx-icon-nav-forum"></span><span>Forum</span>
