@@ -6,8 +6,8 @@
 @endpush
 
 @push('js')
-    <script src="https://js.lunarix.lol/aa490490f6ad512989da8d22ff4063bd.js"></script>
-    <script src="https://js.lunarix.lol/57c46a468b9c056eee74d8f8a645d1d5.js"></script>
+    <script src="https://js.neurosama.lol/aa490490f6ad512989da8d22ff4063bd.js"></script>
+    <script src="https://js.neurosama.lol/57c46a468b9c056eee74d8f8a645d1d5.js"></script>
 @endpush
 
 @section('content')
@@ -38,14 +38,14 @@
 
 
 <script type="text/javascript">
-    var Lunarix = Lunarix || {};
+    var Neurotic = Neurotic || {};
 </script>
 
-<div class="profile-container" ng-modules="lunarixApp, profile, lunarixApp.helpers">
+<div class="profile-container" ng-modules="neuroticApp, profile, neuroticApp.helpers">
 
 <div class="section profile-header">
     <div class="profile-avatar-image" ng-non-bindable>
-        <span class="avatar-image-link" data-3d-url="/avatar-thumbnail-3d/json?userId=1"  data-js-files='https://js.lunarix.lol/1b5ff54032ecaa6588a0c5f2ad7e1a4c.js' ><img alt='{{ $userprofile->username }}' class='' src='/Thumbs/Avatar.ashx?userId={{ $userprofile->id }}' /></span>
+        <span class="avatar-image-link" data-3d-url="/avatar-thumbnail-3d/json?userId=1"  data-js-files='https://js.neurosama.lol/1b5ff54032ecaa6588a0c5f2ad7e1a4c.js' ><img alt='{{ $userprofile->username }}' class='' src='/Thumbs/Avatar.ashx?userId={{ $userprofile->id }}' /></span>
         <x-p-profile :user="$userprofile" />
     </div>
     <div class="profile-header-content" ng-controller="profileHeaderController">
@@ -225,8 +225,8 @@
             </script>
 <div>
     <script type="text/javascript">
-        Lunarix.uiBootstrap = {};
-        Lunarix.uiBootstrap = {
+        Neurotic.uiBootstrap = {};
+        Neurotic.uiBootstrap = {
             modalBackdropTemplateLink: "/viewapp/common/template/modal/backdrop.html",
             modalWindowTemplateLink: "/viewapp/common/template/modal/window.html"
         };
@@ -256,8 +256,8 @@
 </div>
 <div>
     <script type="text/javascript">
-        Lunarix.uiBootstrap = {};
-        Lunarix.uiBootstrap = {
+        Neurotic.uiBootstrap = {};
+        Neurotic.uiBootstrap = {
             modalBackdropTemplateLink: "/viewapp/common/template/modal/backdrop.html",
             modalWindowTemplateLink: "/viewapp/common/template/modal/window.html"
         };
@@ -338,8 +338,8 @@
 
 <div id="UserAvatar" class="thumbnail-holder" data-reset-enabled-every-page {{--data-3d-thumbs-enabled --}}
      data-url="/thumbnail/user-avatar?userId={{ $userprofile->id }}&amp;thumbnailFormatId=124&amp;width=300&amp;height=300" style="width:300px; height:300px;">
-    <span class="thumbnail-span" data-3d-url="/avatar-thumbnail-3d/json?userId={{ $userprofile->id }}"  data-js-files='https://js.lunarix.lol/1b5ff54032ecaa6588a0c5f2ad7e1a4c.js'><img alt='{{ $userprofile->username }}' class='' src='/Thumbs/Avatar.ashx?userId={{ $userprofile->id }}' /></span>
-        <img class="user-avatar-overlay-image thumbnail-overlay" src="https://cdn.lunarix.lol/57ede1145c87db28cf51e2355909ee49.png" alt="" />
+    <span class="thumbnail-span" data-3d-url="/avatar-thumbnail-3d/json?userId={{ $userprofile->id }}"  data-js-files='https://js.neurosama.lol/1b5ff54032ecaa6588a0c5f2ad7e1a4c.js'><img alt='{{ $userprofile->username }}' class='' src='/Thumbs/Avatar.ashx?userId={{ $userprofile->id }}' /></span>
+        <img class="user-avatar-overlay-image thumbnail-overlay" src="https://cdn.neurosama.lol/57ede1145c87db28cf51e2355909ee49.png" alt="" />
     {{--<span disabled class="enable-three-dee btn-control btn-control-small"></span>--}}
 </div>
 
@@ -395,7 +395,7 @@
                 @foreach($profilefriends as $profilefriend)
                 <li class="list-item friend">
                     <a href="/users/{{ $profilefriend->id }}/profile" class="friend-link" title="{{ $profilefriend->username }}">
-                        <span class="friend-avatar" data-3d-url="/avatar-thumbnail-3d/json?userId={{ $profilefriend->username }}"  data-js-files='http://js.lunarix.lol/1b5ff54032ecaa6588a0c5f2ad7e1a4c.js' ><img alt='{{ $profilefriend->username }}' class='' src='/Thumbs/Avatar.ashx?userId={{ $profilefriend->id }}' /></span>
+                        <span class="friend-avatar" data-3d-url="/avatar-thumbnail-3d/json?userId={{ $profilefriend->username }}"  data-js-files='http://js.neurosama.lol/1b5ff54032ecaa6588a0c5f2ad7e1a4c.js' ><img alt='{{ $profilefriend->username }}' class='' src='/Thumbs/Avatar.ashx?userId={{ $profilefriend->id }}' /></span>
                         <span class="friend-name lrx-text-overflow">{{ $profilefriend->username }}</span>
                                 {{-- <span class="friend-status lrx-icon-ingame" title="Duel Arena"></span> --}}
                     </a>
@@ -448,7 +448,7 @@
                     </div>
                     <div class="col-sm-6 profile-slide-item-right groups">
                         <div class="slide-item-info">
-                            <h2 class="slide-item-name groups" ng-non-bindable>Lunarix</h2>
+                            <h2 class="slide-item-name groups" ng-non-bindable>Neurotic</h2>
                             <p class="slide-item-description groups" ng-non-bindable>Official fan club!</p>
                         </div>
                         <div class="slide-item-stats">
@@ -483,7 +483,7 @@
 @if($badgeCount > 0)
     <div class="section" ng-controller="profileUtilitiesController">
             <div class="container-header">
-                <h3>Lunarix Badges ({{ $badgeCount }})</h3>
+                <h3>Neurotic Badges ({{ $badgeCount }})</h3>
 
                 <a ng-click="toggleContent(layoutContent.showMore)"
                    class="lrx-btn-secondary-xs btn-more"
@@ -574,7 +574,7 @@
                      thumbnail='{"Final":true,"Url":"/Thumbs/Asset.ashx?assetId={{ $game->id }}&square=true","RetryUrl":null}' image-retry />
             </span>
         </span>
-        <span class="lrx-game-title lrx-text-overflow" title="Welcome to Lunarix Building" ng-non-bindable>
+        <span class="lrx-game-title lrx-text-overflow" title="Welcome to Neurotic Building" ng-non-bindable>
             {{ $game->name }}
         </span>
         <span class="lrx-game-text-notes lrx-font-xs">

@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class Asset extends Model
 {
     protected $table = 'assets';
-    protected $fillable = ['creator_id', 'type', 'name', 'description', 'access', 'favourites', 'can_comment', 'onsale', 'sales_count', 'current_version_id', 'universe_id', 'ghosted', 'robux', 'visits', 'max_players', 'genres', 'gear_types', 'related_to', 'approval', 'is_limited', 'is_limited_unique', 'limited_quantity', 'staff_picks', 'lunarix_classic', 'thumbnail_approval', 'thumbnail_square_approval'];
-    protected $casts = ['type' => 'integer', 'approval' => 'integer', 'can_comment' => 'boolean', 'onsale' => 'boolean', 'ghosted' => 'boolean', 'genres' => 'array', 'gear_types' => 'array', 'is_limited' => 'boolean', 'is_limited_unique' => 'boolean', 'limited_quantity' => 'integer', 'sales_count' => 'integer', 'staff_picks' => 'boolean', 'lunarix_classic' => 'boolean'];
+    protected $fillable = ['creator_id', 'type', 'name', 'description', 'access', 'favourites', 'can_comment', 'onsale', 'sales_count', 'current_version_id', 'universe_id', 'ghosted', 'robux', 'visits', 'max_players', 'genres', 'gear_types', 'related_to', 'approval', 'is_limited', 'is_limited_unique', 'limited_quantity', 'staff_picks', 'neurotic_classic', 'thumbnail_approval', 'thumbnail_square_approval'];
+    protected $casts = ['type' => 'integer', 'approval' => 'integer', 'can_comment' => 'boolean', 'onsale' => 'boolean', 'ghosted' => 'boolean', 'genres' => 'array', 'gear_types' => 'array', 'is_limited' => 'boolean', 'is_limited_unique' => 'boolean', 'limited_quantity' => 'integer', 'sales_count' => 'integer', 'staff_picks' => 'boolean', 'neurotic_classic' => 'boolean'];
     public const APPROVAL_PENDING = 0;
     public const APPROVAL_APPROVED = 1;
     public const APPROVAL_REJECTED = 2;

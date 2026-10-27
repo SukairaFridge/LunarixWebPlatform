@@ -64,9 +64,9 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-check border border-secondary rounded-2 bg-dark p-3 ps-5 h-100">
-                                    <input id="gameLunarixClassic" class="form-check-input" type="checkbox" name="lunarix_classic" value="1" @checked(old('lunarix_classic', $game->lunarix_classic))>
-                                    <label for="gameLunarixClassic" class="form-check-label">Lunarix Classic</label>
-                                    <div class="small text-secondary">Show this game in the Lunarix Classics row.</div>
+                                    <input id="gameNeuroticClassic" class="form-check-input" type="checkbox" name="neurotic_classic" value="1" @checked(old('neurotic_classic', $game->neurotic_classic))>
+                                    <label for="gameNeuroticClassic" class="form-check-label">Neurotic Classic</label>
+                                    <div class="small text-secondary">Show this game in the Neurotic Classics row.</div>
                                 </div>
                             </div>
                             <div class="col-12 text-end"><button class="btn btn-primary px-4">Save Changes</button></div>

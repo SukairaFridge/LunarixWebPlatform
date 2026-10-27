@@ -24,7 +24,7 @@ class CSS
             return response('Invalid bundle format', 500);
         }
         $output = '';
-        $output .= "/* 2025-2026 Lunarix.my: Be anything, Build Anything. */\n";
+        $output .= "/* 2025-2026 Neurotic.my: Be anything, Build Anything. */\n";
         $output .= "/* 2024-2026 Skyler's Fridge */\n";
         foreach ($files as $file) {
             $file = preg_replace('#^CSS/#', '', $file);

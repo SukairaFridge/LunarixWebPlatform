@@ -42,11 +42,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -60,18 +60,18 @@
 
 
     
-        LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+        NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -80,7 +80,7 @@
 
 
 
-        <script type="text/javascript">Lunarix.FixedUI.gutterAdsEnabled=false;</script>
+        <script type="text/javascript">Neurotic.FixedUI.gutterAdsEnabled=false;</script>
 
         
 
@@ -101,7 +101,7 @@
 <div id="AdvertisingLeaderboard" >
     
 
-<iframe name="Lunarix_Forums_Middle_728x90" 
+<iframe name="Neurotic_Forums_Middle_728x90" 
         allowtransparency="true"
         frameborder="0"
         height="110"
@@ -109,7 +109,7 @@
         src="/userads/1"
         width="728"
         data-js-adtype="iframead"
-        data-ad-slot="Lunarix_Forums_Middle_728x90"></iframe>
+        data-ad-slot="Neurotic_Forums_Middle_728x90"></iframe>
 
 </div>
 
@@ -126,37 +126,37 @@
 			<td class="LeftColumn">&nbsp;&nbsp;&nbsp;</td>
 
 			<!-- center column -->
-			<td id="ctl00_cphLunarix_CenterColumn" class="CenterColumn">
+			<td id="ctl00_cphNeurotic_CenterColumn" class="CenterColumn">
 				<br>
-				<span id="ctl00_cphLunarix_ThreadView1">
+				<span id="ctl00_cphNeurotic_ThreadView1">
 
 <table cellPadding="0" width="100%">
 	<tr>
-		<td align="left"><span id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami1" NAME="Whereami1">
+		<td align="left"><span id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami1" NAME="Whereami1">
 <div>
     <nobr>
-        <a id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami1_ctl00_LinkHome" class="linkMenuSink notranslate" href="/Forum/Default.aspx">Lunarix Forum</a>
+        <a id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami1_ctl00_LinkHome" class="linkMenuSink notranslate" href="/Forum/Default.aspx">Neurotic Forum</a>
     </nobr>
     <nobr>
-        <span id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami1_ctl00_ForumGroupSeparator" class="normalTextSmallBold"> » </span>
-        <a id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami1_ctl00_LinkForumGroup" class="linkMenuSink notranslate" href="/Forum/ShowForumGroup.aspx?ForumGroupID={{ $forum->group->id }}">{{ $forum->group->name }}</a>
+        <span id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami1_ctl00_ForumGroupSeparator" class="normalTextSmallBold"> » </span>
+        <a id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami1_ctl00_LinkForumGroup" class="linkMenuSink notranslate" href="/Forum/ShowForumGroup.aspx?ForumGroupID={{ $forum->group->id }}">{{ $forum->group->name }}</a>
     </nobr>
     <nobr>
-        <span id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami1_ctl00_ForumSeparator" class="normalTextSmallBold"> » </span>
-        <a id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami1_ctl00_LinkForum" class="linkMenuSink notranslate" href="/Forum/ShowForum.aspx?ForumID={{ $forum->id }}">{{ $forum->name }}</a>
+        <span id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami1_ctl00_ForumSeparator" class="normalTextSmallBold"> » </span>
+        <a id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami1_ctl00_LinkForum" class="linkMenuSink notranslate" href="/Forum/ShowForum.aspx?ForumID={{ $forum->id }}">{{ $forum->name }}</a>
     </nobr>
 </div></span></td>
-        <td align="right"><span id="ctl00_cphLunarix_ThreadView1_ctl00_Navigationmenu1">
+        <td align="right"><span id="ctl00_cphNeurotic_ThreadView1_ctl00_Navigationmenu1">
 
 <div id="forum-nav" style="text-align: right">
-	<a id="ctl00_cphLunarix_ThreadView1_ctl00_Navigationmenu1_ctl00_HomeMenu" class="menuTextLink first" href="/Forum/Default.aspx">Home</a>
-	<a id="ctl00_cphLunarix_ThreadView1_ctl00_Navigationmenu1_ctl00_SearchMenu" class="menuTextLink" href="/Forum/Search/default.aspx">Search</a>
+	<a id="ctl00_cphNeurotic_ThreadView1_ctl00_Navigationmenu1_ctl00_HomeMenu" class="menuTextLink first" href="/Forum/Default.aspx">Home</a>
+	<a id="ctl00_cphNeurotic_ThreadView1_ctl00_Navigationmenu1_ctl00_SearchMenu" class="menuTextLink" href="/Forum/Search/default.aspx">Search</a>
 	
 	
 	
 	
 	@auth
-	<a id="ctl00_cphLunarix_NavigationMenu2_ctl00_MyForumsMenu" class="menuTextLink" href="/Forum/User/MyForums.aspx">MyForums</a>
+	<a id="ctl00_cphNeurotic_NavigationMenu2_ctl00_MyForumsMenu" class="menuTextLink" href="/Forum/User/MyForums.aspx">MyForums</a>
 	@endauth
 	
 	
@@ -170,20 +170,20 @@
 	</tr>
 	<tr style="padding-bottom:5px;">
 		<td vAlign="bottom" align="left">
-		    <a id="ctl00_cphLunarix_ThreadView1_ctl00_NewThreadLinkTop" class="btn-control btn-control-medium verified-email-act" href="/Forum/AddPost.aspx?ForumID={{ $forum->id }}">
+		    <a id="ctl00_cphNeurotic_ThreadView1_ctl00_NewThreadLinkTop" class="btn-control btn-control-medium verified-email-act" href="/Forum/AddPost.aspx?ForumID={{ $forum->id }}">
 				New Thread
 			</a>
 		</td>
 		<td align="right">
 		    <span class="normalTextSmallBold">Search this forum: </span>
-			<input name="ctl00$cphLunarix$ThreadView1$ctl00$Search" type="text" id="ctl00_cphLunarix_ThreadView1_ctl00_Search" />
-			<input type="submit" name="ctl00$cphLunarix$ThreadView1$ctl00$SearchButton" value=" Go " id="ctl00_cphLunarix_ThreadView1_ctl00_SearchButton" class="translate btn-control btn-control-medium forum-btn-control-medium" />
+			<input name="ctl00$cphNeurotic$ThreadView1$ctl00$Search" type="text" id="ctl00_cphNeurotic_ThreadView1_ctl00_Search" />
+			<input type="submit" name="ctl00$cphNeurotic$ThreadView1$ctl00$SearchButton" value=" Go " id="ctl00_cphNeurotic_ThreadView1_ctl00_SearchButton" class="translate btn-control btn-control-medium forum-btn-control-medium" />
         </td>
 	</tr>
 	<tr>
 		<td vAlign="top" colSpan="2">
 		    <div style="height:7px"></div>
-		    <table id="ctl00_cphLunarix_ThreadView1_ctl00_ThreadList" class="tableBorder" cellspacing="1" cellpadding="3" border="0" style="width:100%;">
+		    <table id="ctl00_cphNeurotic_ThreadView1_ctl00_ThreadList" class="tableBorder" cellspacing="1" cellpadding="3" border="0" style="width:100%;">
     <tr class="forum-table-header">
         <th align="left" colspan="3" style="height:25px;">&nbsp;Subject&nbsp;</th>
         <th align="left" style="white-space:nowrap;">&nbsp;Author&nbsp;</th>
@@ -257,24 +257,24 @@
 	</tr>
 	<tr>
 		<td align="left" valign="top">
-			<span id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami2" NAME="Whereami2">
+			<span id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami2" NAME="Whereami2">
 <div>
     <nobr>
-        <a id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami2_ctl00_LinkHome" class="linkMenuSink notranslate" href="/Forum/Default.aspx">Lunarix Forum</a>
+        <a id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami2_ctl00_LinkHome" class="linkMenuSink notranslate" href="/Forum/Default.aspx">Neurotic Forum</a>
     </nobr>
     <nobr>
-        <span id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami2_ctl00_ForumGroupSeparator" class="normalTextSmallBold"> » </span>
-        <a id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami2_ctl00_LinkForumGroup" class="linkMenuSink notranslate" href="/Forum/ShowForumGroup.aspx?ForumGroupID={{ $forum->group->id }}">{{ $forum->group->name }}</a>
+        <span id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami2_ctl00_ForumGroupSeparator" class="normalTextSmallBold"> » </span>
+        <a id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami2_ctl00_LinkForumGroup" class="linkMenuSink notranslate" href="/Forum/ShowForumGroup.aspx?ForumGroupID={{ $forum->group->id }}">{{ $forum->group->name }}</a>
     </nobr>
     <nobr>
-        <span id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami2_ctl00_ForumSeparator" class="normalTextSmallBold"> » </span>
-        <a id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami2_ctl00_LinkForum" class="linkMenuSink notranslate" href="/Forum/ShowForum.aspx?ForumID={{ $forum->id }}">{{ $forum->name }}</a>
+        <span id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami2_ctl00_ForumSeparator" class="normalTextSmallBold"> » </span>
+        <a id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami2_ctl00_LinkForum" class="linkMenuSink notranslate" href="/Forum/ShowForum.aspx?ForumID={{ $forum->id }}">{{ $forum->name }}</a>
     </nobr>
 </div></span>
 			
 		</td>
 		<td align="right">
-			<span class="normalTextSmallBold">Display threads for: </span><select name="ctl00$cphLunarix$ThreadView1$ctl00$DisplayByDays" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$cphLunarix$ThreadView1$ctl00$DisplayByDays\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_cphLunarix_ThreadView1_ctl00_DisplayByDays">
+			<span class="normalTextSmallBold">Display threads for: </span><select name="ctl00$cphNeurotic$ThreadView1$ctl00$DisplayByDays" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$cphNeurotic$ThreadView1$ctl00$DisplayByDays\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_cphNeurotic_ThreadView1_ctl00_DisplayByDays">
 	<option selected="selected" value="0">All Days</option>
 	<option value="1">Today</option>
 	<option value="3">Past 3 Days</option>
@@ -287,7 +287,7 @@
 
 </select>
 			<br>
-			    <a id="ctl00_cphLunarix_ThreadView1_ctl00_MarkAllRead" class="linkSmallBold" href="javascript:__doPostBack(&#39;ctl00$cphLunarix$ThreadView1$ctl00$MarkAllRead&#39;,&#39;&#39;)">Mark all threads as read</a>
+			    <a id="ctl00_cphNeurotic_ThreadView1_ctl00_MarkAllRead" class="linkSmallBold" href="javascript:__doPostBack(&#39;ctl00$cphNeurotic$ThreadView1$ctl00$MarkAllRead&#39;,&#39;&#39;)">Mark all threads as read</a>
 			<br>
 			<span class="normalTextSmallBold">
 				
@@ -307,7 +307,7 @@
             <td Width="160px" style="padding-top:88px;">
                 
 
-<iframe name="Lunarix_Forums_Right_160x600" 
+<iframe name="Neurotic_Forums_Right_160x600" 
         allowtransparency="true"
         frameborder="0"
         height="612"
@@ -315,7 +315,7 @@
         src="/userads/2"
         width="160"
         data-js-adtype="iframead"
-        data-ad-slot="Lunarix_Forums_Right_160x600"></iframe>
+        data-ad-slot="Neurotic_Forums_Right_160x600"></iframe>
 
             </td>
             <td class="RightColumn">&nbsp;&nbsp;&nbsp;</td>

@@ -22,7 +22,7 @@
         }
     </style>
     <div style="margin-top: 40px;">
-        <div><h1>Lunarix Privacy Policy</h1></div>
+        <div><h1>Neurotic Privacy Policy</h1></div>
         <div>
             <div style="position: relative;">
                     </div>
@@ -30,20 +30,20 @@
                 <br clear="all" />
                 <div class="PrivacyPolicy" style="padding: 0 12px;">
                     <h2>
-                        About Lunarix</h2>
+                        About Neurotic</h2>
                     <p>
-                        Lunarix (“Colorful Valley”) is an online virtual world and building game. 
+                        Neurotic (“Colorful Valley”) is an online virtual world and building game. 
                         Your privacy is important to us; this is why we created this Privacy Policy so that you are 
                         aware of what information is collected, how we use it and who we share it with. 
                         <p>
                         <p>    
-                            This privacy policy covers the site <a href="http://www.lunarix.lol" target="_blank">www.lunarix.lol</a> and our Mobile App.
+                            This privacy policy covers the site <a href="http://www.neurosama.lol" target="_blank">www.neurosama.lol</a> and our Mobile App.
                         </p>
                         <p>     
-                        Lunarix works like this: 
+                        Neurotic works like this: 
                         <ul>
                             <li>
-                                a user creates a username and a virtual character that is his or her identity in the Lunarix platform
+                                a user creates a username and a virtual character that is his or her identity in the Neurotic platform
                             </li> 
                             <li>
                                 users interact with other users through in-game chat, personal messaging (site contained), 
@@ -85,8 +85,8 @@
                         to credit the account when the transaction is completed.  
                     </p>
                     <p>
-                        Lunarix only allows users who are 13 or above, registered users who are under 13 after first signing up are quickly suspended. If you think that your ban was a mistake, reach out to Lunarix's team for assistance by writing to  
-                        <span class="SL_swap" id="CsEmailLink"><a href="mailto:info@lunarix.lol">info@lunarix.lol</a></span>. 
+                        Neurotic only allows users who are 13 or above, registered users who are under 13 after first signing up are quickly suspended. If you think that your ban was a mistake, reach out to Neurotic's team for assistance by writing to  
+                        <span class="SL_swap" id="CsEmailLink"><a href="mailto:info@neurosama.lol">info@neurosama.lol</a></span>. 
                     </p>
                     <p>
                         We do not ask you for, access, or track any location based information from your mobile device at any time 
@@ -96,7 +96,7 @@
                     <h2>
                         Collected Information</h2>
                     <p>
-                        Lunarix use cookies, beacons, tags and scripts but does not utilize other tracking technologies. The only information that Lunarix collects about you are:
+                        Neurotic use cookies, beacons, tags and scripts but does not utilize other tracking technologies. The only information that Neurotic collects about you are:
                     </p>
                     <p>
                         - Hashed IP addresses
@@ -126,7 +126,7 @@
                     <p>
                         We will retain your information for as long as your account is active or as needed to provide you services. 
                         If you wish to delete your account
-                        contact us at  <span class="SL_swap" id="CsEmailLink"><a href="mailto:info@lunarix.lol">info@lunarix.lol</a></span>. 
+                        contact us at  <span class="SL_swap" id="CsEmailLink"><a href="mailto:info@neurosama.lol">info@neurosama.lol</a></span>. 
                     </p>
 
                     <h2>
@@ -149,7 +149,7 @@
                         If you have any questions, comments, or concerns regarding our privacy policy and/or practices, please 
                         contact us at the following e-mail address, telephone number, or address:</p>
                     <address>       
-                            <span class="SL_swap" id="CsEmailLink"><a href="mailto:info@lunarix.lol">info@lunarix.lol</a></span>
+                            <span class="SL_swap" id="CsEmailLink"><a href="mailto:info@neurosama.lol">info@neurosama.lol</a></span>
                     </address> 
                     <h2>
                         Glossary of Terms</h2>
@@ -167,10 +167,10 @@
                                 Communications</h3>
                             <br />
                             <br />
-                            Personal Messaging – user-to-user and Lunarix-to-user messaging inside the Lunarix
+                            Personal Messaging – user-to-user and Neurotic-to-user messaging inside the Neurotic
                             website
                             <br />
-                            In-Game Chat – user-to-user messaging inside the Lunarix game client
+                            In-Game Chat – user-to-user messaging inside the Neurotic game client
                             <br />
                             Forums – user and staff collaborative help and interest forums
                             <br />

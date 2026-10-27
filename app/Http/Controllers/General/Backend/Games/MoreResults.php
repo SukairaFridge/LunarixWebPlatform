@@ -29,7 +29,7 @@ class MoreResults
                 $query->where('staff_picks', true)->orderByDesc('id');
                 break;
             case 14:
-                $query->where('lunarix_classic', true)->orderByDesc('id');
+                $query->where('neurotic_classic', true)->orderByDesc('id');
                 break;
             case 11:
                 $query->orderByRaw('CASE WHEN COALESCE(rating_totals.ratings_count, 0) > 0 THEN 1 ELSE 0 END DESC')->orderByRaw('CASE WHEN COALESCE(rating_totals.ratings_count, 0) > 0 THEN CAST(COALESCE(rating_totals.likes_count, 0) AS REAL) / rating_totals.ratings_count ELSE 0 END DESC')->orderByDesc('ratings_count')->orderByDesc('likes_count')->orderByDesc('id');

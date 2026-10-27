@@ -5,11 +5,11 @@
 @endpush
 @section('content')
 @include('layout.header')
-<script type='text/javascript'>Lunarix.config.externalResources = [];Lunarix.config.paths['Pages.Catalog'] = 'http://js.lunarix.pw/1612c57544c7977e19cd15c824f7ecc3.js';Lunarix.config.paths['Pages.CatalogShared'] = 'http://js.lunarix.pw/209f2b781ea84e8d0332648ddf547d57.js';Lunarix.config.paths['Pages.Messages'] = 'http://js.lunarix.pw/e8cbac58ab4f0d8d4c707700c9f97630.js';Lunarix.config.paths['Resources.Messages'] = 'http://js.lunarix.pw/fb9cb43a34372a004b06425a1c69c9c4.js';Lunarix.config.paths['Widgets.AvatarImage'] = 'http://js.lunarix.pw/bbaeb48f3312bad4626e00c90746ffc0.js';Lunarix.config.paths['Widgets.DropdownMenu'] = 'http://js.lunarix.pw/7b436bae917789c0b84f40fdebd25d97.js';Lunarix.config.paths['Widgets.GroupImage'] = 'http://js.lunarix.pw/33d82b98045d49ec5a1f635d14cc7010.js';Lunarix.config.paths['Widgets.HierarchicalDropdown'] = 'http://js.lunarix.pw/fbb86cf0752d23f389f983419d3085b4.js';Lunarix.config.paths['Widgets.ItemImage'] = 'http://js.lunarix.pw/8babd891cf420dfe3999b3824a0154cb.js';Lunarix.config.paths['Widgets.PlaceImage'] = 'http://js.lunarix.pw/f2697119678d0851cfaa6c2270a727ed.js';Lunarix.config.paths['Widgets.SurveyModal'] = 'http://js.lunarix.pw/d6e979598c460090eafb6d38231159f6.js';</script><script type="text/javascript">
+<script type='text/javascript'>Neurotic.config.externalResources = [];Neurotic.config.paths['Pages.Catalog'] = 'http://js.neurotic.pw/1612c57544c7977e19cd15c824f7ecc3.js';Neurotic.config.paths['Pages.CatalogShared'] = 'http://js.neurotic.pw/209f2b781ea84e8d0332648ddf547d57.js';Neurotic.config.paths['Pages.Messages'] = 'http://js.neurotic.pw/e8cbac58ab4f0d8d4c707700c9f97630.js';Neurotic.config.paths['Resources.Messages'] = 'http://js.neurotic.pw/fb9cb43a34372a004b06425a1c69c9c4.js';Neurotic.config.paths['Widgets.AvatarImage'] = 'http://js.neurotic.pw/bbaeb48f3312bad4626e00c90746ffc0.js';Neurotic.config.paths['Widgets.DropdownMenu'] = 'http://js.neurotic.pw/7b436bae917789c0b84f40fdebd25d97.js';Neurotic.config.paths['Widgets.GroupImage'] = 'http://js.neurotic.pw/33d82b98045d49ec5a1f635d14cc7010.js';Neurotic.config.paths['Widgets.HierarchicalDropdown'] = 'http://js.neurotic.pw/fbb86cf0752d23f389f983419d3085b4.js';Neurotic.config.paths['Widgets.ItemImage'] = 'http://js.neurotic.pw/8babd891cf420dfe3999b3824a0154cb.js';Neurotic.config.paths['Widgets.PlaceImage'] = 'http://js.neurotic.pw/f2697119678d0851cfaa6c2270a727ed.js';Neurotic.config.paths['Widgets.SurveyModal'] = 'http://js.neurotic.pw/d6e979598c460090eafb6d38231159f6.js';</script><script type="text/javascript">
     $(function () {
-        Lunarix.JSErrorTracker.initialize({ 'suppressConsoleError': true});
+        Neurotic.JSErrorTracker.initialize({ 'suppressConsoleError': true});
     });
-</script><script type='text/javascript' src='http://js.lunarix.pw/b3bb47d913a29004bf50d9a896f46b4a.js'></script>
+</script><script type='text/javascript' src='http://js.neurotic.pw/b3bb47d913a29004bf50d9a896f46b4a.js'></script>
         <div id="navContent" class="nav-content"><div class="nav-content-inner">
     <div id="MasterContainer" >
         
@@ -46,11 +46,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -64,18 +64,18 @@
 
 
     
-        LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+        NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -84,7 +84,7 @@
 
 
 
-        <script type="text/javascript">Lunarix.FixedUI.gutterAdsEnabled=false;</script>
+        <script type="text/javascript">Neurotic.FixedUI.gutterAdsEnabled=false;</script>
 
         
 
@@ -154,7 +154,7 @@
 
     <div class="browseDropdownHeader"></div>
 
-<div id="dropdown" class="browsedropdownbrowsedropdown lunarix-hierarchicaldropdown">
+<div id="dropdown" class="browsedropdownbrowsedropdown neurotic-hierarchicaldropdown">
     <ul id="dropdownUl" class="clearfix">
 
             <li class="subcategories" data-delay="never">
@@ -249,7 +249,7 @@
         
                 <div class="filter-title">Genre</div>
                 <ul id="genresUl">
-                    <li><a href="#" id="AllGenresLink" onclick="Lunarix.Pages.Catalog.ClearGenres();" class="selected">All Genres</a></li>
+                    <li><a href="#" id="AllGenresLink" onclick="Neurotic.Pages.Catalog.ClearGenres();" class="selected">All Genres</a></li>
                         <li>
                             <input type="checkbox" id="genre-13" class="genreFilter" data-genreId="13" />
                             <label for="genre-13">Building</label>
@@ -311,7 +311,7 @@
                 <div class="filter-title">Creators</div>
                 <ul>
                         <li><a href="#creator=0" class="creatorFilter selected" data-creatorId="0">All Creators</a></li>
-                        <li><a href="#creator=1" class="creatorFilter" data-creatorId="1">Lunarix</a></li>
+                        <li><a href="#creator=1" class="creatorFilter" data-creatorId="1">Neurotic</a></li>
                     <li><input id="creatorTextbox" name="name" type="text" value="Name" class="Watermark translate text-box text-box-small" /> <a href="#" id="submitCreatorButton" class="btn-control btn-control-small">Go</a></li>
                 </ul>
         
@@ -332,17 +332,17 @@
         <h3>Legend</h3>
     </div>
     <div id="legendcontent" style="overflow: hidden;display:none">
-        <img src="https://cdn.lunarix.pw/4fc3a98692c7ea4d17207f1630885f68.png" style="margin-left: -13px" />
+        <img src="https://cdn.neurotic.pw/4fc3a98692c7ea4d17207f1630885f68.png" style="margin-left: -13px" />
         <div class="legendText"><b>Bloxxers Club Only</b><br/>
         Only purchasable by Bloxxers Club members.</div>
 
-        <img src="https://cdn.lunarix.pw/793dc1fd7562307165231ca2b960b19a.png" style="margin-left: -13px" />
+        <img src="https://cdn.neurotic.pw/793dc1fd7562307165231ca2b960b19a.png" style="margin-left: -13px" />
         <div class="legendText"><b>Limited Items</b><br/>
         Owners of these discontinued items can re-sell them to other users at any price.</div>
         
-        <img src="https://cdn.lunarix.pw/d649b9c54a08dcfa76131d123e7d8acc.png" style="margin-left: -13px" />
+        <img src="https://cdn.neurotic.pw/d649b9c54a08dcfa76131d123e7d8acc.png" style="margin-left: -13px" />
         <div class="legendText"><b>Limited Unique Items</b><br/>
-        A limited supply originally sold by Lunarix. Each unit is labeled with a serial number. Once sold out, owners can re-sell them to other users.
+        A limited supply originally sold by Neurotic. Each unit is labeled with a serial number. Once sold out, owners can re-sell them to other users.
         </div>
     </div>
 </div>                               </div>
@@ -392,17 +392,17 @@
 <div class="CatalogItemOuter SmallOuter">
 <div class="SmallCatalogItemView SmallView">
 <div class="CatalogItemInner SmallInner">
-    <div class="lunarix-item-image image-small" data-item-id="{{ $asset->id }}" data-image-size="small">
+    <div class="neurotic-item-image image-small" data-item-id="{{ $asset->id }}" data-image-size="small">
         <div class="item-image-wrapper">
             <a href="/{{ $asset->getSlug() }}-item?id={{ $asset->id }}">
-                <img title="{{ $asset->name }}" alt="{{ $asset->name }}" style="width: 110px;" class="original-image" src="https://lunarix.pw/Thumbs/Asset.ashx?assetId={{ $asset->id }}" />
+                <img title="{{ $asset->name }}" alt="{{ $asset->name }}" style="width: 110px;" class="original-image" src="https://neurotic.pw/Thumbs/Asset.ashx?assetId={{ $asset->id }}" />
                 @if ($asset->is_limited_unique)
-                    <img src="https://cdn.lunarix.pw/d649b9c54a08dcfa76131d123e7d8acc.png" alt="Limited Unique" class="limited-overlay">
+                    <img src="https://cdn.neurotic.pw/d649b9c54a08dcfa76131d123e7d8acc.png" alt="Limited Unique" class="limited-overlay">
                 @elseif ($asset->is_limited)
-                    <img src="https://cdn.lunarix.pw/793dc1fd7562307165231ca2b960b19a.png" alt="Limited" class="limited-overlay">
+                    <img src="https://cdn.neurotic.pw/793dc1fd7562307165231ca2b960b19a.png" alt="Limited" class="limited-overlay">
                 @endif
                 @if ($asset->isNewArrival())
-                    <img src="https://cdn.lunarix.pw/b84cdb8c0e7c6cbe58e91397f91b8be8.png" alt="New" />
+                    <img src="https://cdn.neurotic.pw/b84cdb8c0e7c6cbe58e91397f91b8be8.png" alt="New" />
                 @endif
             </a>
         </div>
@@ -475,7 +475,7 @@
 
 <script type="text/javascript">
     $(function () {
-        Lunarix.require('Pages.Catalog', function (catalog) {
+        Neurotic.require('Pages.Catalog', function (catalog) {
             catalog.init(@json($catalogConfig), {{ $totalResults }}, true);
         });
 
@@ -488,8 +488,8 @@
             }
         });
 
-            Lunarix.CatalogValues = Lunarix.CatalogValues || {};
-            Lunarix.CatalogValues.CatalogContext = 1;
+            Neurotic.CatalogValues = Neurotic.CatalogValues || {};
+            Neurotic.CatalogValues.CatalogContext = 1;
 
     });
 </script>

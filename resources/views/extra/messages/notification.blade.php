@@ -2,7 +2,7 @@
     <div ng-switch-when="list">
         <div lrx-messages-list></div>
     </div>
-    <div ng-switch-when="detail" class="lunarix-message-body">
+    <div ng-switch-when="detail" class="neurotic-message-body">
         <div lrx-messages-detail
              selected-message="messageContent.selectedMessage"
              send-message="sendMessage"

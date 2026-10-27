@@ -9,7 +9,7 @@
       </ul>
       <div class="d-flex align-items-center">
         <span class="text-secondary">
-          Welcome {{ $currentUser->username }} | <a href="/" class="text-light">Back to Lunarix</a>
+          Welcome {{ $currentUser->username }} | <a href="/" class="text-light">Back to Neurotic</a>
         </span>
       </div>
     </div>

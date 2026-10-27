@@ -11,7 +11,7 @@
 <script type="text/javascript" src="/js/SuperSafePrivacyIndicator.js"></script>
 @endpush
 @push('js')
-<script type='text/javascript' src='http://js.lunarix.lol/77026e0e8875389783edcd7224c6e72b.js.gzip'></script>
+<script type='text/javascript' src='http://js.neurosama.lol/77026e0e8875389783edcd7224c6e72b.js.gzip'></script>
 @endpush
 @section('content')
 @include('layout.header')
@@ -31,7 +31,7 @@
       @csrf
       <div class="tab-content active" id="settings_tab" style="display: block;">
         <div id="AccountSettings" class="settings-section">
-          <div class="SettingSubTitle" id="UsernameSetting" data-robux-remaining="{{ max(0, 1000 - (int) $user->moons) }}" data-email-verified="True" data-alerturl="https://cdn.lunarix.lol/cbb24e0c0f1fb97381a065bd1e056fcb.png" data-change-username-verifyurl="/account/username/verifyupdate" data-change-username-url="/account/username/update" data-buy-robux-url="/upgrades/robux">
+          <div class="SettingSubTitle" id="UsernameSetting" data-robux-remaining="{{ max(0, 1000 - (int) $user->moons) }}" data-email-verified="True" data-alerturl="https://cdn.neurosama.lol/cbb24e0c0f1fb97381a065bd1e056fcb.png" data-change-username-verifyurl="/account/username/verifyupdate" data-change-username-url="/account/username/update" data-buy-robux-url="/upgrades/robux">
             <span class="settingLabel form-label">Username:</span> <span id="username">{{ $user->username }}</span>
             <a class="btn-small btn-primary" id="changeUsername">Change My Username<span class="btn-text">Change My Username</span></a>
           </div>
@@ -79,11 +79,11 @@
           <div id="PersonalBlurbSetting" class="SettingSubTitle">
             <span class="settingLabel form-label">Personal blurb:</span>
             <div id="BlurbDesc">
-              <textarea class="lunarix-blurb-default-text accountPageChangeMonitor text blurbGreyText valid" cols="20" data-val="true" data-val-length="The field Personal Blurb must be a string with a maximum length of 1000." data-val-length-max="1000" id="blurbText" name="PersonalBlurb" rows="2" title="Describe yourself here">{{ $user->description }}</textarea>
+              <textarea class="neurotic-blurb-default-text accountPageChangeMonitor text blurbGreyText valid" cols="20" data-val="true" data-val-length="The field Personal Blurb must be a string with a maximum length of 1000." data-val-length-max="1000" id="blurbText" name="PersonalBlurb" rows="2" title="Describe yourself here">{{ $user->description }}</textarea>
               <span class="field-validation-valid" data-valmsg-for="PersonalBlurb" data-valmsg-replace="true"></span>
               <br>
               <div id="blurbSubtext" class="footnote">
-                Do not provide any details that can be used to identify you outside Lunarix.
+                Do not provide any details that can be used to identify you outside Neurotic.
                 <span class="footnote"><br>(1000 character limit | ${bytes} to show your bytes amount)</span>
               </div>
             </div>
@@ -216,22 +216,22 @@
 
 <script type="text/javascript">
   $(function () {
-      if (typeof Lunarix === "undefined") {
-          Lunarix = {};
+      if (typeof Neurotic === "undefined") {
+          Neurotic = {};
       }
-      if (typeof Lunarix.ChangeUsername === "undefined") {
-          Lunarix.ChangeUsername = {};
+      if (typeof Neurotic.ChangeUsername === "undefined") {
+          Neurotic.ChangeUsername = {};
       }
       //<sl:translate>
-      Lunarix.AccountResources = {
+      Neurotic.AccountResources = {
           addParentEmailText: "Add Parent Email",
-          missingParentBodyText: "To update or add your parent\'s email address, please have your parent contact our Customer Service Department at info@lunarix.com.",
+          missingParentBodyText: "To update or add your parent\'s email address, please have your parent contact our Customer Service Department at info@neurotic.com.",
           okText: "OK",
           cancelText: "Cancel",
           facebookConnectText: "Facebook Connect",
           facebookConnectBodyText: "Your Facebook account has been disconnected."
       };
-      Lunarix.SignupFormValidator.Resources = {
+      Neurotic.SignupFormValidator.Resources = {
           doesntMatch: "Doesn't match",
           requiredField: "Required field",
           tooLong: "Too long",
@@ -246,7 +246,7 @@
           cantBeUsed: "Can't be used",
           password: "password"
       };
-      Lunarix.ChangeUsername.Resources = {
+      Neurotic.ChangeUsername.Resources = {
           insufficientFundsTitle: "Insufficient Funds",
           insufficientFundsText: "You need {0} more to change your username.",
           insufficientFundsAcceptText: "Get Bytes",
@@ -264,7 +264,7 @@
           passwordLabel: "Password:",
           warningText: "Username changes cost 1,000 Bytes.",
           processingText: "Processing...",
-          processIndicatorImageUrl: "https://cdn.lunarix.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif",
+          processIndicatorImageUrl: "https://cdn.neurosama.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif",
           confirmUsernameChangeFooterText: "Your balance after this transaction will be {0}.",
           confirmUsernameChangeAccept: "Buy Now",
           usernameChangedText: "Congratulations, {0}! Your username has been changed.",
@@ -272,16 +272,16 @@
           usernameChangeErrorText: "There was an error changing your username: "
       };
   
-      Lunarix.ChangeUsername.initializeStrings();
-      Lunarix.ChangeUsername.initializeChangeUsernameButton();
+      Neurotic.ChangeUsername.initializeStrings();
+      Neurotic.ChangeUsername.initializeChangeUsernameButton();
       //</sl:translate>
           if ($("#FacebookDisconnectModal").length > 0) {
       
-      Lunarix.GenericConfirmation.open({
-              titleText: Lunarix.AccountResources.facebookConnectText,
-              bodyContent: Lunarix.AccountResources.facebookConnectBodyText,
-              acceptText: Lunarix.AccountResources.okText,
-              declineColor: Lunarix.GenericConfirmation.none,
+      Neurotic.GenericConfirmation.open({
+              titleText: Neurotic.AccountResources.facebookConnectText,
+              bodyContent: Neurotic.AccountResources.facebookConnectBodyText,
+              acceptText: Neurotic.AccountResources.okText,
+              declineColor: Neurotic.GenericConfirmation.none,
               dismissable: false
           });
   

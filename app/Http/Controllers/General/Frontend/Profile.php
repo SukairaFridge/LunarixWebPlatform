@@ -55,7 +55,7 @@ class Profile
         $games = Asset::where('creator_id', $profileId)->places()->notGhosted()->select('assets.*')->selectRaw('COALESCE(rating_totals.likes_count, 0) as likes_count')->selectRaw('COALESCE(rating_totals.dislikes_count, 0) as dislikes_count')->selectRaw('COALESCE(rating_totals.ratings_count, 0) as ratings_count')->leftJoinSub($ratingTotals, 'rating_totals', function ($join) {
             $join->on('rating_totals.asset_id', '=', 'assets.id');
         })->with('creator')->withCount('gamePlayers')->get();
-        $badges = DB::table('user_lunarix_badges')->where('user_id', $profileId)->pluck('badge_id');
+        $badges = DB::table('user_neurotic_badges')->where('user_id', $profileId)->pluck('badge_id');
         $badgeCount = $badges->count();
         $wornAssets = $userprofile->wornAssets()->notGhosted()->with('creator')->get();
         $totalPlaceVisits = $games->sum('visits');
@@ -65,6 +65,6 @@ class Profile
                     $q2->where('is_limited', true)->orWhere('is_limited_unique', true);
                 });
             })->with('asset')->orderByDesc('obtained_at')->get()->unique('asset_id')->take(6)->values();
-        return view('user', ['currentUser' => $currentUser, 'userprofile' => $userprofile, 'games' => $games, 'maySendFriendInvitation' => $maySendFriendInvitation, 'incomingFriendRequestId' => $incomingFriendRequestId, 'friendCount' => $friendCount, 'followersCount' => $followersCount, 'followingsCount' => $followingsCount, 'isFollowing' => $isFollowing, 'profilefriends' => $profilefriends, 'isFriend' => $isFriend, 'requestPending' => $requestPending, 'receivedRequest' => $receivedRequest, 'isOwnProfile' => $isOwnProfile, 'badges' => $badges,  'wornAssets' => $wornAssets, 'badgeCount' => $badgeCount, 'totalPlaceVisits' => $totalPlaceVisits, 'forumPostCount' => $forumPostCount, 'recentCollectibles' => $recentCollectibles, 'title' => $userprofile->username.' - Lunarix']);
+        return view('user', ['currentUser' => $currentUser, 'userprofile' => $userprofile, 'games' => $games, 'maySendFriendInvitation' => $maySendFriendInvitation, 'incomingFriendRequestId' => $incomingFriendRequestId, 'friendCount' => $friendCount, 'followersCount' => $followersCount, 'followingsCount' => $followingsCount, 'isFollowing' => $isFollowing, 'profilefriends' => $profilefriends, 'isFriend' => $isFriend, 'requestPending' => $requestPending, 'receivedRequest' => $receivedRequest, 'isOwnProfile' => $isOwnProfile, 'badges' => $badges,  'wornAssets' => $wornAssets, 'badgeCount' => $badgeCount, 'totalPlaceVisits' => $totalPlaceVisits, 'forumPostCount' => $forumPostCount, 'recentCollectibles' => $recentCollectibles, 'title' => $userprofile->username.' - Neurotic']);
     }
 }

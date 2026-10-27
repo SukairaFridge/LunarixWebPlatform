@@ -32,21 +32,21 @@
 										<div class="items-container games-container">
 											<script>
 												function editGameInStudio(play_placeId) {
-													LunarixLaunch._GoogleAnalyticsCallback = function() {
-														var isInsideLunarixIDE = 'website';
-														if (Lunarix && Lunarix.Client && Lunarix.Client.isIDE && Lunarix.Client.isIDE()) {
-															isInsideLunarixIDE = 'Studio';
+													NeuroticLaunch._GoogleAnalyticsCallback = function() {
+														var isInsideNeuroticIDE = 'website';
+														if (Neurotic && Neurotic.Client && Neurotic.Client.isIDE && Neurotic.Client.isIDE()) {
+															isInsideNeuroticIDE = 'Studio';
 														};
-														GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideLunarixIDE]);
+														GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideNeuroticIDE]);
 														GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Edit']);
 														EventTracker.fireEvent('GameLaunchAttempt_Win32', 'GameLaunchAttempt_Win32_Plugin');
-														if (typeof Lunarix.GamePlayEvents != 'undefined') {
-															Lunarix.GamePlayEvents.SendClientStartAttempt(null, play_placeId);
+														if (typeof Neurotic.GamePlayEvents != 'undefined') {
+															Neurotic.GamePlayEvents.SendClientStartAttempt(null, play_placeId);
 														}
 													};
-													Lunarix.Client.WaitForLunarix(function() {
-														Lunarix.VideoPreRoll.showVideoPreRoll = false;
-														LunarixLaunch.StartGame('http://www.lunarix.com//Game/edit.ashx?placeId=' + play_placeId , 'edit.ashx', 'https://www.lunarix.com//Login/Negotiate.ashx', 'FETCH', true)
+													Neurotic.Client.WaitForNeurotic(function() {
+														Neurotic.VideoPreRoll.showVideoPreRoll = false;
+														NeuroticLaunch.StartGame('http://www.neurotic.com//Game/edit.ashx?placeId=' + play_placeId , 'edit.ashx', 'https://www.neurotic.com//Login/Negotiate.ashx', 'FETCH', true)
 													});
 												}
 											</script><span id="verifiedEmail" style="display:none"></span> <span id="assetLinks" style="display:none" data-asset-links-enabled="True"></span>
@@ -70,8 +70,8 @@
 															<div class="totals-label">Total Visitors:<span>{{ $asset->visits ?? 0 }}</span></div>
 															<div class="totals-label">Last 7 days:<span>0</span></div>
 														</td>
-														<td class="edit-col"><a class="lunarix-edit-button btn-control btn-control-large" href="javascript:">Edit</a></td>
-														<td class="build-col"><a class="lunarix-build-button btn-control btn-control-large" href="javascript:">Build</a></td>
+														<td class="edit-col"><a class="neurotic-edit-button btn-control btn-control-large" href="javascript:">Edit</a></td>
+														<td class="build-col"><a class="neurotic-build-button btn-control btn-control-large" href="javascript:">Build</a></td>
 														<td class="menu-col">
 															<div class="gear-button-wrapper"><a href="#" class="gear-button"></a></div>
 														</td>

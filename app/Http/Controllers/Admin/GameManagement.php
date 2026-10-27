@@ -46,10 +46,10 @@ class GameManagement
             'can_comment' => ['nullable', 'boolean'],
             'ghosted' => ['nullable', 'boolean'],
             'staff_picks' => ['nullable', 'boolean'],
-            'lunarix_classic' => ['nullable', 'boolean'],
+            'neurotic_classic' => ['nullable', 'boolean'],
         ]);
-        $before = $game->only(['name', 'description', 'max_players', 'access', 'can_comment', 'ghosted', 'staff_picks', 'lunarix_classic']);
-        $game->update(['name' => $validated['name'], 'description' => (string) ($validated['description'] ?? ''), 'max_players' => (int) $validated['max_players'], 'access' => (int) $validated['access'], 'can_comment' => $request->boolean('can_comment'), 'ghosted' => $request->boolean('ghosted'), 'staff_picks' => $request->boolean('staff_picks'), 'lunarix_classic' => $request->boolean('lunarix_classic')]);
+        $before = $game->only(['name', 'description', 'max_players', 'access', 'can_comment', 'ghosted', 'staff_picks', 'neurotic_classic']);
+        $game->update(['name' => $validated['name'], 'description' => (string) ($validated['description'] ?? ''), 'max_players' => (int) $validated['max_players'], 'access' => (int) $validated['access'], 'can_comment' => $request->boolean('can_comment'), 'ghosted' => $request->boolean('ghosted'), 'staff_picks' => $request->boolean('staff_picks'), 'neurotic_classic' => $request->boolean('neurotic_classic')]);
         AdminAudit::record('game.updated', ['game_id' => $game->id, 'before' => $before, 'after' => $game->fresh()->only(array_keys($before))], $game->creator_id, $request->user()->id);
         return redirect()->route('admin.games.edit', $game)->with('success', 'Game information updated.');
     }

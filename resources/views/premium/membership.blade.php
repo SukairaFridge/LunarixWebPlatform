@@ -48,11 +48,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -62,18 +62,18 @@
             }
         }
 
-LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -92,7 +92,7 @@ LunarixEventManager.initialize(true);
 <div id="BCPageContainer">
   <div id="UserDataInfo" data-auth="false" data-active-bc="false"></div>
   <div class="header">
-    <span><h1>Upgrade to Lunarix Bloxxers Club</h1></span>
+    <span><h1>Upgrade to Neurotic Bloxxers Club</h1></span>
   </div>
   <div class="left-column">
     <table cellspacing="0" border="0">
@@ -100,19 +100,19 @@ LunarixEventManager.initialize(true);
         <tr>
           <td class="center-bold">
             <h2 class="product-space">Free</h2>
-            <img data-attribute="free" src="https://cdn.lunarix.lol/77add140640c3388e6c9603bc5983846.png" alt="free" />
+            <img data-attribute="free" src="https://cdn.neurosama.lol/77add140640c3388e6c9603bc5983846.png" alt="free" />
           </td>
           <td class="center-bold">
             <h2 class="product-space">Classic</h2>
-            <img data-attribute="classic" src="https://cdn.lunarix.lol/ba707f47bb20a1f4804da461fb5d3c31.png" alt=" bc" />
+            <img data-attribute="classic" src="https://cdn.neurosama.lol/ba707f47bb20a1f4804da461fb5d3c31.png" alt=" bc" />
           </td>
           <td class="center-bold">
             <h2 class="product-space">Turbo</h2>
-            <img data-attribute="turbo" src="https://cdn.lunarix.lol/d7eb3ed186e351d99ce8c11503675721.png" alt="tbc" />
+            <img data-attribute="turbo" src="https://cdn.neurosama.lol/d7eb3ed186e351d99ce8c11503675721.png" alt="tbc" />
           </td>
           <td class="center-bold">
             <h2 class="product-space">Outrageous</h2>
-            <img data-attribute="outrageous" src="https://cdn.lunarix.lol/ca1d0aef06c5fc06a2d8b23aea5e20d2.png" alt="obc" />
+            <img data-attribute="outrageous" src="https://cdn.neurosama.lol/ca1d0aef06c5fc06a2d8b23aea5e20d2.png" alt="obc" />
           </td>
         </tr>
       </thead>
@@ -179,7 +179,7 @@ LunarixEventManager.initialize(true);
           </td>
       </tr>
                     <tr>
-                <td colspan="4">* Lunarix Bloxxers Club is a free membership.</td>
+                <td colspan="4">* Neurotic Bloxxers Club is a free membership.</td>
             </tr>
   </tbody>
 
@@ -341,11 +341,11 @@ LunarixEventManager.initialize(true);
     
     <div class="cell cellDivider">
         <h3>Bytes</h3>
-        <p>Bytes is the free virtual currency for Lunarix used in many of our online games. You can also use Bytes for finding a great look for your character. Get cool gear to take into multiplayer battles. Buy Limited items to sell and trade. You’ll need Bytes to make it all happen. What are you waiting for?</p>
+        <p>Bytes is the free virtual currency for Neurotic used in many of our online games. You can also use Bytes for finding a great look for your character. Get cool gear to take into multiplayer battles. Buy Limited items to sell and trade. You’ll need Bytes to make it all happen. What are you waiting for?</p>
     </div>
         <div class="cell cellDivider">
             <h3>Gift Cards</h3><br />
-            <a href="/upgrades/giftcards.aspx" class="giftCardImage"><img src="https://cdn.lunarix.lol/bf9f4b65f937ad01f07ae6714eaba723.png" alt="giftcard" /></a>
+            <a href="/upgrades/giftcards.aspx" class="giftCardImage"><img src="https://cdn.neurosama.lol/bf9f4b65f937ad01f07ae6714eaba723.png" alt="giftcard" /></a>
             <div>
                 <div class="giftCardButton">
                     <a  href="/gamecard" class="lrx-btn-secondary-xs">Got a card? Redeem it!</a>
@@ -355,9 +355,9 @@ LunarixEventManager.initialize(true);
         </div>
     <div class="cell">
         <h3>Parents</h3>
-        <p>Learn more about Bloxxers Club and how we help <a href="http://corp.lunarix.lol/parents" class="lunarix-interstitial">keep kids safe.</a></p>
+        <p>Learn more about Bloxxers Club and how we help <a href="http://corp.neurosama.lol/parents" class="neurotic-interstitial">keep kids safe.</a></p>
         <h3>Cancellation</h3>
-        <p>You can turn off membership auto renewal at any time before the renewal date and you will continue to receive Bloxxers Club privileges for the remainder of the currently paid period. To turn off membership auto renewal, please click the 'Cancel Membership Renewal button' on the <a href="/my/account?tab=billing" class="lunarix-interstitial">Billing</a> tab of the Settings page and confirm the cancellation.</p>
+        <p>You can turn off membership auto renewal at any time before the renewal date and you will continue to receive Bloxxers Club privileges for the remainder of the currently paid period. To turn off membership auto renewal, please click the 'Cancel Membership Renewal button' on the <a href="/my/account?tab=billing" class="neurotic-interstitial">Billing</a> tab of the Settings page and confirm the cancellation.</p>
     </div>
 </div>
   </div>

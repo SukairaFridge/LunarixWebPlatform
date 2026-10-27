@@ -17,7 +17,7 @@ class Asset
             return response('Missing userId', 400);
         }
         $urls = [];
-        $urls[] = "http://lunarix.lol/Asset/BodyColors.ashx?userId={$userId}";
+        $urls[] = "http://neurosama.lol/Asset/BodyColors.ashx?userId={$userId}";
         $assets = DB::table('user_accoutrements')->where('user_id', $userId)->pluck('asset_id');
         foreach ($assets as $assetId) {
             if ($assetId > 0) {

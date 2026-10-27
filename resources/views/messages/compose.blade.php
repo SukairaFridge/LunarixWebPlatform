@@ -5,8 +5,8 @@
 <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=page___52ecb4339a49a1b9212e1c6894fd0ca0_m.css">
 @endpush
 @push('js')
-<script type='text/javascript' src='http://js.lunarix.lol/f49d858ef181e7cd401d8fcb4245e6e8.js.gzip'></script>
-<script type='text/javascript' src='http://js.lunarix.lol/6d2c5d08317da59677c25876e4f7f6a0.js.gzip'></script>
+<script type='text/javascript' src='http://js.neurosama.lol/f49d858ef181e7cd401d8fcb4245e6e8.js.gzip'></script>
+<script type='text/javascript' src='http://js.neurosama.lol/6d2c5d08317da59677c25876e4f7f6a0.js.gzip'></script>
 @endpush
 @section('content')
 @include('layout.header')
@@ -52,11 +52,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -66,18 +66,18 @@
             }
         }
 
-LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -104,7 +104,7 @@ LunarixEventManager.initialize(true);
         <div id="Body" style='width:970px; padding:10px;'>
             <h1>Send New Message</h1>
             <br />
-            <div id="errortextbox" class="status-error lunarix-message-error" style="width:745px;word-wrap:break-word;display:none;"></div>
+            <div id="errortextbox" class="status-error neurotic-message-error" style="width:745px;word-wrap:break-word;display:none;"></div>
             <span class="form-label" style="float:left;font-weight: 800;">From: <a class="text-link" style="margin-left:42px;">{{ $currentUser->username }}</a></span><br />
             <span class="form-label" style="float:left;font-weight: 800;">To: <a class="text-link" style="margin-left:59px;">{{ $recipient->username }}</a></span><br />
             <div style="min-height: 30px;">
@@ -117,7 +117,7 @@ LunarixEventManager.initialize(true);
                 <span class="form-label" style="float:left;padding-top:5px;margin-right:46px;font-weight: 800;">Body: </span>
                 <div style="float: left; width: 660px; text-align:left;">
                     <textarea class="text-box text-area-medium" cols="80" id="textbox" name="body" rows="15" style="width: 660px;"></textarea>
-                    <p style="margin-left: 0px;"><span style="color: #E04A32; float: left; width: 660px;"><i>Remember, Lunarix Staff will never ask for your password. People who ask for your password are trying to steal your account.</i></span></p>
+                    <p style="margin-left: 0px;"><span style="color: #E04A32; float: left; width: 660px;"><i>Remember, Neurotic Staff will never ask for your password. People who ask for your password are trying to steal your account.</i></span></p>
                 </div>
             </div>
             <div style="clear:both; margin-top: 15px;">

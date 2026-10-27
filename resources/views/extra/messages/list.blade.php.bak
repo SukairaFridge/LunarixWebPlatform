@@ -1,21 +1,21 @@
 @verbatim
 <div ng-switch="currentStatus.activeTab">
     <div ng-switch-when="notifications">
-        <div class="notifications-header">Notifications are important messages from the Lunarix Team.</div>
+        <div class="notifications-header">Notifications are important messages from the Neurotic Team.</div>
         <div id="Notifications" class="messages">
             <div ng-show="notifications.TotalCollectionSize == 0">You have no notifications.</div>
-            <div class="sub-divider-bottom messageDivider lunarix-notificationRow "
+            <div class="sub-divider-bottom messageDivider neurotic-notificationRow "
                  ng-repeat="notification in notifications.Collection"
                  ng-click="showBody = !showBody">
                 <div class="clearfix">
-                    <div class="lunarix-avatar-image">
+                    <div class="neurotic-avatar-image">
                         <a ng-href="{{notification.SenderAbsoluteUrl}}"
                            lrx-avatar
                            thumbnail="notification.SenderThumbnail">
                         </a>
                     </div>
-                    <div class="lunarix-message-title clearfix">
-                        <span class="lunarix-message-subject">
+                    <div class="neurotic-message-title clearfix">
+                        <span class="neurotic-message-subject">
                                 <a ng-hide="showBody" >
                                     <b>{{notification.Sender.UserName}}</b>
                                 </a>
@@ -41,23 +41,23 @@
     <div ng-switch-default>
         <div id="MessagesInbox" class="messages">
             <div ng-show="messages.TotalCollectionSize == 0">You have no {{currentStatus.activeTab}} messages.</div>
-            <div class="sub-divider-bottom messageDivider read lunarix-message-row"
+            <div class="sub-divider-bottom messageDivider read neurotic-message-row"
                  ng-class="{unread: message.IsRead == false && currentStatus.activeTab != 'sent'}"
                  ng-repeat="message in messages.Collection">
 
                 <a class="messageRowAnchor"></a>
-                <label class="messageCheckbox lunarix-inboxCheckbox"
-                       ng-class="{lunarixInvisibility: currentStatus.activeTab == 'sent'}">
+                <label class="messageCheckbox neurotic-inboxCheckbox"
+                       ng-class="{neuroticInvisibility: currentStatus.activeTab == 'sent'}">
                     <input type="checkbox"
                            ng-click="toggleSelection($index)"
                            ng-checked="message.checked"
                            ng-model="message.checked" />
                 </label>
-                <div class="lunarix-avatar-image">
+                <div class="neurotic-avatar-image">
                     <a ng-if="currentStatus.activeTab != 'sent'"
                        ng-href="{{message.SenderAbsoluteUrl}}"
                        lrx-avatar
-                       thumbnail="message.SenderThumbnail | isEmpty:MESSAGEDEFAULTS.lunarixUserThumbnail:message.Sender.UserId">
+                       thumbnail="message.SenderThumbnail | isEmpty:MESSAGEDEFAULTS.neuroticUserThumbnail:message.Sender.UserId">
                     </a>
                     <a ng-if="currentStatus.activeTab == 'sent'"
                        ng-href="{{message.RecipientAbsoluteUrl}}"
@@ -65,12 +65,12 @@
                        thumbnail="message.RecipientThumbnail">
                     </a>
                 </div>
-                <div class="lunarix-messageRow lunarix-message-summary"
+                <div class="neurotic-messageRow neurotic-message-summary"
                      ng-click="toggleMessagesBox('detail')">
                     <div class="wrappedText notranslate">
                         <span class="positionAboveLink"
                               ng-if="currentStatus.activeTab != 'sent'"
-                              ng-bind="message.Sender.UserName | isEmpty : MESSAGEDEFAULTS.lunarixUserName:message.Sender.UserName"></span>
+                              ng-bind="message.Sender.UserName | isEmpty : MESSAGEDEFAULTS.neuroticUserName:message.Sender.UserName"></span>
                         <span class="positionAboveLink"
                               ng-if="currentStatus.activeTab == 'sent'"
                               ng-bind="message.Recipient.UserName"></span>

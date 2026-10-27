@@ -17,7 +17,7 @@ class UserRender
     public function redirectRender(Request $request, string $renderType)
     {
         $placeholder = '/img/ph/user_placeholder.png';
-        if (config('app.lunarix_renders_disabled', false)) {
+        if (config('app.neurotic_renders_disabled', false)) {
             return redirect()->away($placeholder);
         }
         $userId = (int) $request->query('userId');

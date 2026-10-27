@@ -37,23 +37,23 @@
                     <div class="items-container games-container">
                       <script>
                         function editGameInStudio(play_placeId) {
-                          LunarixLaunch._GoogleAnalyticsCallback = function() {
-                            var isInsideLunarixIDE = 'website';
-                            if (Lunarix && Lunarix.Client && Lunarix.Client.isIDE && Lunarix.Client.isIDE()) {
-                              isInsideLunarixIDE = 'Studio';
+                          NeuroticLaunch._GoogleAnalyticsCallback = function() {
+                            var isInsideNeuroticIDE = 'website';
+                            if (Neurotic && Neurotic.Client && Neurotic.Client.isIDE && Neurotic.Client.isIDE()) {
+                              isInsideNeuroticIDE = 'Studio';
                             };
-                            GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideLunarixIDE]);
+                            GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideNeuroticIDE]);
                             GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Edit']);
                             EventTracker.fireEvent('GameLaunchAttempt_Win32', 'GameLaunchAttempt_Win32_Plugin');
-                            if (typeof Lunarix.GamePlayEvents != 'undefined') {
-                              Lunarix.GamePlayEvents.SendClientStartAttempt(null, play_placeId);
+                            if (typeof Neurotic.GamePlayEvents != 'undefined') {
+                              Neurotic.GamePlayEvents.SendClientStartAttempt(null, play_placeId);
                             }
                           };
-                          Lunarix.Client.WaitForLunarix(function() {
-                            if (Lunarix.VideoPreRollDFP) {
-                              Lunarix.VideoPreRollDFP.showVideoPreRoll = false;
+                          Neurotic.Client.WaitForNeurotic(function() {
+                            if (Neurotic.VideoPreRollDFP) {
+                              Neurotic.VideoPreRollDFP.showVideoPreRoll = false;
                             }
-                            LunarixLaunch.StartGame('/Game/edit.ashx?PlaceID=' + play_placeId + '&upload=' + play_placeId, 'edit.ashx', '/Login/Negotiate.ashx', 'FETCH', true);
+                            NeuroticLaunch.StartGame('/Game/edit.ashx?PlaceID=' + play_placeId + '&upload=' + play_placeId, 'edit.ashx', '/Login/Negotiate.ashx', 'FETCH', true);
                           });
                         }
                       </script>
@@ -92,7 +92,7 @@
                               </div>
                             </td>
                             <td class="edit-col">
-                              <a class="lunarix-edit-button btn-control btn-control-large" href="javascript:">Edit</a>
+                              <a class="neurotic-edit-button btn-control btn-control-large" href="javascript:">Edit</a>
                             </td>
                             <td class="menu-col">
                               <div class="gear-button-wrapper">
@@ -110,6 +110,6 @@
                     </div>
                     <div class="build-loading-container" style="display:none">
                       <div class="buildpage-loading-container">
-                        <img alt="^_^" src="https://cdn.lunarix.pw/ec4e85b0c4396cf753a06fade0a8d8af.gif">
+                        <img alt="^_^" src="https://cdn.neurotic.pw/ec4e85b0c4396cf753a06fade0a8d8af.gif">
                       </div>
                     </div>

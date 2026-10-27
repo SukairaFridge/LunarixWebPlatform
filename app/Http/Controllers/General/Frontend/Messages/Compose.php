@@ -24,6 +24,6 @@ class Compose
                 abort(404);
             }
         }
-        return view('messages.compose', ['title' => 'Send Message - Lunarix', 'currentUser' => $currentUser, 'recipient' => $recipient]);
+        return view('messages.compose', ['title' => 'Send Message - Neurotic', 'currentUser' => $currentUser, 'recipient' => $recipient]);
     }
 }

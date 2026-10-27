@@ -10,6 +10,6 @@ class Inventory
         $user = auth()->user();
         $vieweduser = DB::table('users')->select('id', 'username')->where('id', $id)->first();
         abort_if(! $vieweduser, 404);
-        return view('inventory', ['vieweduser' => $vieweduser, 'user' => $user, 'title' => 'Inventory - Lunarix']);
+        return view('inventory', ['vieweduser' => $vieweduser, 'user' => $user, 'title' => 'Inventory - Neurotic']);
     }
 }

@@ -32,10 +32,10 @@
                 }
         </style>
             <h1>Contributions</h1>
-                <p>As you may know, the Lunarix project is a community-made ROBLOX revival with the goal of reviving the 2016 era and without the help of these people Lunarix could've not been shaped into what it is today hence why we thank everyone who had helped us ever since Lunarix had began as a project</p>
+                <p>As you may know, the Neurotic project is a community-made ROBLOX revival with the goal of reviving the 2016 era and without the help of these people Neurotic could've not been shaped into what it is today hence why we thank everyone who had helped us ever since Neurotic had began as a project</p>
                 <p>Note: The last one does not mean we endorse you, we may or may not be doing that</p>
             <ul class="ctribs">
-            <h3>Lunarix Maintainers</h3>
+            <h3>Neurotic Maintainers</h3>
                 <li><b>• Sukaira Nakamura</b> - Founder</li>
                 <li><b>• Kar</b> - Co-Founder</li><br>
             <h3>Developers</h3>

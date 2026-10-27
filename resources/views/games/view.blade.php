@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=page___a280135812a16a583499b62a7a2baaf2_m.css">
 @endpush
 @push('js')
-<script type='text/javascript' src='https://js.lunarix.lol/741440986fa916e8a036aae7f8b7fd31.js'></script>
+<script type='text/javascript' src='https://js.neurosama.lol/741440986fa916e8a036aae7f8b7fd31.js'></script>
 @endpush
 @section('content')
 <div id="fb-root"></div>
@@ -41,8 +41,8 @@
     <div class="col-xs-12 section game-main-content">
         <div class="game-thumb-container">
             <script>
-    var Lunarix = Lunarix || {};
-    Lunarix.Carousel = function () {
+    var Neurotic = Neurotic || {};
+    Neurotic.Carousel = function () {
         var carouselId = "#lrx-carousel";
         var checkedForVideo = false;
         var isMobile = false;
@@ -70,7 +70,7 @@
             $(carouselId)
                 .on("slide.bs.carousel", function () {
                     // pause ALL the videos
-                    Lunarix.Carousel.pauseAllVideos();
+                    Neurotic.Carousel.pauseAllVideos();
                     // restart the carousel sliding
                     $(carouselId).carousel('cycle');
                 })
@@ -90,14 +90,14 @@
 
             $(document).on("playButton:gamePlayIntent", function () {
                 // we pressed the play button - stop playing the video
-                Lunarix.Carousel.pauseAllVideos();
+                Neurotic.Carousel.pauseAllVideos();
             });
 
-            Lunarix.Carousel.setUpYouTubeAPI();
+            Neurotic.Carousel.setUpYouTubeAPI();
 
             // retry thumbnails in carousel
             $(function () {
-                $("#lrx-carousel .item span").loadLunarixThumbnails();
+                $("#lrx-carousel .item span").loadNeuroticThumbnails();
             });
         }
 
@@ -147,7 +147,7 @@
             if (lrxplayer && lrxplayer.length > 0) {
                 var lrxplayerlen = lrxplayer.length;
                 for (var i = 0; i < lrxplayerlen; i++) {
-                    Lunarix.Carousel.pauseVideoAtIndex(i);
+                    Neurotic.Carousel.pauseVideoAtIndex(i);
                 }
             }
         }
@@ -161,7 +161,7 @@
                 if ($(val).find('.flex-video').length > 0) {
                     carousel.carousel(idx);
                     carousel.carousel("pause");
-                    var successfulPlay = Lunarix.Carousel.playVideoAtIndex(0);
+                    var successfulPlay = Neurotic.Carousel.playVideoAtIndex(0);
                     checkedForVideo = successfulPlay;
                     return false; // stop
                 } else {
@@ -173,7 +173,7 @@
             // This first moment get the video and auto-play it
             var autoplay = $('#lrx-carousel').data('is-video-autoplayed-on-ready');
             if (autoplay && !isMobile) {
-                Lunarix.Carousel.checkForVideo();
+                Neurotic.Carousel.checkForVideo();
             }
         }
         var onPlayerPlaying = function () {
@@ -219,17 +219,17 @@
             var data = $.parseJSON(originalData);
             
             if (data.event == "onReady") {
-                Lunarix.Carousel.onPlayerReady();
+                Neurotic.Carousel.onPlayerReady();
             }
             if(data.event == "infoDelivery" && data.info.playerState && data.info.playerState == 1) {
-                Lunarix.Carousel.onPlayerPlaying();
+                Neurotic.Carousel.onPlayerPlaying();
             }
         });
     }
 
  
     $(document).ready(function () {
-        Lunarix.Carousel.initialize();
+        Neurotic.Carousel.initialize();
     });
 </script>
 
@@ -295,7 +295,7 @@
             var placeId = $(this).data("place-id");
             $("#game-context-menu").find(".lrx-menu-item").popover('hide'); 
 
-            Lunarix.GenericConfirmation.open({
+            Neurotic.GenericConfirmation.open({
                 titleText: "Shut Down Game",
                 bodyContent: "Are you sure you want to shut down this game?",
                 onAccept: function () {
@@ -305,7 +305,7 @@
                         // throw away
                     });
                 },
-                acceptColor: Lunarix.GenericConfirmation.blue,
+                acceptColor: Neurotic.GenericConfirmation.blue,
                 acceptText: "Yes",
                 declineText: "No",
                 allowHtmlContentInBody: true
@@ -317,7 +317,7 @@
             var placeId = el.attr("placeid");
             var universeId = el.data("universeid");
             var allowUpload = el.data("allowupload") ? true : false;
-            Lunarix.GameLauncher.buildGameInStudio(placeId, universeId, allowUpload);
+            Neurotic.GameLauncher.buildGameInStudio(placeId, universeId, allowUpload);
         });
         $("#game-context-menu").on("click", ".VisitButtonEditPH", function (evt) {
             $("#game-context-menu").find(".lrx-menu-item").popover('hide'); 
@@ -325,7 +325,7 @@
             var placeId = el.attr("placeid");
             var universeId = el.data("universeid");
             var allowUpload = el.data("allowupload") ? true : false;
-            Lunarix.GameLauncher.editGameInStudio(placeId, universeId, allowUpload);
+            Neurotic.GameLauncher.editGameInStudio(placeId, universeId, allowUpload);
         });
     });
 </script>
@@ -346,9 +346,9 @@
 
 
 <script type="text/javascript">
-    Lunarix = Lunarix || {};
+    Neurotic = Neurotic || {};
 
-    Lunarix.BCUpsellModal = function () {
+    Neurotic.BCUpsellModal = function () {
         var resources = {
             //<sl:translate>
             title: "Bloxxers Club Only",
@@ -359,17 +359,17 @@
 
         var open = function () {
             var options = {
-                titleText: Lunarix.BCUpsellModal.Resources.title,
-                bodyContent: Lunarix.BCUpsellModal.Resources.body,
+                titleText: Neurotic.BCUpsellModal.Resources.title,
+                bodyContent: Neurotic.BCUpsellModal.Resources.body,
                 footerText: "",
-                acceptText: Lunarix.BCUpsellModal.Resources.accept,
-                declineText: Lunarix.Resources.GenericConfirmation.No,
-                acceptColor: Lunarix.GenericConfirmation.green,
+                acceptText: Neurotic.BCUpsellModal.Resources.accept,
+                declineText: Neurotic.Resources.GenericConfirmation.No,
+                acceptColor: Neurotic.GenericConfirmation.green,
                 onAccept: function () { window.location.href = '/Upgrades/BloxxersClubMemberships.aspx?ctx=bc-only-game'; },
-                imageUrl: 'https://cdn.lunarix.lol/43ac54175f3f3cd403536fedd9170c10.png'
+                imageUrl: 'https://cdn.neurosama.lol/43ac54175f3f3cd403536fedd9170c10.png'
             };
 
-            Lunarix.GenericConfirmation.open(
+            Neurotic.GenericConfirmation.open(
                 options
             );
         };
@@ -384,27 +384,27 @@
 <script type="text/javascript">
     var play_placeId = {{ $game['id'] }};
     function fireEventAction(action) {
-        LunarixEventManager.triggerEvent('lrx_evt_popup_action', { action: action });
+        NeuroticEventManager.triggerEvent('lrx_evt_popup_action', { action: action });
     }
   
-    $(function () { $('.VisitButtonPlay').click(function () {play_placeId=$(this).attr('placeid');Lunarix.GameLauncher.joinMultiplayerGame(play_placeId, true);return false;});$('#game-context-menu').on('click touchstart','.VisitButtonBuild', function () {LunarixLaunch._GoogleAnalyticsCallback = function() { var isInsideLunarixIDE = 'website'; if (Lunarix && Lunarix.Client && Lunarix.Client.isIDE && Lunarix.Client.isIDE()) { isInsideLunarixIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideLunarixIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Build']);EventTracker.fireEvent('GameLaunchAttempt_Unknown', 'GameLaunchAttempt_Unknown_Plugin'); if (typeof Lunarix.GamePlayEvents != 'undefined') { Lunarix.GamePlayEvents.SendClientStartAttempt(null, play_placeId); }  }; play_placeId = (typeof $(this).attr('placeid') === 'undefined') ? play_placeId : $(this).attr('placeid'); Lunarix.Client.WaitForLunarix(function() { window.location = '/Login/Default.aspx?ReturnUrl={{ urlencode(route('games.view', ['id' => $game['id'], 'slug' => $game['slug']])) }}' }); return false;});$('#game-context-menu').on('click touchstart','.VisitButtonEdit', function () {LunarixLaunch._GoogleAnalyticsCallback = function() { var isInsideLunarixIDE = 'website'; if (Lunarix && Lunarix.Client && Lunarix.Client.isIDE && Lunarix.Client.isIDE()) { isInsideLunarixIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideLunarixIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Edit']);EventTracker.fireEvent('GameLaunchAttempt_Unknown', 'GameLaunchAttempt_Unknown_Plugin'); if (typeof Lunarix.GamePlayEvents != 'undefined') { Lunarix.GamePlayEvents.SendClientStartAttempt(null, play_placeId); }  }; play_placeId = (typeof $(this).attr('placeid') === 'undefined') ? play_placeId : $(this).attr('placeid'); Lunarix.Client.WaitForLunarix(function() { LunarixLaunch.StartGame('http://www.lunarix.com//Game/edit.ashx?PlaceID='+play_placeId+'&upload=', 'edit.ashx', 'https://www.lunarix.com//Login/Negotiate.ashx', 'FETCH', true) }); return false;});$('.VisitButtonPersonalServer').click(function () {play_placeId=$(this).attr('placeid');Lunarix.CharacterSelect.placeid = play_placeId;Lunarix.CharacterSelect.show();});$(document).on('CharacterSelectLaunch', function (event, genderTypeID) { if (genderTypeID == 3) { var isInsideLunarixIDE = 'website'; if (Lunarix && Lunarix.Client && Lunarix.Client.isIDE && Lunarix.Client.isIDE()) { isInsideLunarixIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideLunarixIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Play']);EventTracker.fireEvent("GameLaunchAttempt_Unknown", "GameLaunchAttempt_Unknown_Plugin"); if (typeof Lunarix.GamePlayEvents != 'undefined') { Lunarix.GamePlayEvents.SendClientStartAttempt(null, play_placeId); } } else { var isInsideLunarixIDE = 'website'; if (Lunarix && Lunarix.Client && Lunarix.Client.isIDE && Lunarix.Client.isIDE()) { isInsideLunarixIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideLunarixIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Play']);EventTracker.fireEvent("GameLaunchAttempt_Unknown", "GameLaunchAttempt_Unknown_Plugin"); if (typeof Lunarix.GamePlayEvents != 'undefined') { Lunarix.GamePlayEvents.SendClientStartAttempt(null, play_placeId); } }play_placeId = (typeof $(this).attr('placeid') === 'undefined') ? play_placeId : $(this).attr('placeid'); Lunarix.Client.WaitForLunarix(function() { LunarixLaunch.RequestGame('PlaceLauncherStatusPanel', play_placeId, genderTypeID); }); return false;});}());;
+    $(function () { $('.VisitButtonPlay').click(function () {play_placeId=$(this).attr('placeid');Neurotic.GameLauncher.joinMultiplayerGame(play_placeId, true);return false;});$('#game-context-menu').on('click touchstart','.VisitButtonBuild', function () {NeuroticLaunch._GoogleAnalyticsCallback = function() { var isInsideNeuroticIDE = 'website'; if (Neurotic && Neurotic.Client && Neurotic.Client.isIDE && Neurotic.Client.isIDE()) { isInsideNeuroticIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideNeuroticIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Build']);EventTracker.fireEvent('GameLaunchAttempt_Unknown', 'GameLaunchAttempt_Unknown_Plugin'); if (typeof Neurotic.GamePlayEvents != 'undefined') { Neurotic.GamePlayEvents.SendClientStartAttempt(null, play_placeId); }  }; play_placeId = (typeof $(this).attr('placeid') === 'undefined') ? play_placeId : $(this).attr('placeid'); Neurotic.Client.WaitForNeurotic(function() { window.location = '/Login/Default.aspx?ReturnUrl={{ urlencode(route('games.view', ['id' => $game['id'], 'slug' => $game['slug']])) }}' }); return false;});$('#game-context-menu').on('click touchstart','.VisitButtonEdit', function () {NeuroticLaunch._GoogleAnalyticsCallback = function() { var isInsideNeuroticIDE = 'website'; if (Neurotic && Neurotic.Client && Neurotic.Client.isIDE && Neurotic.Client.isIDE()) { isInsideNeuroticIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideNeuroticIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Edit']);EventTracker.fireEvent('GameLaunchAttempt_Unknown', 'GameLaunchAttempt_Unknown_Plugin'); if (typeof Neurotic.GamePlayEvents != 'undefined') { Neurotic.GamePlayEvents.SendClientStartAttempt(null, play_placeId); }  }; play_placeId = (typeof $(this).attr('placeid') === 'undefined') ? play_placeId : $(this).attr('placeid'); Neurotic.Client.WaitForNeurotic(function() { NeuroticLaunch.StartGame('http://www.neurotic.com//Game/edit.ashx?PlaceID='+play_placeId+'&upload=', 'edit.ashx', 'https://www.neurotic.com//Login/Negotiate.ashx', 'FETCH', true) }); return false;});$('.VisitButtonPersonalServer').click(function () {play_placeId=$(this).attr('placeid');Neurotic.CharacterSelect.placeid = play_placeId;Neurotic.CharacterSelect.show();});$(document).on('CharacterSelectLaunch', function (event, genderTypeID) { if (genderTypeID == 3) { var isInsideNeuroticIDE = 'website'; if (Neurotic && Neurotic.Client && Neurotic.Client.isIDE && Neurotic.Client.isIDE()) { isInsideNeuroticIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideNeuroticIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Play']);EventTracker.fireEvent("GameLaunchAttempt_Unknown", "GameLaunchAttempt_Unknown_Plugin"); if (typeof Neurotic.GamePlayEvents != 'undefined') { Neurotic.GamePlayEvents.SendClientStartAttempt(null, play_placeId); } } else { var isInsideNeuroticIDE = 'website'; if (Neurotic && Neurotic.Client && Neurotic.Client.isIDE && Neurotic.Client.isIDE()) { isInsideNeuroticIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideNeuroticIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Play']);EventTracker.fireEvent("GameLaunchAttempt_Unknown", "GameLaunchAttempt_Unknown_Plugin"); if (typeof Neurotic.GamePlayEvents != 'undefined') { Neurotic.GamePlayEvents.SendClientStartAttempt(null, play_placeId); } }play_placeId = (typeof $(this).attr('placeid') === 'undefined') ? play_placeId : $(this).attr('placeid'); Neurotic.Client.WaitForNeurotic(function() { NeuroticLaunch.RequestGame('PlaceLauncherStatusPanel', play_placeId, genderTypeID); }); return false;});}());;
 
 </script>
 @else
 <script type="text/javascript">
     var play_placeId = {{ $game['id'] }};
     function fireEventAction(action) {
-        LunarixEventManager.triggerEvent('lrx_evt_popup_action', { action: action });
+        NeuroticEventManager.triggerEvent('lrx_evt_popup_action', { action: action });
     }
   
-    $(function () { $('.VisitButtonPlay').click(function () {play_placeId=$(this).attr('placeid');Lunarix.CharacterSelect.placeid = play_placeId;Lunarix.CharacterSelect.show();});$('#game-context-menu').on('click touchstart','.VisitButtonBuild', function () {LunarixLaunch._GoogleAnalyticsCallback = function() { var isInsideLunarixIDE = 'website'; if (Lunarix && Lunarix.Client && Lunarix.Client.isIDE && Lunarix.Client.isIDE()) { isInsideLunarixIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideLunarixIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Build']);EventTracker.fireEvent('GameLaunchAttempt_Unknown', 'GameLaunchAttempt_Unknown_Plugin'); if (typeof Lunarix.GamePlayEvents != 'undefined') { Lunarix.GamePlayEvents.SendClientStartAttempt(null, play_placeId); }  }; play_placeId = (typeof $(this).attr('placeid') === 'undefined') ? play_placeId : $(this).attr('placeid'); Lunarix.Client.WaitForLunarix(function() { window.location = '/Login/Default.aspx?ReturnUrl={{ urlencode(route('games.view', ['id' => $game['id'], 'slug' => $game['slug']])) }}' }); return false;});$('#game-context-menu').on('click touchstart','.VisitButtonEdit', function () {LunarixLaunch._GoogleAnalyticsCallback = function() { var isInsideLunarixIDE = 'website'; if (Lunarix && Lunarix.Client && Lunarix.Client.isIDE && Lunarix.Client.isIDE()) { isInsideLunarixIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideLunarixIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Edit']);EventTracker.fireEvent('GameLaunchAttempt_Unknown', 'GameLaunchAttempt_Unknown_Plugin'); if (typeof Lunarix.GamePlayEvents != 'undefined') { Lunarix.GamePlayEvents.SendClientStartAttempt(null, play_placeId); }  }; play_placeId = (typeof $(this).attr('placeid') === 'undefined') ? play_placeId : $(this).attr('placeid'); Lunarix.Client.WaitForLunarix(function() { LunarixLaunch.StartGame('http://www.lunarix.com//Game/edit.ashx?PlaceID='+play_placeId+'&upload=', 'edit.ashx', 'https://www.lunarix.com//Login/Negotiate.ashx', 'FETCH', true) }); return false;});$('.VisitButtonPersonalServer').click(function () {play_placeId=$(this).attr('placeid');Lunarix.CharacterSelect.placeid = play_placeId;Lunarix.CharacterSelect.show();});$(document).on('CharacterSelectLaunch', function (event, genderTypeID) { if (genderTypeID == 3) { var isInsideLunarixIDE = 'website'; if (Lunarix && Lunarix.Client && Lunarix.Client.isIDE && Lunarix.Client.isIDE()) { isInsideLunarixIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideLunarixIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Play']);EventTracker.fireEvent("GameLaunchAttempt_Unknown", "GameLaunchAttempt_Unknown_Plugin"); if (typeof Lunarix.GamePlayEvents != 'undefined') { Lunarix.GamePlayEvents.SendClientStartAttempt(null, play_placeId); } } else { var isInsideLunarixIDE = 'website'; if (Lunarix && Lunarix.Client && Lunarix.Client.isIDE && Lunarix.Client.isIDE()) { isInsideLunarixIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideLunarixIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Play']);EventTracker.fireEvent("GameLaunchAttempt_Unknown", "GameLaunchAttempt_Unknown_Plugin"); if (typeof Lunarix.GamePlayEvents != 'undefined') { Lunarix.GamePlayEvents.SendClientStartAttempt(null, play_placeId); } }play_placeId = (typeof $(this).attr('placeid') === 'undefined') ? play_placeId : $(this).attr('placeid'); Lunarix.Client.WaitForLunarix(function() { LunarixLaunch.RequestGame('PlaceLauncherStatusPanel', play_placeId, genderTypeID); }); return false;});}());;
+    $(function () { $('.VisitButtonPlay').click(function () {play_placeId=$(this).attr('placeid');Neurotic.CharacterSelect.placeid = play_placeId;Neurotic.CharacterSelect.show();});$('#game-context-menu').on('click touchstart','.VisitButtonBuild', function () {NeuroticLaunch._GoogleAnalyticsCallback = function() { var isInsideNeuroticIDE = 'website'; if (Neurotic && Neurotic.Client && Neurotic.Client.isIDE && Neurotic.Client.isIDE()) { isInsideNeuroticIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideNeuroticIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Build']);EventTracker.fireEvent('GameLaunchAttempt_Unknown', 'GameLaunchAttempt_Unknown_Plugin'); if (typeof Neurotic.GamePlayEvents != 'undefined') { Neurotic.GamePlayEvents.SendClientStartAttempt(null, play_placeId); }  }; play_placeId = (typeof $(this).attr('placeid') === 'undefined') ? play_placeId : $(this).attr('placeid'); Neurotic.Client.WaitForNeurotic(function() { window.location = '/Login/Default.aspx?ReturnUrl={{ urlencode(route('games.view', ['id' => $game['id'], 'slug' => $game['slug']])) }}' }); return false;});$('#game-context-menu').on('click touchstart','.VisitButtonEdit', function () {NeuroticLaunch._GoogleAnalyticsCallback = function() { var isInsideNeuroticIDE = 'website'; if (Neurotic && Neurotic.Client && Neurotic.Client.isIDE && Neurotic.Client.isIDE()) { isInsideNeuroticIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideNeuroticIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Edit']);EventTracker.fireEvent('GameLaunchAttempt_Unknown', 'GameLaunchAttempt_Unknown_Plugin'); if (typeof Neurotic.GamePlayEvents != 'undefined') { Neurotic.GamePlayEvents.SendClientStartAttempt(null, play_placeId); }  }; play_placeId = (typeof $(this).attr('placeid') === 'undefined') ? play_placeId : $(this).attr('placeid'); Neurotic.Client.WaitForNeurotic(function() { NeuroticLaunch.StartGame('http://www.neurotic.com//Game/edit.ashx?PlaceID='+play_placeId+'&upload=', 'edit.ashx', 'https://www.neurotic.com//Login/Negotiate.ashx', 'FETCH', true) }); return false;});$('.VisitButtonPersonalServer').click(function () {play_placeId=$(this).attr('placeid');Neurotic.CharacterSelect.placeid = play_placeId;Neurotic.CharacterSelect.show();});$(document).on('CharacterSelectLaunch', function (event, genderTypeID) { if (genderTypeID == 3) { var isInsideNeuroticIDE = 'website'; if (Neurotic && Neurotic.Client && Neurotic.Client.isIDE && Neurotic.Client.isIDE()) { isInsideNeuroticIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideNeuroticIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Play']);EventTracker.fireEvent("GameLaunchAttempt_Unknown", "GameLaunchAttempt_Unknown_Plugin"); if (typeof Neurotic.GamePlayEvents != 'undefined') { Neurotic.GamePlayEvents.SendClientStartAttempt(null, play_placeId); } } else { var isInsideNeuroticIDE = 'website'; if (Neurotic && Neurotic.Client && Neurotic.Client.isIDE && Neurotic.Client.isIDE()) { isInsideNeuroticIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideNeuroticIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Play']);EventTracker.fireEvent("GameLaunchAttempt_Unknown", "GameLaunchAttempt_Unknown_Plugin"); if (typeof Neurotic.GamePlayEvents != 'undefined') { Neurotic.GamePlayEvents.SendClientStartAttempt(null, play_placeId); } }play_placeId = (typeof $(this).attr('placeid') === 'undefined') ? play_placeId : $(this).attr('placeid'); Neurotic.Client.WaitForNeurotic(function() { NeuroticLaunch.RequestGame('PlaceLauncherStatusPanel', play_placeId, genderTypeID); }); return false;});}());;
 
 </script>
 @endauth
 {{-- <script type="text/javascript">
 var play_placeId = {{ $game['id'] }};
 function fireEventAction(action) {
-    LunarixEventManager.triggerEvent('lrx_evt_popup_action', { action: action });
+    NeuroticEventManager.triggerEvent('lrx_evt_popup_action', { action: action });
 }
 $(function () {
     $('.VisitButtonPlay').click(function () {
@@ -417,7 +417,7 @@ $(function () {
         }, 10000);
     });
     $('#ProtocolHandlerInstallButton').on('click', function () {
-        $('#downloadInstallerIFrame').attr('src', 'https://setup.lunarix.lol/LunarixPlayerLauncher.exe');
+        $('#downloadInstallerIFrame').attr('src', 'https://setup.neurosama.lol/NeuroticPlayerLauncher.exe');
         $.modal.close();
         $('#InstallationInstructions').modal({overlayClose: false, escClose: false, opacity: 80, overlayCss: { backgroundColor: "#000" }, modalWidth: 970});
         setTimeout(function () { $('.VisitButtonContinuePH a').removeClass('disabled'); }, 15000);
@@ -430,7 +430,7 @@ $(function () {
 </script>
 <script type="text/javascript">
     $(function() {
-        Lunarix.PlaceItemPurchase = new Lunarix.ItemPurchase(function (obj) {
+        Neurotic.PlaceItemPurchase = new Neurotic.ItemPurchase(function (obj) {
             $(".PurchaseButton[data-item-id="+ obj.AssetID +"]").each(function (index, htmlElem) {
                 $("#lrx-place-purchase-required").hide();
                 $("#MultiplayerVisitButton").show();
@@ -440,7 +440,7 @@ $(function () {
         if("False".toLowerCase() == "true") {
             $(function () {
                 $("#lrx-place-purchase-required").on("click", function(e) {
-                    Lunarix.PlaceItemPurchase.openPurchaseVerificationView(this);
+                    Neurotic.PlaceItemPurchase.openPurchaseVerificationView(this);
                     return false;
                 });
             });
@@ -468,19 +468,19 @@ $(function () {
 
 <script type="text/javascript">
     //<sl:translate>
-    Lunarix = Lunarix || {};
-    Lunarix.Resources = Lunarix.Resources || {};
+    Neurotic = Neurotic || {};
+    Neurotic.Resources = Neurotic.Resources || {};
 
-    Lunarix.Resources.FavoriteButton = {
+    Neurotic.Resources.FavoriteButton = {
         AddToFavorites: "Add to favorites",
         RemoveFromFavorites: "Remove from favorites"
     };
     //</sl:translate>
 
-    Lunarix.Favorites.Initialize();
-    Lunarix.FavoriteButton = Lunarix.FavoriteButton || {};
+    Neurotic.Favorites.Initialize();
+    Neurotic.FavoriteButton = Neurotic.FavoriteButton || {};
     var isCurrentlyFavorited = @json($game['is_favorited']);
-    Lunarix.FavoriteButton.initialTooltip = isCurrentlyFavorited ? Lunarix.Resources.FavoriteButton.RemoveFromFavorites : Lunarix.Resources.FavoriteButton.AddToFavorites;
+    Neurotic.FavoriteButton.initialTooltip = isCurrentlyFavorited ? Neurotic.Resources.FavoriteButton.RemoveFromFavorites : Neurotic.Resources.FavoriteButton.AddToFavorites;
 </script>
                 
         <li class="voting-panel body"
@@ -516,9 +516,9 @@ $(function () {
 
 <script>
     $(function () {
-        Lunarix.Voting.Initialize();
+        Neurotic.Voting.Initialize();
 
-        Lunarix.Voting.Resources = {
+        Neurotic.Voting.Resources = {
             //<sl:translate>
             emailVerifiedTitle: "Verify Your Email",
             emailVerifiedMessage: "You must verify your email before you can vote. You can verify your email on the <a href='/my/account?confirmemail=1'>Account</a> page.",
@@ -545,7 +545,7 @@ $(function () {
             guestUserMessage: "<div>You must login to vote.</div> <div>Please <a href='/'>login or register</a> to continue.</div>",
 
             accountUnderOneDayTitle: "Voter Feedback",
-            accountUnderOneDayMessage: "You will be able to vote on Games and Studio Models later, after you've had a chance to experience Lunarix a bit more. Come back to this page in a couple days.",
+            accountUnderOneDayMessage: "You will be able to vote on Games and Studio Models later, after you've had a chance to experience Neurotic a bit more. Come back to this page in a couple days.",
 
             accept: "Verify",
             decline: "Cancel",
@@ -623,7 +623,7 @@ $(function () {
         </p>
         <div id="gigya-target"></div>
         <input class="copy-to-clipboard form-control lrx-input-field" type="text" value="{{ route('games.view', ['id' => $game['id'], 'slug' => $game['slug']]) }}" readonly="true" />
-        <div class="catchy-title-tooltip-hover">Share Lunarix with your friends.</div>
+        <div class="catchy-title-tooltip-hover">Share Neurotic with your friends.</div>
     </div>
 </div>
                             <script>
@@ -646,20 +646,20 @@ $(function () {
                                         {
                                             'provider': "Facebook",
                                             'enableCount': "true",
-                                            'iconImgUp': "https://cdn.lunarix.lol/4799659a1367d6c6e235b5986cb9b6b9.png"
+                                            'iconImgUp': "https://cdn.neurosama.lol/4799659a1367d6c6e235b5986cb9b6b9.png"
                                         },
                                         {
                                             'provider': "Twitter",
                                             'enableCount': "true",
-                                            'iconImgUp': "https://cdn.lunarix.lol/d75e7a07fd4db793d79060cc5976cb29.png"
+                                            'iconImgUp': "https://cdn.neurosama.lol/d75e7a07fd4db793d79060cc5976cb29.png"
                                         },
                                         {
                                             'provider': "Googleplus",
                                             'enableCount': "true",
-                                            'iconImgUp': "https://cdn.lunarix.lol/ee4b20b19bbaac5eb7c5e2c46a750c5c.png"
+                                            'iconImgUp': "https://cdn.neurosama.lol/ee4b20b19bbaac5eb7c5e2c46a750c5c.png"
                                         }
                                     ];
-                                    Lunarix.Social.presentShareDialog(@json($game['name']), @json(route('games.view', ['id' => $game['id'], 'slug' => $game['slug']])), @json(route('games.view', ['id' => $game['id'], 'slug' => $game['slug']])));
+                                    Neurotic.Social.presentShareDialog(@json($game['name']), @json(route('games.view', ['id' => $game['id'], 'slug' => $game['slug']])), @json(route('games.view', ['id' => $game['id'], 'slug' => $game['slug']])));
                                 });
                             </script>
 
@@ -746,21 +746,21 @@ $(function () {
             <h3>VIP Servers</h3>
         </div>
         <div class="lrx-vip-server-item-container">
-            <p><strong><a href="http://wiki.lunarix.com/index.php?title=VIP_server">VIP Servers</a> are currently not available as of this moment.</strong></p>
+            <p><strong><a href="http://wiki.neurotic.com/index.php?title=VIP_server">VIP Servers</a> are currently not available as of this moment.</strong></p>
         </div>
     </div>
 
 <script>
-    var Lunarix = Lunarix || {};
+    var Neurotic = Neurotic || {};
 
-    Lunarix.PrivateServers = Lunarix.PrivateServers || {};
+    Neurotic.PrivateServers = Neurotic.PrivateServers || {};
     //<sl:translate>
-    Lunarix.PrivateServers.RenewRecurringTitle = "Renew Private Server";
-    Lunarix.PrivateServers.RenewRecurringBody = "Are you sure you want to enable future payments for your private VIP version of "
+    Neurotic.PrivateServers.RenewRecurringTitle = "Renew Private Server";
+    Neurotic.PrivateServers.RenewRecurringBody = "Are you sure you want to enable future payments for your private VIP version of "
     + @json($game['name'].' by '.$game['creator_name'].'?<br><br>This VIP Server will start renewing every month at ')
     + "<span class=\"currency CurrencyColor1\">0</span> until you cancel.";
-    Lunarix.PrivateServers.RenewRecurringAcceptText = "Renew Private Server";
-    Lunarix.PrivateServers.RenewRecurringDeclineText = "Back";
+    Neurotic.PrivateServers.RenewRecurringAcceptText = "Renew Private Server";
+    Neurotic.PrivateServers.RenewRecurringDeclineText = "Back";
     //<sl:translate>
 </script>
 
@@ -776,7 +776,7 @@ $(function () {
         <h3>Comments</h3>
         <div class="AddAComment">
             <div class="comment-form">
-                <div class="Avatar lunarix-avatar-image" data-user-id="-1" data-image-size="small"></div>
+                <div class="Avatar neurotic-avatar-image" data-user-id="-1" data-image-size="small"></div>
 
                 <form class="lrx-form-horizontal ng-pristine ng-valid" role="form">
                     <div class="lrx-form-group">
@@ -816,7 +816,7 @@ $(function () {
 </div>
 <script>
     $(document).ready(function () {
-        Lunarix.Comments.Resources = {
+        Neurotic.Comments.Resources = {
             //<sl:translate>
             defaultMessage: 'Write a comment!',
             noCommentsFound: 'No comments found.',
@@ -834,27 +834,27 @@ $(function () {
             //</sl:translate>
         };
     
-        Lunarix.Comments.Limits =
+        Neurotic.Comments.Limits =
         [
             {
                 limit: '10',
                 character: "\n",
-                message: Lunarix.Comments.Resources.tooManyNewlines
+                message: Neurotic.Comments.Resources.tooManyNewlines
             },
             {
                 limit: '200',
                 character: undefined,
-                message: Lunarix.Comments.Resources.tooManyCharacters
+                message: Neurotic.Comments.Resources.tooManyCharacters
             }
         ];
 
-        Lunarix.Comments.FilterIsEnabled = true;
-        Lunarix.Comments.FilterRegex = "(([a-zA-Z0-9-]+\\.[a-zA-Z]{2,4}[:\\#/\?]+)|([a-zA-Z0-9]\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,4}))";
-        Lunarix.Comments.FilterCleanExistingComments = false ;
+        Neurotic.Comments.FilterIsEnabled = true;
+        Neurotic.Comments.FilterRegex = "(([a-zA-Z0-9-]+\\.[a-zA-Z]{2,4}[:\\#/\?]+)|([a-zA-Z0-9]\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,4}))";
+        Neurotic.Comments.FilterCleanExistingComments = false ;
 
 
     
-    Lunarix.Comments.initialize();
+    Neurotic.Comments.initialize();
     });
 </script>
 
@@ -874,8 +874,8 @@ $(function () {
 
 <script>
     $(function () {
-        Lunarix.GamePassJSData = { };
-        Lunarix.GamePassJSData.PlaceID = {{ $game['id'] }};
+        Neurotic.GamePassJSData = { };
+        Neurotic.GamePassJSData.PlaceID = {{ $game['id'] }};
 
         var purchaseConfirmationCallback = function (obj) {
             var originalContainer = $('.PurchaseButton[data-item-id=' + obj.AssetID + ']').parent('.lrx-caption');
@@ -883,10 +883,10 @@ $(function () {
             originalContainer.find('.lrx-item-buy').show();
 
         };
-        Lunarix.GamePassItemPurchase = new Lunarix.ItemPurchase(purchaseConfirmationCallback);
+        Neurotic.GamePassItemPurchase = new Neurotic.ItemPurchase(purchaseConfirmationCallback);
 
         $("#store #lrx-game-passes").on("click", ".PurchaseButton", function (e) {
-            Lunarix.PlaceProductPromotionItemPurchase.openPurchaseVerificationView($(this), 'game-pass');
+            Neurotic.PlaceProductPromotionItemPurchase.openPurchaseVerificationView($(this), 'game-pass');
         });
 
         $("#store #lrx-game-passes .btn-more").on("click", function (e) {
@@ -904,7 +904,7 @@ $(function () {
 <script>
     // From DisplayProductPromotions
     $(function() {
-        Lunarix.PlaceProductPromotion.Resources = {
+        Neurotic.PlaceProductPromotion.Resources = {
             //<sl:translate>
             anErrorOccurred: 'An error occurred, please try again.'
             , youhaveAdded: "You have added "
@@ -926,16 +926,16 @@ $(function () {
             originalContainer.find('.lrx-item-buy').show();
             
         };
-        Lunarix.PlaceProductPromotionItemPurchase = new Lunarix.ItemPurchase(purchaseConfirmationCallback);
-        Lunarix.PlaceProductPromotion.PlaceID = {{ $game['id'] }};
+        Neurotic.PlaceProductPromotionItemPurchase = new Neurotic.ItemPurchase(purchaseConfirmationCallback);
+        Neurotic.PlaceProductPromotion.PlaceID = {{ $game['id'] }};
 
         $("#store").on("click", ".lrx-icon-delete", function(e) {
             var promoId = $(this).data('delete-promotion-id');
-            Lunarix.PlaceProductPromotion.DeleteGear(promoId);
+            Neurotic.PlaceProductPromotion.DeleteGear(promoId);
         });
 
         $("#store #lrx-game-gear").on("click", ".PurchaseButton", function (e) {
-            Lunarix.PlaceProductPromotionItemPurchase.openPurchaseVerificationView($(this), 'game-gear');
+            Neurotic.PlaceProductPromotionItemPurchase.openPurchaseVerificationView($(this), 'game-gear');
         });
 
         $("#store #lrx-game-gear .btn-more").on("click", function (e) {
@@ -1034,13 +1034,13 @@ $(function () {
     See More</button>
 </div>
     <script>
-        var Lunarix = Lunarix || {};
-        Lunarix.Leaderboard = Lunarix.Leaderboard || {};
-        Lunarix.Leaderboard.Resources = {};
+        var Neurotic = Neurotic || {};
+        Neurotic.Leaderboard = Neurotic.Leaderboard || {};
+        Neurotic.Leaderboard.Resources = {};
         //<sl:translate>
-        Lunarix.Leaderboard.Resources.ErrorLoading = "Error loading rows.";
-        Lunarix.Leaderboard.Resources.Loading = "Loading...";
-        Lunarix.Leaderboard.Resources.GoGetPoints = "You are not yet ranked for this time period. Go earn some Points!";
+        Neurotic.Leaderboard.Resources.ErrorLoading = "Error loading rows.";
+        Neurotic.Leaderboard.Resources.Loading = "Loading...";
+        Neurotic.Leaderboard.Resources.GoGetPoints = "You are not yet ranked for this time period. Go earn some Points!";
         //</sl:translate>
     </script>
 
@@ -1104,13 +1104,13 @@ $(function () {
     See More</button>
 </div>
     <script>
-        var Lunarix = Lunarix || {};
-        Lunarix.Leaderboard = Lunarix.Leaderboard || {};
-        Lunarix.Leaderboard.Resources = {};
+        var Neurotic = Neurotic || {};
+        Neurotic.Leaderboard = Neurotic.Leaderboard || {};
+        Neurotic.Leaderboard.Resources = {};
         //<sl:translate>
-        Lunarix.Leaderboard.Resources.ErrorLoading = "Error loading rows.";
-        Lunarix.Leaderboard.Resources.Loading = "Loading...";
-        Lunarix.Leaderboard.Resources.GoGetPoints = "You are not yet ranked for this time period. Go earn some Points!";
+        Neurotic.Leaderboard.Resources.ErrorLoading = "Error loading rows.";
+        Neurotic.Leaderboard.Resources.Loading = "Loading...";
+        Neurotic.Leaderboard.Resources.GoGetPoints = "You are not yet ranked for this time period. Go earn some Points!";
         //</sl:translate>
     </script>
 
@@ -1122,7 +1122,7 @@ $(function () {
                     $(".lrx-tab a[href='#leaderboards']").on('shown.bs.tab', function(e) {
                         // e.target newly activated tab
                         // e.relatedTarget previous active tab
-                        Lunarix.Leaderboard.init();
+                        Neurotic.Leaderboard.init();
                     });
                 </script>
             </div>
@@ -1185,7 +1185,7 @@ $(function () {
         </div>
         <div class="clear"></div>
         <div id="GenericModalButtonContainer" class="GenericModalButtonContainer">
-            <a class="ImageButton btn-neutral btn-large lunarix-ok">OK</a>
+            <a class="ImageButton btn-neutral btn-large neurotic-ok">OK</a>
         </div>
     </div>
 </div>
@@ -1201,8 +1201,8 @@ $(function () {
      data-user-bc="0"
      data-continueshopping-url="{{ route('games.view', ['id' => $game['id'], 'slug' => $game['slug']], false) }}"
      data-imageurl ="http://t2.lrxcdn.com/6893a74f94ec60b4d8f5318ead65faeb"
-     data-alerturl ="https://cdn.lunarix.lol/cbb24e0c0f1fb97381a065bd1e056fcb.png"
-     data-bloxxerscluburl ="https://cdn.lunarix.lol/ae345c0d59b00329758518edc104d573.png"
+     data-alerturl ="https://cdn.neurosama.lol/cbb24e0c0f1fb97381a065bd1e056fcb.png"
+     data-bloxxerscluburl ="https://cdn.neurosama.lol/ae345c0d59b00329758518edc104d573.png"
      >
     
 </div>
@@ -1210,7 +1210,7 @@ $(function () {
 
 <div id="ProcessingView" style="display:none">
     <div class="ProcessingModalBody">
-        <p style="margin:0px"><img src='https://cdn.lunarix.lol/116db03ed7027c242f773e70a4ed2e68.png' alt="Processing..." /></p>
+        <p style="margin:0px"><img src='https://cdn.neurosama.lol/116db03ed7027c242f773e70a4ed2e68.png' alt="Processing..." /></p>
         <p style="margin:7px 0px">Processing Transaction</p>
     </div>
 </div>
@@ -1227,7 +1227,7 @@ $(function () {
     </div>
     <div class="unifiedModalContent" style="padding-top:5px; margin-bottom: 3px; margin-left: 3px; margin-right: 3px">
         <div class="ImageContainer">
-            <img class="GenericModalImage BCModalImage" alt="Builder's Club" src="https://cdn.lunarix.lol/ae345c0d59b00329758518edc104d573.png" />
+            <img class="GenericModalImage BCModalImage" alt="Builder's Club" src="https://cdn.neurosama.lol/ae345c0d59b00329758518edc104d573.png" />
             <div id="BCMessageDiv" class="BCMessage Message">
                 Bloxxers Club membership is required to play in this place.
             </div>
@@ -1269,11 +1269,11 @@ $(function () {
 
 <style type="text/css">
     .male {
-        background-image: url('https://cdn.lunarix.lol/856241927a2ac609e3033feada3ef9f9.png');
+        background-image: url('https://cdn.neurosama.lol/856241927a2ac609e3033feada3ef9f9.png');
         background-repeat: no-repeat;
     }
     .female {
-        background-image: url('https://cdn.lunarix.lol/a0afd0556163477e1023c5aa55d1b9f6.png');
+        background-image: url('https://cdn.neurosama.lol/a0afd0556163477e1023c5aa55d1b9f6.png');
         background-repeat: no-repeat;
     }
 </style>
@@ -1573,7 +1573,7 @@ $(function () {
                     <p id="GenderInputValidation" class="lrx-control-label input-validation lrx-text-danger" ng-bind="(badSubmit && !(signup.gender == 2 || signup.gender == 3)) ? 'Gender is required' : ''"></p>
                 </div>
             </div>
-            <button id="SignupButton" type="button" tabindex="9" class="lrx-btn-primary-md" lrx-form-interaction name="signupSubmit" ng-disabled="isSubmitting" data-signup-api-url="https://api.lunarix.com/signup/v1" ng-click="submitSignup($event)" ng-keypress="submitSignup($event)">Sign Up and Play!</button>
+            <button id="SignupButton" type="button" tabindex="9" class="lrx-btn-primary-md" lrx-form-interaction name="signupSubmit" ng-disabled="isSubmitting" data-signup-api-url="https://api.neurotic.com/signup/v1" ng-click="submitSignup($event)" ng-keypress="submitSignup($event)">Sign Up and Play!</button>
             <noscript>
                 <div class="text-danger">
                     <strong>JavaScript is required to submit this form.</strong>
@@ -1599,7 +1599,7 @@ $(function () {
                         <input id="login-password" class="form-control lrx-input-field" type="password" tabindex="2" placeholder="Password" name="password" lrx-form-interaction lrx-form-validation lrx-form-validation-redact-input ng-required="true" ng-model="login.password" ng-keypress="enterLogin($event)">
                         <p id="login-password-input-validation" class="lrx-control-label input-validation lrx-text-danger" ng-bind="((loginForm.password.$dirty || badSubmit) && loginForm.password.$invalid || loginForm.password.showValidation) ? loginForm.password.$validationMessage : ''"></p>
                     </div>
-                    <button id="login-button" type="button" ng-disabled="isSubmitting || isTwoStepSectionShown" lrx-form-interaction name="loginSubmit" tabindex="3" class="lrx-btn-primary-md" data-login-api-url="https://api.lunarix.com/login/v1" data-two-step-code-request-url="https://api.lunarix.com/twostepverification/request-unauthenticated" ng-click="submitLogin($event)">Log In</button>
+                    <button id="login-button" type="button" ng-disabled="isSubmitting || isTwoStepSectionShown" lrx-form-interaction name="loginSubmit" tabindex="3" class="lrx-btn-primary-md" data-login-api-url="https://api.neurotic.com/login/v1" data-two-step-code-request-url="https://api.neurotic.com/twostepverification/request-unauthenticated" ng-click="submitLogin($event)">Log In</button>
                     <button id="switch-to-signup" type="button" tabindex="4" class="lrx-btn-secondary-md" lrx-show-section section-type="0">Sign Up</button>
                     <div id="general-login-error-text" class="input-validation-large lrx-alert-warning lrx-font-bold" ng-show="$generalError" ng-bind="$generalErrorText"></div>
                 </div>
@@ -1623,8 +1623,8 @@ $(function () {
     </iframe><br /><textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea><input name="recaptcha_response_field" value="manual_challenge" type="hidden" />
 </noscript>
         <button id="CaptchaSubmitButton" class="lrx-btn-primary-md"
-                data-signup-captcha-api-url="https://api.lunarix.com/captcha/validate/signup"
-                data-log-in-captcha-api-url="https://api.lunarix.com/captcha/validate/login"
+                data-signup-captcha-api-url="https://api.neurotic.com/captcha/validate/signup"
+                data-log-in-captcha-api-url="https://api.neurotic.com/captcha/validate/login"
                 ng-click="submitCaptcha($event)"
                 ng-disabled="isSubmitting"
                 lrx-form-interaction name="captchaSubmit">

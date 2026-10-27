@@ -3,7 +3,7 @@ namespace App\Helpers;
 
 class XMLBuilder
 {
-    private const XSI_SCHEMA_LOCATION = 'http://www.lunarix.le/roblox.xsd';
+    private const XSI_SCHEMA_LOCATION = 'http://www.neurotic.le/roblox.xsd';
     private static function assetHost(): string
     {
         return 'http://' . config('app.base_url_nohttp') . '/asset';

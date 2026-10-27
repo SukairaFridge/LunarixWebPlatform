@@ -22,7 +22,7 @@ class AssetRenderQueue
 
     public function queue(Asset $asset, bool $force = false, bool $square = false): bool
     {
-        if (config('app.lunarix_renders_disabled', false) || ! $this->supports($asset)) {
+        if (config('app.neurotic_renders_disabled', false) || ! $this->supports($asset)) {
             return false;
         }
         $lockKey = "render_pending:asset:{$asset->id}".($square ? ':square' : '');

@@ -73,7 +73,7 @@
                                         <form id="stop-{{ md5($server->job_id) }}" method="POST" action="{{ route('admin.game-servers.stop', $server) }}">@csrf</form>
                                         <button type="button" class="btn btn-sm btn-danger" data-confirm-form="stop-{{ md5($server->job_id) }}" data-confirm-title="Stop this server?" data-confirm-body="RCC will stop the process and its server/player records will be removed.">Stop</button>
                                         <form id="forget-{{ md5($server->job_id) }}" method="POST" action="{{ route('admin.game-servers.forget', $server) }}">@csrf @method('DELETE')</form>
-                                        <button type="button" class="btn btn-sm btn-outline-warning" data-confirm-form="forget-{{ md5($server->job_id) }}" data-confirm-title="Forget stale record?" data-confirm-body="This only deletes Lunarix database records. It does not contact or stop RCC.">Forget</button>
+                                        <button type="button" class="btn btn-sm btn-outline-warning" data-confirm-form="forget-{{ md5($server->job_id) }}" data-confirm-title="Forget stale record?" data-confirm-body="This only deletes Neurotic database records. It does not contact or stop RCC.">Forget</button>
                                     </div>
                                 </td>
                             </tr>

@@ -19,26 +19,26 @@
             </div>
                 <div class="form-row submit-buttons">
                             <a id="upload-button" class="btn-medium btn-primary btn-level-element " tabindex="4">Upload</a>
-                                    <span id="loading-container"><img src="https://cdn.lunarix.pw/ec4e85b0c4396cf753a06fade0a8d8af.gif"></span>
+                                    <span id="loading-container"><img src="https://cdn.neurotic.pw/ec4e85b0c4396cf753a06fade0a8d8af.gif"></span>
                 <div id="upload-result" class="status-confirm btn-level-element">
-                    <a href="https://web.lunarix.com/catalog/1161477602/haaa" target="_top">T-Shirt</a> successfully created!
+                    <a href="https://web.neurotic.com/catalog/1161477602/haaa" target="_top">T-Shirt</a> successfully created!
                 </div>
                     <script type="text/javascript">
 
-                        window.parent.$('.items-container').load('https://web.lunarix.com/build/assets?assetTypeId=2');
+                        window.parent.$('.items-container').load('https://web.neurotic.com/build/assets?assetTypeId=2');
                     </script>
         </div>
     </div>
 </form>
 <script type="text/javascript">
-    if (typeof Lunarix === "undefined") {
-        Lunarix = {};
+    if (typeof Neurotic === "undefined") {
+        Neurotic = {};
     }
-    if (typeof Lunarix.EmbeddedUpload === 'undefined') {
-        Lunarix.EmbeddedUpload = {};
+    if (typeof Neurotic.EmbeddedUpload === 'undefined') {
+        Neurotic.EmbeddedUpload = {};
     }
 
-    Lunarix.EmbeddedUpload.Resources = {
+    Neurotic.EmbeddedUpload.Resources = {
         //<sl:translate>
         invalidImageFile: 'Must be a .png, .jpg, .tga,  or .bmp file',
         invalidSoundFile: 'Must be a .mp3 or .ogg file',
@@ -52,7 +52,7 @@
     };
 
     // Only disabled upload button for Badge and GamePass
-    Lunarix.EmbeddedUpload.isInsufficientFunds = false;
-    Lunarix.EmbeddedUpload.isPlaceSpecificAsset = false;
+    Neurotic.EmbeddedUpload.isInsufficientFunds = false;
+    Neurotic.EmbeddedUpload.isPlaceSpecificAsset = false;
 </script>
-<script type='text/javascript' src='https://js.lunarix.pw/83130c78c1b36f01e9c6ae1afb856f7d.js.gzip'></script>
+<script type='text/javascript' src='https://js.neurotic.pw/83130c78c1b36f01e9c6ae1afb856f7d.js.gzip'></script>

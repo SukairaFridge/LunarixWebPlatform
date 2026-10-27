@@ -7,7 +7,7 @@
     <main class="admin-content">
         <div class="admin-page-header">
             <h1>Create Asset</h1>
-            <p>Publish a asset to the lunarix catalog.</p>
+            <p>Publish a asset to the neurotic catalog.</p>
         </div>
 
         @if(session('success'))<div class="alert alert-success">{{ session('success') }}</div>@endif

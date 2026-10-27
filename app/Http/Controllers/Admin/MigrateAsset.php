@@ -158,7 +158,7 @@ class MigrateAsset
             } else {
                 continue;
             }
-            $newUrl = rtrim(config('app.roblox_asset_base_url', 'https://lunarix.lol/asset'), '/').'?id='.$newAsset->id;
+            $newUrl = rtrim(config('app.roblox_asset_base_url', 'https://neurosama.lol/asset'), '/').'?id='.$newAsset->id;
             $xml = str_replace($ref['url'], $newUrl, $xml);
         }
         return $xml;

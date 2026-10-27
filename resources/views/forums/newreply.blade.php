@@ -15,7 +15,7 @@
         <div class="alert-container">
         </div>
     <div id="AdvertisingLeaderboard">
-<iframe name="Lunarix_Forums_Middle_728x90"
+<iframe name="Neurotic_Forums_Middle_728x90"
         allowtransparency="true"
         frameborder="0"
         height="110"
@@ -23,7 +23,7 @@
         src="/userads/1"
         width="728"
         data-js-adtype="iframead"
-        data-ad-slot="Lunarix_Forums_Middle_728x90"></iframe>
+        data-ad-slot="Neurotic_Forums_Middle_728x90"></iframe>
     </div>
         <div id="BodyWrapper">
             <div id="RepositionBody">
@@ -34,36 +34,36 @@
             <td>&nbsp;&nbsp;&nbsp;</td>
 
             <!-- center column -->
-            <td id="ctl00_cphLunarix_CenterColumn" width="95%" class="CenterColumn">
+            <td id="ctl00_cphNeurotic_CenterColumn" width="95%" class="CenterColumn">
                 <br>
-                <span id="ctl00_cphLunarix_PostView1">
+                <span id="ctl00_cphNeurotic_PostView1">
 
 <table cellPadding="0" width="100%">
   <tr>
     <td align="left">
-        <span id="ctl00_cphLunarix_PostView1_ctl00_Whereami1" NAME="Whereami1">
+        <span id="ctl00_cphNeurotic_PostView1_ctl00_Whereami1" NAME="Whereami1">
 <div>
     <nobr>
-        <a id="ctl00_cphLunarix_PostView1_ctl00_Whereami1_ctl00_LinkHome" class="linkMenuSink notranslate" href="/Forum/Default.aspx">Lunarix Forum</a>
+        <a id="ctl00_cphNeurotic_PostView1_ctl00_Whereami1_ctl00_LinkHome" class="linkMenuSink notranslate" href="/Forum/Default.aspx">Neurotic Forum</a>
     </nobr>
     <nobr>
-        <span id="ctl00_cphLunarix_PostView1_ctl00_Whereami1_ctl00_ForumGroupSeparator" class="normalTextSmallBold"> » </span>
-        <a id="ctl00_cphLunarix_PostView1_ctl00_Whereami1_ctl00_LinkForumGroup" class="linkMenuSink notranslate" href="/Forum/ShowForumGroup.aspx?ForumGroupID={{ $thread->forum->group->id }}">{{ $thread->forum->group->name }}</a>
+        <span id="ctl00_cphNeurotic_PostView1_ctl00_Whereami1_ctl00_ForumGroupSeparator" class="normalTextSmallBold"> » </span>
+        <a id="ctl00_cphNeurotic_PostView1_ctl00_Whereami1_ctl00_LinkForumGroup" class="linkMenuSink notranslate" href="/Forum/ShowForumGroup.aspx?ForumGroupID={{ $thread->forum->group->id }}">{{ $thread->forum->group->name }}</a>
     </nobr>
     <nobr>
-        <span id="ctl00_cphLunarix_PostView1_ctl00_Whereami1_ctl00_ForumSeparator" class="normalTextSmallBold"> » </span>
-        <a id="ctl00_cphLunarix_PostView1_ctl00_Whereami1_ctl00_LinkForum" class="linkMenuSink notranslate" href="/Forum/ShowForum.aspx?ForumID={{ $thread->forum_id }}">{{ $thread->forum->name ?? '' }}</a>
+        <span id="ctl00_cphNeurotic_PostView1_ctl00_Whereami1_ctl00_ForumSeparator" class="normalTextSmallBold"> » </span>
+        <a id="ctl00_cphNeurotic_PostView1_ctl00_Whereami1_ctl00_LinkForum" class="linkMenuSink notranslate" href="/Forum/ShowForum.aspx?ForumID={{ $thread->forum_id }}">{{ $thread->forum->name ?? '' }}</a>
     </nobr>
 </div></span>
     </td>
     <td align="right">
-        <span id="ctl00_cphLunarix_PostView1_ctl00_Navigationmenu1">
+        <span id="ctl00_cphNeurotic_PostView1_ctl00_Navigationmenu1">
 
 <div id="forum-nav" style="text-align: right">
-	<a id="ctl00_cphLunarix_PostView1_ctl00_Navigationmenu1_ctl00_HomeMenu" class="menuTextLink first" href="/Forum/Default.aspx">Home</a>
-	<a id="ctl00_cphLunarix_PostView1_ctl00_Navigationmenu1_ctl00_SearchMenu" class="menuTextLink" href="/Forum/Search/default.aspx">Search</a>
+	<a id="ctl00_cphNeurotic_PostView1_ctl00_Navigationmenu1_ctl00_HomeMenu" class="menuTextLink first" href="/Forum/Default.aspx">Home</a>
+	<a id="ctl00_cphNeurotic_PostView1_ctl00_Navigationmenu1_ctl00_SearchMenu" class="menuTextLink" href="/Forum/Search/default.aspx">Search</a>
 	@auth
-	<a id="ctl00_cphLunarix_NavigationMenu2_ctl00_MyForumsMenu" class="menuTextLink" href="/Forum/User/MyForums.aspx">MyForums</a>
+	<a id="ctl00_cphNeurotic_NavigationMenu2_ctl00_MyForumsMenu" class="menuTextLink" href="/Forum/User/MyForums.aspx">MyForums</a>
 	@endauth
 </div>
 </span>
@@ -74,19 +74,19 @@
   </tr>
   <tr>
     <td align="left" colSpan="2">
-        <h2 id="ctl00_cphLunarix_PostView1_ctl00_PostTitle" CssClass="notranslate" style="margin-bottom:20px">Reply to Post</h2>
+        <h2 id="ctl00_cphNeurotic_PostView1_ctl00_PostTitle" CssClass="notranslate" style="margin-bottom:20px">Reply to Post</h2>
     </td>
   </tr>
 	<tr>
 		<td class="forumHeaderBackgroundAlternate" colspan="2" style="height:20px;"><table class="forum-table-header" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
 			<tr>
-				<td class="tableHeaderText" align="right"><label id="ctl00_cphLunarix_PostView1_ctl00_PostList_ctl00_PreviousThread" class="center">Original Post</label>&nbsp;</td>
+				<td class="tableHeaderText" align="right"><label id="ctl00_cphNeurotic_PostView1_ctl00_PostList_ctl00_PreviousThread" class="center">Original Post</label>&nbsp;</td>
 			</tr>
 		</table></td>
 	</tr>
   <tr>
     <td colSpan="2">
-        <table id="ctl00_cphLunarix_PostView1_ctl00_OriginalPost" class="tableBorder" cellspacing="1" cellpadding="0" border="0" style="width:100%;">
+        <table id="ctl00_cphNeurotic_PostView1_ctl00_OriginalPost" class="tableBorder" cellspacing="1" cellpadding="0" border="0" style="width:100%;">
         @php
             $opAuthor = $thread->firstPost->author ?? null;
         @endphp
@@ -109,7 +109,7 @@
 	<tr>
 		<td class="forumHeaderBackgroundAlternate" colspan="2" style="height:20px;"><table class="forum-table-header" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
 			<tr>
-				<td class="tableHeaderText" align="right"><label id="ctl00_cphLunarix_PostView1_ctl00_PostList_ctl00_PreviousThread" class="center">New Post</label>&nbsp;</td>
+				<td class="tableHeaderText" align="right"><label id="ctl00_cphNeurotic_PostView1_ctl00_PostList_ctl00_PreviousThread" class="center">New Post</label>&nbsp;</td>
 			</tr>
 		</table></td>
 	</tr>
@@ -135,18 +135,18 @@
   </tr>
   <tr>
     <td align="left" colSpan="2">
-        <span id="ctl00_cphLunarix_PostView1_ctl00_Whereami2" NAME="Whereami2">
+        <span id="ctl00_cphNeurotic_PostView1_ctl00_Whereami2" NAME="Whereami2">
 <div>
     <nobr>
-        <a id="ctl00_cphLunarix_PostView1_ctl00_Whereami2_ctl00_LinkHome" class="linkMenuSink notranslate" href="/Forum/Default.aspx">Lunarix Forum</a>
+        <a id="ctl00_cphNeurotic_PostView1_ctl00_Whereami2_ctl00_LinkHome" class="linkMenuSink notranslate" href="/Forum/Default.aspx">Neurotic Forum</a>
     </nobr>
     <nobr>
-        <span id="ctl00_cphLunarix_PostView1_ctl00_Whereami2_ctl00_ForumGroupSeparator" class="normalTextSmallBold"> » </span>
-        <a id="ctl00_cphLunarix_PostView1_ctl00_Whereami2_ctl00_LinkForumGroup" class="linkMenuSink notranslate" href="/Forum/ShowForumGroup.aspx?ForumGroupID={{ $thread->forum->group->id }}">{{ $thread->forum->group->name }}</a>
+        <span id="ctl00_cphNeurotic_PostView1_ctl00_Whereami2_ctl00_ForumGroupSeparator" class="normalTextSmallBold"> » </span>
+        <a id="ctl00_cphNeurotic_PostView1_ctl00_Whereami2_ctl00_LinkForumGroup" class="linkMenuSink notranslate" href="/Forum/ShowForumGroup.aspx?ForumGroupID={{ $thread->forum->group->id }}">{{ $thread->forum->group->name }}</a>
     </nobr>
     <nobr>
-        <span id="ctl00_cphLunarix_PostView1_ctl00_Whereami2_ctl00_ForumSeparator" class="normalTextSmallBold"> » </span>
-        <a id="ctl00_cphLunarix_PostView1_ctl00_Whereami2_ctl00_LinkForum" class="linkMenuSink notranslate" href="/Forum/ShowForum.aspx?ForumID={{ $thread->forum_id }}">{{ $thread->forum->name ?? '' }}</a>
+        <span id="ctl00_cphNeurotic_PostView1_ctl00_Whereami2_ctl00_ForumSeparator" class="normalTextSmallBold"> » </span>
+        <a id="ctl00_cphNeurotic_PostView1_ctl00_Whereami2_ctl00_LinkForum" class="linkMenuSink notranslate" href="/Forum/ShowForum.aspx?ForumID={{ $thread->forum_id }}">{{ $thread->forum->name ?? '' }}</a>
     </nobr>
 </div></span>
     </td>
@@ -162,7 +162,7 @@
             <td Width="160px" style="padding-top:88px;">
                 
 
-<iframe name="Lunarix_Forums_Right_160x600" 
+<iframe name="Neurotic_Forums_Right_160x600" 
         allowtransparency="true"
         frameborder="0"
         height="612"
@@ -170,7 +170,7 @@
         src="/userads/2"
         width="160"
         data-js-adtype="iframead"
-        data-ad-slot="Lunarix_Forums_Right_160x600"></iframe>
+        data-ad-slot="Neurotic_Forums_Right_160x600"></iframe>
 
             </td>
             <td class="RightColumn">&nbsp;&nbsp;&nbsp;</td>

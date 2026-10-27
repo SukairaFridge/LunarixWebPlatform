@@ -64,7 +64,7 @@ class SocialControls extends Controller
         $notificationsEnabled = UserPrivacy::where('user_id', $targetUserID)->value('discord_notifications') ?? true;
         if ($target?->discord_id && $notificationsEnabled) {
             try {
-                $discord->sendDm((string) $target->discord_id, $user->username.' sent you a friend request on Lunarix. '.url('/users/'.$user->id.'/profile'));
+                $discord->sendDm((string) $target->discord_id, $user->username.' sent you a friend request on Neurotic. '.url('/users/'.$user->id.'/profile'));
             } catch (\Throwable $e) {
                 report($e);
             }
@@ -135,7 +135,7 @@ class SocialControls extends Controller
             $notificationsEnabled = UserPrivacy::where('user_id', $recipientUserId)->value('discord_notifications') ?? true;
             if ($recipient->discord_id && $notificationsEnabled) {
                 try {
-                    $discord->sendDm((string) $recipient->discord_id, $user->username.' sent you a friend request on Lunarix. '.url('/users/'.$user->id.'/profile'));
+                    $discord->sendDm((string) $recipient->discord_id, $user->username.' sent you a friend request on Neurotic. '.url('/users/'.$user->id.'/profile'));
                 } catch (\Throwable $e) {
                     report($e);
                 }

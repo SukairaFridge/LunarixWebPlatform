@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=page___3297996122eaf8389c3412b669a3c56c_m.css">
 @endpush
 @push('js')
-<script type="text/javascript" src="https://js.lunarix.lol/7a712e30d49c02cdb47a510e4d8fb595.js.gzip"></script>
+<script type="text/javascript" src="https://js.neurosama.lol/7a712e30d49c02cdb47a510e4d8fb595.js.gzip"></script>
 @endpush
 @section('content')
 @include('layout.header')
@@ -31,14 +31,14 @@
         @else
             <h2 style="text-align: center;">Account Deleted</h2>
         @endif
-        <p>Our content monitors have determined that your behavior at Lunarix has been in violation of our Terms of Service.
+        <p>Our content monitors have determined that your behavior at Neurotic has been in violation of our Terms of Service.
         
         We will terminate your account if you do not abide by the rules.</p>
         
         <p>Reviewed: <span style="font-weight: bold">{{ \Carbon\Carbon::parse($punishment->created_at)->format('M j, Y g:i A T') }}</span></p>
-        <div id="ctl00_cphLunarix_ModeratorNotePanel">
+        <div id="ctl00_cphNeurotic_ModeratorNotePanel">
 	    @if($punishment?->mod_note)
-            <p>Moderator Note: <span style="font-weight: bold"><span id="ctl00_cphLunarix_Label4" mode="Encode">{{ $punishment->mod_note }}</span></span></p>
+            <p>Moderator Note: <span style="font-weight: bold"><span id="ctl00_cphNeurotic_Label4" mode="Encode">{{ $punishment->mod_note }}</span></span></p>
             @endif
         
 </div>
@@ -62,7 +62,7 @@
 
         <p></p>
         
-        <p>Please abide by the <a href="/info/terms-of-service">Lunarix Terms of Service</a> so that Lunarix can be fun for all users.</p>
+        <p>Please abide by the <a href="/info/terms-of-service">Neurotic Terms of Service</a> so that Neurotic can be fun for all users.</p>
         
         
         
@@ -71,9 +71,9 @@
         
         
         
-        <div id="ctl00_cphLunarix_PanelReopen">
+        <div id="ctl00_cphNeurotic_PanelReopen">
                 @if($canReactivate)
-                <p>You may re-activate your account by agreeing to our <a id="ctl00_cphLunarix_HyperLinkToS" href="/info/terms-of-service" target="_blank" style="text-decoration:underline;">Terms of Service</a>.</p>
+                <p>You may re-activate your account by agreeing to our <a id="ctl00_cphNeurotic_HyperLinkToS" href="/info/terms-of-service" target="_blank" style="text-decoration:underline;">Terms of Service</a>.</p>
                 @endif
                 @if((int) $currentUser->status === 4 && $punishment?->expiry && now()->lt(\Carbon\Carbon::parse($punishment->expiry)))
                 <p>Your account has been disabled for {{ $banDays }} {{ Str::plural('day', $banDays) }}. You may re-activate it after {{ \Carbon\Carbon::parse($punishment->expiry)->format('M j, Y g:i A T') }}.</p>
@@ -86,7 +86,7 @@
             @csrf
             <p style="text-align: center;"><input type="checkbox" id="AgreeCheckBox" onclick="EnableButton()">I Agree</p>
             <p style="text-align: center;">
-                <input type="submit" name="ctl00$cphLunarix$ButtonAgree" value="Reactivate My Account" id="ctl00_cphLunarix_ButtonAgree" disabled="disabled" class="translate">
+                <input type="submit" name="ctl00$cphNeurotic$ButtonAgree" value="Reactivate My Account" id="ctl00_cphNeurotic_ButtonAgree" disabled="disabled" class="translate">
             </p>
             </form>
             @endif
@@ -94,17 +94,17 @@
 </div>
         <form method="GET" action="/authentication/logout">
         <p style="text-align: center;">
-            <input type="submit" name="ctl00$cphLunarix$LogoutButton" value="Logout" id="ctl00_cphLunarix_LogoutButton" class="translate">
+            <input type="submit" name="ctl00$cphNeurotic$LogoutButton" value="Logout" id="ctl00_cphNeurotic_LogoutButton" class="translate">
         </p>
         </form>
 
         <script type="text/javascript">
             function EnableButton() {
                 if (document.getElementById('AgreeCheckBox').checked) {
-                    document.getElementById('ctl00_cphLunarix_ButtonAgree').disabled = false;
+                    document.getElementById('ctl00_cphNeurotic_ButtonAgree').disabled = false;
                 }
                 else {
-                    document.getElementById('ctl00_cphLunarix_ButtonAgree').disabled = true;
+                    document.getElementById('ctl00_cphNeurotic_ButtonAgree').disabled = true;
                 }
             }
         </script>

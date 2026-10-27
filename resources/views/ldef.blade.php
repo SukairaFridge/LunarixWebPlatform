@@ -11,7 +11,7 @@
 
     $error = match ($code) {
         403 => [
-            'image' => 'https://cdn.lunarix.lol/05636e8bda24cdc11428e091e386605c.png',
+            'image' => 'https://cdn.neurosama.lol/05636e8bda24cdc11428e091e386605c.png',
             'title' => 'Access Denied',
             'message' => "Sorry, you don't have permission to view this page!",
             'support' => 'If you continue to receive this page, please contact the developers.',
@@ -23,7 +23,7 @@
             'support' => '',
         ],
         default => [
-            'image' => 'https://cdn.lunarix.lol/b47ba5565699c01cb4521af3f339b36b.png',
+            'image' => 'https://cdn.neurosama.lol/b47ba5565699c01cb4521af3f339b36b.png',
             'title' => 'Unexpected error with your request',
             'message' => 'Please try again after a few moments.',
             'support' => 'If you continue to receive this page, please contact the developers.',
@@ -60,12 +60,12 @@
                 var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
 
                 if (daysSinceFirstVisit === 1 && typeof cookie.odr === 'undefined') {
-                    LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                    NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                     cookie.odr = 1;
                 }
 
                 if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === 'undefined') {
-                    LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                    NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                     cookie.sdr = 1;
                 }
 
@@ -76,15 +76,15 @@
                 GoogleListener.init();
             }
 
-            LunarixEventManager.initialize(true);
-            LunarixEventManager.triggerEvent('lrx_evt_pageview');
+            NeuroticEventManager.initialize(true);
+            NeuroticEventManager.triggerEvent('lrx_evt_pageview');
             trackReturns();
-            LunarixEventManager._idleInterval = 450000;
-            LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-            LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-            LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-            LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-            LunarixEventManager.startMonitor();
+            NeuroticEventManager._idleInterval = 450000;
+            NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+            NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+            NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+            NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+            NeuroticEventManager.startMonitor();
         });
     </script>
 @endpush
@@ -113,19 +113,19 @@
                 <div id="ErrorPage">
                     <img
                         src="{{ $error['image'] }}"
-                        id="ctl00_cphLunarix_ErrorImage"
+                        id="ctl00_cphNeurotic_ErrorImage"
                         alt="Alert"
                         class="ErrorAlert"
                     >
 
-                    <h1><span id="ctl00_cphLunarix_ErrorTitle">{{ $error['title'] }}</span></h1>
-                    <h3><span id="ctl00_cphLunarix_ErrorMessage">{{ $error['message'] }}</span></h3>
+                    <h1><span id="ctl00_cphNeurotic_ErrorTitle">{{ $error['title'] }}</span></h1>
+                    <h3><span id="ctl00_cphNeurotic_ErrorMessage">{{ $error['message'] }}</span></h3>
 
                     @if($error['support'] !== '')
-                        <p><span id="ctl00_cphLunarix_CustomerServiceMessage">{{ $error['support'] }}</span></p>
+                        <p><span id="ctl00_cphNeurotic_CustomerServiceMessage">{{ $error['support'] }}</span></p>
                     @endif
 
-                    <pre style="text-align: left; margin-left: 10px;"><span id="ctl00_cphLunarix_errorMsgLbl"></span></pre>
+                    <pre style="text-align: left; margin-left: 10px;"><span id="ctl00_cphNeurotic_errorMsgLbl"></span></pre>
                     <div class="divideTitleAndBackButtons">&nbsp;</div>
 
                     @if($ref)

@@ -19,9 +19,9 @@
                                 <div id="loginPanel">
                                     <p class="text">
                                         @if($action === 'link')
-                                            Approve linking this Discord account to Lunarix account <strong>{{ $user->username }} ({{ $user->id }})</strong>?
+                                            Approve linking this Discord account to Neurotic account <strong>{{ $user->username }} ({{ $user->id }})</strong>?
                                         @else
-                                            Approve unlinking Discord from Lunarix account <strong>{{ $user->username }} ({{ $user->id }})</strong>?
+                                            Approve unlinking Discord from Neurotic account <strong>{{ $user->username }} ({{ $user->id }})</strong>?
                                         @endif
                                     </p>
                                     <p class="footnote">This link expires after 30 minutes.</p>

@@ -8,7 +8,7 @@ class UserAds
 {
     private const HOUSE_ADS = [
         [
-            'title' => 'Get Lunarix Bloxxers Club today!',
+            'title' => 'Get Neurotic Bloxxers Club today!',
             'href'  => '/Upgrades/BloxxersClubMemberships.aspx',
             'images' => [1 => '/img/house-ads/membership_728x90.png', 2 => '/img/house-ads/membership_160x600.png', 3 => '/img/house-ads/membership_300x250.png'],
         ]

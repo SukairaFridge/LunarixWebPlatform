@@ -42,11 +42,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -60,18 +60,18 @@
 
 
     
-        LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+        NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -80,7 +80,7 @@
 
 
 
-        <script type="text/javascript">Lunarix.FixedUI.gutterAdsEnabled=false;</script>
+        <script type="text/javascript">Neurotic.FixedUI.gutterAdsEnabled=false;</script>
 
         
 
@@ -101,7 +101,7 @@
 <div id="AdvertisingLeaderboard" >
     
 
-<iframe name="Lunarix_Forums_Middle_728x90" 
+<iframe name="Neurotic_Forums_Middle_728x90" 
         allowtransparency="true"
         frameborder="0"
         height="110"
@@ -109,7 +109,7 @@
         src="/userads/1"
         width="728"
         data-js-adtype="iframead"
-        data-ad-slot="Lunarix_Forums_Middle_728x90"></iframe>
+        data-ad-slot="Neurotic_Forums_Middle_728x90"></iframe>
 
 </div>
 
@@ -126,29 +126,29 @@
 			<td class="LeftColumn">&nbsp;&nbsp;&nbsp;</td>
 
 			<!-- center column -->
-			<td id="ctl00_cphLunarix_CenterColumn" class="CenterColumn">
+			<td id="ctl00_cphNeurotic_CenterColumn" class="CenterColumn">
 				<br>
-				<span id="ctl00_cphLunarix_ThreadView1">
+				<span id="ctl00_cphNeurotic_ThreadView1">
 
 <table cellPadding="0" width="100%">
 	<tr>
-		<td align="left"><span id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami1" NAME="Whereami1">
+		<td align="left"><span id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami1" NAME="Whereami1">
 <div>
     <nobr>
-        <a id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami1_ctl00_LinkHome" class="linkMenuSink notranslate" href="/Forum/Default.aspx">Lunarix Forum</a>
+        <a id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami1_ctl00_LinkHome" class="linkMenuSink notranslate" href="/Forum/Default.aspx">Neurotic Forum</a>
     </nobr>
 </div></span></td>
-        <td align="right"><span id="ctl00_cphLunarix_ThreadView1_ctl00_Navigationmenu1">
+        <td align="right"><span id="ctl00_cphNeurotic_ThreadView1_ctl00_Navigationmenu1">
 
 <div id="forum-nav" style="text-align: right">
-	<a id="ctl00_cphLunarix_ThreadView1_ctl00_Navigationmenu1_ctl00_HomeMenu" class="menuTextLink first" href="/Forum/Default.aspx">Home</a>
-	<a id="ctl00_cphLunarix_ThreadView1_ctl00_Navigationmenu1_ctl00_SearchMenu" class="menuTextLink" href="/Forum/Search/default.aspx">Search</a>
+	<a id="ctl00_cphNeurotic_ThreadView1_ctl00_Navigationmenu1_ctl00_HomeMenu" class="menuTextLink first" href="/Forum/Default.aspx">Home</a>
+	<a id="ctl00_cphNeurotic_ThreadView1_ctl00_Navigationmenu1_ctl00_SearchMenu" class="menuTextLink" href="/Forum/Search/default.aspx">Search</a>
 	
 	
 	
 	
 	@auth
-	<a id="ctl00_cphLunarix_NavigationMenu2_ctl00_MyForumsMenu" class="menuTextLink" href="/Forum/User/MyForums.aspx">MyForums</a>
+	<a id="ctl00_cphNeurotic_NavigationMenu2_ctl00_MyForumsMenu" class="menuTextLink" href="/Forum/User/MyForums.aspx">MyForums</a>
 	@endauth
 	
 	
@@ -166,7 +166,7 @@
 		    <div style="height:7px"></div>
                     &nbsp;
                     @auth
-		    <table id="ctl00_cphLunarix_ThreadView1_ctl00_ThreadList" class="tableBorder" cellspacing="1" cellpadding="3" border="0" style="width:100%;">
+		    <table id="ctl00_cphNeurotic_ThreadView1_ctl00_ThreadList" class="tableBorder" cellspacing="1" cellpadding="3" border="0" style="width:100%;">
     <tr class="forum-table-header">
         <th align="left" colspan="3" style="height:25px;">&nbsp;Subject&nbsp;</th>
         <th align="left" style="white-space:nowrap;">&nbsp;Author&nbsp;</th>
@@ -253,7 +253,7 @@
             <td Width="160px" style="padding-top:88px;">
                 
 
-<iframe name="Lunarix_Forums_Right_160x600" 
+<iframe name="Neurotic_Forums_Right_160x600" 
         allowtransparency="true"
         frameborder="0"
         height="612"
@@ -261,7 +261,7 @@
         src="/userads/2"
         width="160"
         data-js-adtype="iframead"
-        data-ad-slot="Lunarix_Forums_Right_160x600"></iframe>
+        data-ad-slot="Neurotic_Forums_Right_160x600"></iframe>
 
             </td>
             <td class="RightColumn">&nbsp;&nbsp;&nbsp;</td>

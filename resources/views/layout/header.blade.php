@@ -1,11 +1,11 @@
-<script type='text/javascript' src='https://js.lunarix.lol/9715e76471ffacd5f6d9c24a5ab101ad.js'></script>
+<script type='text/javascript' src='https://js.neurosama.lol/9715e76471ffacd5f6d9c24a5ab101ad.js'></script>
 <div class="nav-container no-gutter-ads">
 <div id="header" class="navbar-fixed-top lrx-header" role="navigation">
     <div class="container-fluid">
         <div class="lrx-navbar-header">
             <div data-behavior="nav-notification" class="lrx-nav-collapse" onselectstart="return false;">
                 @auth
-                <!-- here's the big bs about this, lunarix's nav functionality is HORRID and just breaks sometimes so i added one line of javascript here to fix the issue -->
+                <!-- here's the big bs about this, neurotic's nav functionality is HORRID and just breaks sometimes so i added one line of javascript here to fix the issue -->
                 <span class="lrx-icon-nav-menu" onclick="$('[data-behavior=&quot;left-col&quot;]').toggleClass('nav-show')"></span>
                 @endauth
                 <div class="lrx-nav-notification hide lrx-font-xs" title="0">
@@ -190,7 +190,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://blog.lunarix.lol/" id="nav-blog">
+                    <a href="https://blog.neurosama.lol/" id="nav-blog">
                         <span class="lrx-icon-nav-blog"></span><span>Blog</span>
                     </a>
                 </li>

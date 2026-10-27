@@ -1,22 +1,22 @@
 @verbatim
 <div>
     <div class="messages message-detail">
-        <div class="message-confirm status-confirm lunarix-message-confirm"
+        <div class="message-confirm status-confirm neurotic-message-confirm"
              ng-show="sendMessage.sendComplete == true && sendMessage.sendResult.hasError == false ">
             {{sendMessage.sendResult.details}}
         </div>
-        <div class="message-confirm status-error lunarix-message-confirm"
+        <div class="message-confirm status-error neurotic-message-confirm"
              ng-show="sendMessage.sendComplete == true && sendMessage.sendResult.hasError == true"
              ng-bind-html="sendMessage.sendResult.details">
 
         </div>
         <div class="clearfix">
             <div class="sender">
-                <div class="lunarix-avatar-image message-detail-image lunarix-message-avatar">
+                <div class="neurotic-avatar-image message-detail-image neurotic-message-avatar">
                     <a ng-if="currentStatus.activeTab != 'sent'"
                        ng-href="{{selectedMessage.SenderAbsoluteUrl}}"
                        lrx-avatar
-                       thumbnail="selectedMessage.SenderThumbnail | isEmpty : messageDefaults.lunarixUserThumbnail:selectedMessage.Sender.UserId">
+                       thumbnail="selectedMessage.SenderThumbnail | isEmpty : messageDefaults.neuroticUserThumbnail:selectedMessage.Sender.UserId">
                     </a>
                     <a ng-if="currentStatus.activeTab == 'sent'"
                        ng-href="{{selectedMessage.RecipientAbsoluteUrl}}"
@@ -25,20 +25,20 @@
                     </a>
                 </div>
             </div>
-            <div class="subject lunarix-send-message-subject">
+            <div class="subject neurotic-send-message-subject">
                 <h3>{{selectedMessage.Subject}}</h3>
-                <div class="lunarix-send-message-content">
-                    <p class="lunarix-sender-link" ng-if="currentStatus.activeTab != 'sent'">
+                <div class="neurotic-send-message-content">
+                    <p class="neurotic-sender-link" ng-if="currentStatus.activeTab != 'sent'">
                         <a ng-href="{{selectedMessage.SenderAbsoluteUrl}}">
-                            {{selectedMessage.Sender.UserName | isEmpty : messageDefaults.lunarixUserName:selectedMessage.Sender.UserName}}
+                            {{selectedMessage.Sender.UserName | isEmpty : messageDefaults.neuroticUserName:selectedMessage.Sender.UserName}}
                         </a> wrote at {{selectedMessage.Created}}
                     </p>
-                    <p class="lunarix-sender-link" ng-if="currentStatus.activeTab == 'sent'">
+                    <p class="neurotic-sender-link" ng-if="currentStatus.activeTab == 'sent'">
                         <a ng-href="{{selectedMessage.SenderAbsoluteUrl}}">
                             {{selectedMessage.Sender.UserName}}
                         </a> wrote at {{selectedMessage.Created}}
                     </p>
-                    <a ng-if="selectedMessage.IsReportAbuseDisplayed == true" ng-href="{{selectedMessage.AbuseReportAbsoluteUrl}}" class="abuse-button lunarix-abuse-btn">Report Abuse</a>
+                    <a ng-if="selectedMessage.IsReportAbuseDisplayed == true" ng-href="{{selectedMessage.AbuseReportAbsoluteUrl}}" class="abuse-button neurotic-abuse-btn">Report Abuse</a>
                     
                 </div>
             </div>
@@ -52,11 +52,11 @@
             <textarea rows="2" cols="20" class="messages-reply-box text-box"
                       ng-model="sendMessage.replyContent"
                       ng-disabled="sendMessage.disableSendBtn == true"></textarea>
-            <div class="password-warning">Remember, Lunarix staff will never ask you for your password. People who ask for your password are trying to steal your account.</div>
+            <div class="password-warning">Remember, Neurotic staff will never ask you for your password. People who ask for your password are trying to steal your account.</div>
             <input type="checkbox" id="includePreviousMessage" ng-checked="sendMessage.includePreviousMessage" ng-model="sendMessage.includePreviousMessage">
             <label for="includePreviousMessage">Include Previous Message</label>
-            <div class="lunarix-sendMessage-action">
-                <button class="lunarix-sendMessage"
+            <div class="neurotic-sendMessage-action">
+                <button class="neurotic-sendMessage"
                         ng-click="sendReply()"
                         ng-disabled="sendMessage.disableSendBtn == true || sendMessage.replyContent.length == 0">
                     Send reply

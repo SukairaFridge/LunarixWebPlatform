@@ -14,3 +14,6 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+# USED BY SERV00, REMOVE IF USING ANOTHER HOST
+AddType application/x-httpd-php85 .php

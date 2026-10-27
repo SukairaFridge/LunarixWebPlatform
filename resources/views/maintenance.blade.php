@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="lunarix-pw" lang="en">
+<html id="neurotic-pw" lang="en">
 <head>
     @include('layout.head.embed')
     <title>Site Offline</title>
@@ -12,10 +12,10 @@
     <script>window.jQuery || document.write("<script src='/js/jquery/jquery-migrate-1.2.1.js'><\/script>")</script>
     <script src="//ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>
     <script>window.Sys || document.write("<script src='/js/Microsoft/MicrosoftAjax.js'><\/script>")</script>
-    <script src="http://js.lunarix.lol/7037e3d1c3e072f44eacf9acc3b1b04d.js"></script>
+    <script src="http://js.neurosama.lol/7037e3d1c3e072f44eacf9acc3b1b04d.js"></script>
     <script type="text/javascript">
         $(function () {
-            Lunarix.JSErrorTracker.initialize({ 'suppressConsoleError': true});
+            Neurotic.JSErrorTracker.initialize({ 'suppressConsoleError': true});
         });
     </script>
 	<script type="text/javascript">
@@ -64,14 +64,14 @@
             The site is currently offline for maintenance and upgrades. <br/>Please check back soon!
         </p>
         <div class="cookie-constraint-form">
-            <input name="ctl00$cphLunarix$Textbox1" type="password" id="ctl00_cphLunarix_Textbox1" class="cookie-constraint-input" />
-            <input type="submit" name="ctl00$cphLunarix$Button1" value="L" id="ctl00_cphLunarix_Button1" class="cookie-constraint-btn" />
-            <input type="submit" name="ctl00$cphLunarix$Button2" value="U" id="ctl00_cphLunarix_Button2" class="cookie-constraint-btn" />
-            <input type="submit" name="ctl00$cphLunarix$Button3" value="N" id="ctl00_cphLunarix_Button3" class="cookie-constraint-btn" />
-            <input type="submit" name="ctl00$cphLunarix$Button3" value="A" id="ctl00_cphLunarix_Button3" class="cookie-constraint-btn" />
-            <input type="submit" name="ctl00$cphLunarix$Button4" value="R" id="ctl00_cphLunarix_Button4" class="cookie-constraint-btn" />
-            <input type="submit" name="ctl00$cphLunarix$Button5" value="I" id="ctl00_cphLunarix_Button5" class="cookie-constraint-btn" />
-            <input type="submit" name="ctl00$cphLunarix$Button6" value="X" id="ctl00_cphLunarix_Button6" class="cookie-constraint-btn" />
+            <input name="ctl00$cphNeurotic$Textbox1" type="password" id="ctl00_cphNeurotic_Textbox1" class="cookie-constraint-input" />
+            <input type="submit" name="ctl00$cphNeurotic$Button1" value="L" id="ctl00_cphNeurotic_Button1" class="cookie-constraint-btn" />
+            <input type="submit" name="ctl00$cphNeurotic$Button2" value="U" id="ctl00_cphNeurotic_Button2" class="cookie-constraint-btn" />
+            <input type="submit" name="ctl00$cphNeurotic$Button3" value="N" id="ctl00_cphNeurotic_Button3" class="cookie-constraint-btn" />
+            <input type="submit" name="ctl00$cphNeurotic$Button3" value="A" id="ctl00_cphNeurotic_Button3" class="cookie-constraint-btn" />
+            <input type="submit" name="ctl00$cphNeurotic$Button4" value="R" id="ctl00_cphNeurotic_Button4" class="cookie-constraint-btn" />
+            <input type="submit" name="ctl00$cphNeurotic$Button5" value="I" id="ctl00_cphNeurotic_Button5" class="cookie-constraint-btn" />
+            <input type="submit" name="ctl00$cphNeurotic$Button6" value="X" id="ctl00_cphNeurotic_Button6" class="cookie-constraint-btn" />
         </div>
         <div id="countDown" class="count-down">
             <h1>Down time: </h1>
@@ -91,25 +91,25 @@
     <div class="Title"></div>
     <div class="GenericModalBody">
         <div class="TopBody">
-            <div class="ImageContainer lunarix-item-image"  data-image-size="small" data-no-overlays data-no-click>
+            <div class="ImageContainer neurotic-item-image"  data-image-size="small" data-no-overlays data-no-click>
                 <img class="GenericModalImage" alt="generic image" />
             </div>
             <div class="Message"></div>
         </div>
         <div class="ConfirmationModalButtonContainer">
-            <a href id="lunarix-confirm-btn"><span></span></a>
-            <a href id="lunarix-decline-btn"><span></span></a>
+            <a href id="neurotic-confirm-btn"><span></span></a>
+            <a href id="neurotic-decline-btn"><span></span></a>
         </div>
         <div class="ConfirmationModalFooter">
         
         </div>  
     </div>   
     <script type="text/javascript">
-        Lunarix = Lunarix || {};
-        Lunarix.Resources = Lunarix.Resources || {};
+        Neurotic = Neurotic || {};
+        Neurotic.Resources = Neurotic.Resources || {};
 
         //<sl:translate>
-        Lunarix.Resources.GenericConfirmation = {
+        Neurotic.Resources.GenericConfirmation = {
             yes: "Yes",
             No: "No",
             Confirm: "Confirm",
@@ -122,10 +122,10 @@
     
 
 <script type="text/javascript">
-    var Lunarix = Lunarix || {};
-    Lunarix.UpsellAdModal = Lunarix.UpsellAdModal || {};
+    var Neurotic = Neurotic || {};
+    Neurotic.UpsellAdModal = Neurotic.UpsellAdModal || {};
 
-    Lunarix.UpsellAdModal.Resources = {
+    Neurotic.UpsellAdModal.Resources = {
         //<sl:translate>
         title: "Remove Ads Like This",
         body: "Bloxxers Club members do not see external ads like these.",
@@ -166,11 +166,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -180,18 +180,18 @@
             }
         }
 
-        LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+        NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -199,6 +199,6 @@
 </script>
 
 </form>
-    <script type='text/javascript' src='http://js.lunarix.lol/a2dbf78ae5c458d941836804f98ec83d.js'></script>
+    <script type='text/javascript' src='http://js.neurosama.lol/a2dbf78ae5c458d941836804f98ec83d.js'></script>
 </body>
 </html>

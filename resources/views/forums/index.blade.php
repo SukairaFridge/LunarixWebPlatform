@@ -42,11 +42,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -60,18 +60,18 @@
 
 
     
-        LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+        NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -80,7 +80,7 @@
 
 
 
-        <script type="text/javascript">Lunarix.FixedUI.gutterAdsEnabled=false;</script>
+        <script type="text/javascript">Neurotic.FixedUI.gutterAdsEnabled=false;</script>
 
         
 
@@ -117,18 +117,18 @@
 			<td class="LeftColumn">&nbsp;&nbsp;&nbsp;</td>
 			
             <!-- center column -->
-			<td id="ctl00_cphLunarix_CenterColumn" width="95%" class="CenterColumn">
+			<td id="ctl00_cphNeurotic_CenterColumn" width="95%" class="CenterColumn">
 				<br>
-            	<span id="ctl00_cphLunarix_NavigationMenu2">
+            	<span id="ctl00_cphNeurotic_NavigationMenu2">
 
 <div id="forum-nav" style="text-align: right">
-	<a id="ctl00_cphLunarix_NavigationMenu2_ctl00_HomeMenu" class="menuTextLink first" href="/Forum/Default.aspx">Home</a>
-	<a id="ctl00_cphLunarix_NavigationMenu2_ctl00_SearchMenu" class="menuTextLink" href="/Forum/Search/default.aspx">Search</a>
+	<a id="ctl00_cphNeurotic_NavigationMenu2_ctl00_HomeMenu" class="menuTextLink first" href="/Forum/Default.aspx">Home</a>
+	<a id="ctl00_cphNeurotic_NavigationMenu2_ctl00_SearchMenu" class="menuTextLink" href="/Forum/Search/default.aspx">Search</a>
 	
 	
 	
 	@auth
-	<a id="ctl00_cphLunarix_NavigationMenu2_ctl00_MyForumsMenu" class="menuTextLink" href="/Forum/User/MyForums.aspx">MyForums</a>
+	<a id="ctl00_cphNeurotic_NavigationMenu2_ctl00_MyForumsMenu" class="menuTextLink" href="/Forum/User/MyForums.aspx">MyForums</a>
 	@endauth
 	
 	
@@ -141,12 +141,12 @@
 							<span class="normalTextSmallBold">Current time: </span><span class="normalTextSmall">Aug 28, 7:11 AM</span>
 						</td>
 						<td align="right">
-						    <span id="ctl00_cphLunarix_SearchRedirect">
+						    <span id="ctl00_cphNeurotic_SearchRedirect">
 
 <span>
-    <span class="normalTextSmallBold">Search Lunarix Forums:</span>
-    <input name="ctl00$cphLunarix$SearchRedirect$ctl00$SearchText" type="text" maxlength="50" id="ctl00_cphLunarix_SearchRedirect_ctl00_SearchText" class="notranslate" size="20" />
-    <input type="submit" name="ctl00$cphLunarix$SearchRedirect$ctl00$SearchButton" value="Go" id="ctl00_cphLunarix_SearchRedirect_ctl00_SearchButton" class="translate btn-control btn-control-medium forum-btn-control-medium" />
+    <span class="normalTextSmallBold">Search Neurotic Forums:</span>
+    <input name="ctl00$cphNeurotic$SearchRedirect$ctl00$SearchText" type="text" maxlength="50" id="ctl00_cphNeurotic_SearchRedirect_ctl00_SearchText" class="notranslate" size="20" />
+    <input type="submit" name="ctl00$cphNeurotic$SearchRedirect$ctl00$SearchButton" value="Go" id="ctl00_cphNeurotic_SearchRedirect_ctl00_SearchButton" class="translate btn-control btn-control-medium forum-btn-control-medium" />
 </span></span>
 							
 						</td>
@@ -155,7 +155,7 @@
                 <div style="height:7px;"></div>
 @foreach ($groups as $group)
 				<table cellpadding="2" cellspacing="1" border="0" width="100%" class="table"><tr class="table-header forum-table-header">
-	<th class="first" colspan="2"><a id="ctl00_cphLunarix_ForumGroupRepeater1_ctl01_GroupTitle" class="forumTitle" href="/Forum/ShowForumGroup.aspx?ForumGroupID={{ $group->id }}">{{ $group->name }}</a></th><th style="width:50px;white-space:nowrap;">&nbsp;&nbsp;Threads&nbsp;&nbsp;</th><th style="width:50px;white-space:nowrap;">&nbsp;&nbsp;Posts&nbsp;&nbsp;</th><th style="width:135px;white-space:nowrap;">&nbsp;Last Post&nbsp;</th>
+	<th class="first" colspan="2"><a id="ctl00_cphNeurotic_ForumGroupRepeater1_ctl01_GroupTitle" class="forumTitle" href="/Forum/ShowForumGroup.aspx?ForumGroupID={{ $group->id }}">{{ $group->name }}</a></th><th style="width:50px;white-space:nowrap;">&nbsp;&nbsp;Threads&nbsp;&nbsp;</th><th style="width:50px;white-space:nowrap;">&nbsp;&nbsp;Posts&nbsp;&nbsp;</th><th style="width:135px;white-space:nowrap;">&nbsp;Last Post&nbsp;</th>
 </tr>
 @foreach ($group->forums as $forum)
 @php($lastPost = $latestPosts->get($forum->id))
@@ -184,7 +184,7 @@
 			<td class="CenterColumn">&nbsp;&nbsp;&nbsp;</td>
 			
             <!-- right column -->
-			<td id="ctl00_cphLunarix_RightColumn" nowrap="nowrap" width="160" class="RightColumn" style="padding-top:88px;">
+			<td id="ctl00_cphNeurotic_RightColumn" nowrap="nowrap" width="160" class="RightColumn" style="padding-top:88px;">
 			    
 
     <iframe allowtransparency="true"

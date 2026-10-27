@@ -22,7 +22,7 @@ class Suspension
         $reasonIds = $punishment ? json_decode($punishment->reasonids ?? '[]', true) : [];
         $reasons = empty($reasonIds) ? collect() : DB::table('user_ban_reasons')->whereIn('id', $reasonIds)->get();
         $canReactivate = (int) $currentUser->status === 3 || ((int) $currentUser->status === 4 && $punishment?->expiry && now()->gte(Carbon::parse($punishment->expiry)));
-        return view('membership.suspended', compact('currentUser', 'punishment', 'reasons', 'canReactivate') + ['title' => 'Account Suspended - Lunarix']);
+        return view('membership.suspended', compact('currentUser', 'punishment', 'reasons', 'canReactivate') + ['title' => 'Account Suspended - Neurotic']);
     }
 
     public function reactivateAccount(Request $request): RedirectResponse

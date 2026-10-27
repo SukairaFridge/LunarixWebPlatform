@@ -14,7 +14,7 @@
             									<p>Find your image: <input name="tshirtItem" accept="png" id="itemImage" type="file"></p>
             									<p>T-Shirt Name: <input style="margin-left: 28px;" id="itemName" type="text" class="inputItemName-0-2-57"></p>
             									<div class="header-together" style="margin-left: 10px;"><a href="#" id="CreateTeeShirt" class="btn-medium btn-primary">Upload</a>
-			    									<div class="status-confirm lunarix-message-confirm" style="display: none;"></div></div>
+			    									<div class="status-confirm neurotic-message-confirm" style="display: none;"></div></div>
         									</div>
     									</div>
 										<div class="items-container">
@@ -70,7 +70,7 @@ $(document).ready(function () {
         $statusConfirm.hide();
         if (!fileInput.files || fileInput.files.length === 0 || itemName === '') {
             if ($statusError.length === 0) {
-                $('<div class="status-error lunarix-message-error">Please select a file and enter a T-Shirt name.</div>')
+                $('<div class="status-error neurotic-message-error">Please select a file and enter a T-Shirt name.</div>')
                     .insertAfter($uploadBtn);
             } else {
                 $statusError.text('Please select a file and enter a T-Shirt name.').show();
@@ -104,7 +104,7 @@ $(document).ready(function () {
                 } else {
                     var errorMsg = (response && response.message) ? response.message : 'An error occurred while creating the T-Shirt.';
                     if ($statusError.length === 0) {
-                        $('<div class="status-error lunarix-message-error">' + errorMsg + '</div>')
+                        $('<div class="status-error neurotic-message-error">' + errorMsg + '</div>')
                             .insertAfter($uploadBtn);
                     } else {
                         $statusError.text(errorMsg).show();
@@ -120,7 +120,7 @@ $(document).ready(function () {
                     errorMsg = xhr.responseJSON.message;
                 }
                 if ($statusError.length === 0) {
-                    $('<div class="status-error lunarix-message-error">' + errorMsg + '</div>')
+                    $('<div class="status-error neurotic-message-error">' + errorMsg + '</div>')
                         .insertAfter($uploadBtn);
                 } else {
                     $statusError.text(errorMsg).show();

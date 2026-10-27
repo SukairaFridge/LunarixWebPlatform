@@ -8,7 +8,7 @@ class Batch
 {
     public function getBatch(Request $request)
     {
-        if (config('app.lunarix_renders_disabled', false)) {
+        if (config('app.neurotic_renders_disabled', false)) {
             return response()->json(["data" => []]);
         }
         $items = $request->json()->all();

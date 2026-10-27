@@ -28,7 +28,7 @@ class StartGame extends Controller
         }
         $ticket = $this->generateAuthTicket(auth()->id());
         $placeLauncherUrl = 'Game/PlaceLauncher.ashx' . '?' . http_build_query(['request' => 'RequestGame', 'placeId' => $placeId]);
-        $launcherArgs = implode('+', ['lunarixmobile://' . $placeLauncherUrl]);
+        $launcherArgs = implode('+', ['neuroticmobile://' . $placeLauncherUrl]);
         return redirect()->away($launcherArgs);
     }
 }

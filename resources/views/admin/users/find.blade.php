@@ -14,7 +14,7 @@
                     <label for="userLookupQuery" class="form-label text-secondary fw-semibold">UserID, Discord ID, or Username</label>
                     <div class="input-group input-group-lg">
                         <span class="input-group-text bg-dark border-secondary text-secondary"><i class="bi bi-search"></i></span>
-                        <input id="userLookupQuery" name="q" value="{{ $query }}" class="form-control bg-dark border-secondary text-light" placeholder="For example: 1, Lunarix, or 735668954214694912" maxlength="50" autofocus>
+                        <input id="userLookupQuery" name="q" value="{{ $query }}" class="form-control bg-dark border-secondary text-light" placeholder="For example: 1, Neurotic, or 735668954214694912" maxlength="50" autofocus>
                     </div>
                 </div>
                 <div class="col-lg-3 d-grid">

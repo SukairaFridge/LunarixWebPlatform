@@ -43,7 +43,7 @@ class AssetRender
         if (! $asset->isPubliclyAvailable()) {
             abort(404);
         }
-        if (config('app.lunarix_renders_disabled', false)) {
+        if (config('app.neurotic_renders_disabled', false)) {
             return $placeholder;
         }
         $isSquarePlace = $asset->type === Asset::TYPE_PLACE && $isSquarePlace;
@@ -53,7 +53,7 @@ class AssetRender
                 return $placeholder;
             }
             $path = ltrim($version->path, '/');
-            return "https://asset.lunarix.lol/{$path}";
+            return "https://asset.neurosama.lol/{$path}";
         }
         if ($asset->type === Asset::TYPE_AUDIO) {
             return '/images/AudioPreview.png';
@@ -67,7 +67,7 @@ class AssetRender
             }
             return $this->resolveAssetRenderUrl($asset->related_to, $isSquarePlace, $request);
         }
-        $cdnBase = rtrim(config('app.cdn_url', 'https://cdn.lunarix.lol'), '/');
+        $cdnBase = rtrim(config('app.cdn_url', 'https://cdn.neurosama.lol'), '/');
         $renderQuery = DB::table('asset_renders')->where('asset_id', $assetId);
         $renderQuery = $isSquarePlace ? $renderQuery->where('render_type', 'place_square') : $renderQuery->where('render_type', '!=', 'place_square');
         $render = $renderQuery->orderByDesc('created_at')->first();

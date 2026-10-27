@@ -7,7 +7,7 @@
     <title>Style Guide</title>
     <script type="text/javascript" src="/js/jquery/jquery-1.7.2.min.js"></script> 
     <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=styleguide" > 
-    <script type="text/javascript" src="/js/lunarix.js"></script>
+    <script type="text/javascript" src="/js/neurotic.js"></script>
     <style type="text/css">
         /* TODO: This should be extracted into an external file */
         body {
@@ -60,7 +60,7 @@
             position: absolute;
             width: 250px;
         }
-        .lunarix-reference-block { /* Empty rule to mute Resharper warnings */ }
+        .neurotic-reference-block { /* Empty rule to mute Resharper warnings */ }
         .doc-section {
             border:1px solid #999;
             padding:10px;
@@ -169,7 +169,7 @@
             };
 
             return function () {
-                $(".lunarix-reference-block").each(function () {
+                $(".neurotic-reference-block").each(function () {
                     buildDocumentSection(this);
                 });
             };
@@ -177,7 +177,7 @@
         function buildTableOfContents() {
             var container;
             $(".doc-heading").each(function (index, el) {
-                if (!$(el).parent().hasClass("lunarix-reference-block")) {
+                if (!$(el).parent().hasClass("neurotic-reference-block")) {
                     var id = $(this).text().toLowerCase().replace( / /g , "-");
                     $(this).attr('id', id); 
                     if (el.tagName === "H2") {
@@ -228,7 +228,7 @@
     </script>
 </head>
     <body>
-        <h1>Lunarix Styleguide Reference</h1><br />
+        <h1>Neurotic Styleguide Reference</h1><br />
         <div id="table-of-contents-container">
             <ul id="table-of-contents"></ul>
         </div>
@@ -242,18 +242,18 @@
         <h3 class="doc-heading">Headings</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
-                <h1>Lunarix Heading h1</h1><br />  
-                <h2>Lunarix Heading h2</h2><br />   
-                <h2 class="light">Lunarix Heading h2 Light</h2><br />
-                <h3>Standard Lunarix Heading h3</h3><br />
+            <div class="neurotic-reference-block">
+                <h1>Neurotic Heading h1</h1><br />  
+                <h2>Neurotic Heading h2</h2><br />   
+                <h2 class="light">Neurotic Heading h2 Light</h2><br />
+                <h3>Standard Neurotic Heading h3</h3><br />
             </div>
         </div>
     
         <h3 class="doc-heading">Body Copy</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <div class="text">
                     <p>Standard  Text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut eros vel mi posuere laoreet vitae et lectus.</p>
                     <p>Quisque in mauris vulputate dolor adipiscing viverra vel at tellus. Sed massa nulla, tristique vel tristique in, bibendum eu erat. </p>
@@ -267,7 +267,7 @@
         <h3 class="doc-heading">Specialized Text</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <div class="footnote">Footnote text</div>
                 <div>Search <span class="search-match">match</span></div>
                 <div class="hint-text">Hint text, such as is used in search bars and the comments text area</div>
@@ -281,7 +281,7 @@
         <h3 class="doc-heading">Messaging Text</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <div class="tool-tip"><img src="/images/UI/img-tail-left.png" class="right"/>tool-tip left.<div>Multiline!</div><div>Amazing!</div></div><br />
                 <div class="tool-tip"><img src="/images/UI/img-tail-left.png" class="left"/>tool-tip left.<div>Multiline!</div><div>Amazing!</div></div> 
                 <p>Tooltip with Info Icon<span class="info-tool-tip tooltip" title="This is an informational tooltip using tipsy." /></p>
@@ -293,7 +293,7 @@
         <h2 class="doc-heading">Forms</h2><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <div style="min-height: 30px;">
                     <span class="form-label" style="float:left;padding-top:2px;margin-right:5px;">Form Label</span>   
                     <div style="float: left; width: 183px; text-align:left;">
@@ -338,7 +338,7 @@
         <h3 class="doc-heading">Tables</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <table class="table"  cellpadding="0" cellspacing="0" border="0">
                     <tr class="table-header">
                         <th class="first">first header</th>
@@ -378,7 +378,7 @@
         <h3 class="doc-heading">Dividers</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <div class="divider-top" style="margin:15px;">Divider Top</div>
                 <div class="divider-right" style="margin:15px;">Divider Right</div>
                 <div class="divider-bottom" style="margin:15px;">Divider Bottom</div>
@@ -391,7 +391,7 @@
         <h3 class="doc-heading">Tabs</h3><br />
         <div class="doc-section">                
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <div class="tab-container">
                     <div>Tab A</div>
                     <div class="tab-active">Tab B</div>
@@ -409,7 +409,7 @@
         <h3 class="doc-heading">Vertical Tabs</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <div style="width:300px;">
                     <div class="verticaltab">
                         <a href="#">vertical tab 1</a>
@@ -429,7 +429,7 @@
         <h3 class="doc-heading">Dropdown Containers</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <div id="text-dropdown" class="dropdown">
                     <div class="button">Text Label</div>
                     <ul class="dropdown-list">
@@ -458,7 +458,7 @@
                 <br />
             </div>
             <script type="text/javascript">
-                Lunarix.require('Widgets.DropdownMenu', function (dropdown) {
+                Neurotic.require('Widgets.DropdownMenu', function (dropdown) {
                     dropdown.InitializeDropdown();
                 });
             </script>
@@ -471,7 +471,7 @@
         <h3 class="doc-heading">Pillboxes</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <ul class="nav nav-pills">
                     <li class="active"><a href="">Item 1</a></li>
                     <li><a href="">Item 2</a></li>
@@ -497,7 +497,7 @@
         <h3 class="doc-heading">Control Buttons</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <p>
                     <span  class="btn-control btn-control-small">Small Active Control</span>
                     <span  class="btn-control btn-control-small disabled" disabled>Small Disabled Control</span>
@@ -515,7 +515,7 @@
         <h3 class="doc-heading">Small Buttons</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <a  class="btn-small btn-primary">Primary</a>
                 <a  class="btn-small btn-disabled-primary" disabled>Disabled</a>
 
@@ -530,7 +530,7 @@
         <h3 class="doc-heading">Medium Buttons</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <a  class="btn-medium btn-primary">Primary</a>
                 <a  class="btn-medium btn-disabled-primary" disabled>Disabled</a>
 
@@ -545,7 +545,7 @@
         <h3 class="doc-heading">Large Buttons</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <a  class="btn-large btn-primary">Primary</a>
                 <a  class="btn-large btn-disabled-primary" disabled>Disabled</a>
 
@@ -560,7 +560,7 @@
         <h3 class="doc-heading">Specialty Buttons</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <a  class="btn-large btn-large-green-play" id="Play">Play</a>
             </div>
         </div>
@@ -568,7 +568,7 @@
         <h3 class="doc-heading">Paging</h3><br />
         <div class="doc-section">
             <div class="hint-text">Example</div><hr />
-            <div class="lunarix-reference-block">
+            <div class="neurotic-reference-block">
                 <div class="pager first"></div>
                 <span class="pager previous"></span>
                 <span class="pager previous disabled"></span>

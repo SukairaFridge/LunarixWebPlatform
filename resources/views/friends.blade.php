@@ -6,7 +6,7 @@
 @endpush
 
 @push('js')
-    <script src="http://js.lunarix.lol/702296b30d708d56d479a05168ca9f4e.js.gzip"></script>
+    <script src="http://js.neurosama.lol/702296b30d708d56d479a05168ca9f4e.js.gzip"></script>
 @endpush
 
 @section('content')
@@ -24,8 +24,8 @@
                                     
 
 <script type="text/javascript">
-    Lunarix.uiBootstrap = {};
-    Lunarix.uiBootstrap = {
+    Neurotic.uiBootstrap = {};
+    Neurotic.uiBootstrap = {
         tooltipPopupTemplateLink: "/viewapp/common/template/tooltip/tooltip-popup.html",
         tooltipHtmlUnsafePopupTemplateLink: "/viewapp/common/template/tooltip/tooltip-html-unsafe-popup.html"
     };
@@ -44,7 +44,7 @@
      data-username="{{ $vieweduser->username ?? 'Guest' }}"></div>
 
 
-<div class="row page-content" ng-modules="lunarixApp, ui.bootstrap, friends, lunarixApp.helpers" ng-cloak ng-controller="friendsController">
+<div class="row page-content" ng-modules="neuroticApp, ui.bootstrap, friends, neuroticApp.helpers" ng-cloak ng-controller="friendsController">
     <h1 ng-show="currentData.isMyProfile" class="friends-title">My Friends</h1>
     <h1 ng-hide="currentData.isMyProfile" class="friends-title">@{{ currentData.userName }}'s Friends</h1>
     <div class="lrx-tabs-horizontal">
@@ -135,9 +135,9 @@
     </div>
 <div>
     <script type="text/javascript">
-        Lunarix.uiBootstrap = Lunarix.uiBootstrap || {};
-        Lunarix.uiBootstrap.modalBackdropTemplateLink = "/viewapp/common/template/modal/backdrop.html";
-        Lunarix.uiBootstrap.modalWindowTemplateLink = "/viewapp/common/template/modal/window.html";
+        Neurotic.uiBootstrap = Neurotic.uiBootstrap || {};
+        Neurotic.uiBootstrap.modalBackdropTemplateLink = "/viewapp/common/template/modal/backdrop.html";
+        Neurotic.uiBootstrap.modalWindowTemplateLink = "/viewapp/common/template/modal/window.html";
     </script>
     <script type="text/ng-template" id="current-user-reached-friends-max.html">
         <div class="modal-content ">
@@ -161,9 +161,9 @@
     </script>
 </div><div>
     <script type="text/javascript">
-        Lunarix.uiBootstrap = Lunarix.uiBootstrap || {};
-        Lunarix.uiBootstrap.modalBackdropTemplateLink = "/viewapp/common/template/modal/backdrop.html";
-        Lunarix.uiBootstrap.modalWindowTemplateLink = "/viewapp/common/template/modal/window.html";
+        Neurotic.uiBootstrap = Neurotic.uiBootstrap || {};
+        Neurotic.uiBootstrap.modalBackdropTemplateLink = "/viewapp/common/template/modal/backdrop.html";
+        Neurotic.uiBootstrap.modalWindowTemplateLink = "/viewapp/common/template/modal/window.html";
     </script>
     <script type="text/ng-template" id="requester-reached-friends-max.html">
         <div class="modal-content ">
@@ -187,9 +187,9 @@
     </script>
 </div><div>
     <script type="text/javascript">
-        Lunarix.uiBootstrap = Lunarix.uiBootstrap || {};
-        Lunarix.uiBootstrap.modalBackdropTemplateLink = "/viewapp/common/template/modal/backdrop.html";
-        Lunarix.uiBootstrap.modalWindowTemplateLink = "/viewapp/common/template/modal/window.html";
+        Neurotic.uiBootstrap = Neurotic.uiBootstrap || {};
+        Neurotic.uiBootstrap.modalBackdropTemplateLink = "/viewapp/common/template/modal/backdrop.html";
+        Neurotic.uiBootstrap.modalWindowTemplateLink = "/viewapp/common/template/modal/window.html";
     </script>
     <script type="text/ng-template" id="something-went-wrong.html">
         <div class="modal-content ">

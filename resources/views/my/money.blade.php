@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=page___454963b97fe545e3b3f2aaf85eef6d4a_m.css">
 @endpush
 @push('js')
-<script type="text/javascript" src="https://js.lunarix.lol/3f3e6c117b7e1ff6c7644a1b4048a54c.js.gzip">
+<script type="text/javascript" src="https://js.neurosama.lol/3f3e6c117b7e1ff6c7644a1b4048a54c.js.gzip">
 <script type="text/javascript">
 $(function () {
     $('.SquareTabsContainer .SquareTabGray').on('click', function () {
@@ -21,10 +21,10 @@ $(function () {
 @section('content')
 @include('layout.header')
 <script type="text/javascript">
-if (typeof(Lunarix) === "undefined") { Lunarix = {}; }
-Lunarix.Endpoints = Lunarix.Endpoints || {};
-Lunarix.Endpoints.Urls = Lunarix.Endpoints.Urls || {};
-Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lol/authentication/is-logged-in';
+if (typeof(Neurotic) === "undefined") { Neurotic = {}; }
+Neurotic.Endpoints = Neurotic.Endpoints || {};
+Neurotic.Endpoints.Urls = Neurotic.Endpoints.Urls || {};
+Neurotic.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.neurosama.lol/authentication/is-logged-in';
 </script>
 
 <script type="text/javascript">
@@ -96,11 +96,11 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -114,18 +114,18 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
 
 
     
-        LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+        NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -134,7 +134,7 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
 
 
 
-        <script type="text/javascript">Lunarix.FixedUI.gutterAdsEnabled=false;</script>
+        <script type="text/javascript">Neurotic.FixedUI.gutterAdsEnabled=false;</script>
 
         
 
@@ -243,7 +243,7 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
                             <h2 class="light">
                                     <span class="robux">&nbsp;</span>
                                     <span>Bytes</span>
-                                    <img src="https://cdn.lunarix.lol/d3246f1ece35d773099f876a31a38e5a.png" class="tooltip" title="The principal currency of Lunarixia, which Bloxxers Club members receive a daily allowance of to live a comfortable life of leisure. For this and other benefits, join Bloxxers Club!" />
+                                    <img src="https://cdn.neurosama.lol/d3246f1ece35d773099f876a31a38e5a.png" class="tooltip" title="The principal currency of Neuroticia, which Bloxxers Club members receive a daily allowance of to live a comfortable life of leisure. For this and other benefits, join Bloxxers Club!" />
                             </h2>
                             <table class="table" cellpadding="0" cellspacing="0" border="0" >
                             <tr class="table-header">
@@ -276,7 +276,7 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
                             </tr>
                             
                             <tr  >
-                                <td class="Categories">Pending Sales <img src="https://cdn.lunarix.lol/d3246f1ece35d773099f876a31a38e5a.png" class="tooltip" title="As an anti fraud precaution, revenue from certain transactions, such as Game Pass sales, is held for a short period of time before being released to the seller." /></td>
+                                <td class="Categories">Pending Sales <img src="https://cdn.neurosama.lol/d3246f1ece35d773099f876a31a38e5a.png" class="tooltip" title="As an anti fraud precaution, revenue from certain transactions, such as Game Pass sales, is held for a short period of time before being released to the seller." /></td>
                                 <td class="Credit R_PendingSales">&nbsp;</td>
                             </tr> 
                             
@@ -352,11 +352,11 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
 
 
 <div class="info">
-    When you share a Lunarix promotion link and new players sign up from your link, both of you will earn 10 bytes.
+    When you share a Neurotic promotion link and new players sign up from your link, both of you will earn 10 bytes.
 </div>
 <div>
     <div class="form-label">Your Promotion link:</div>
-    <div id="LinkGeneratorOutput">https://www.lunarix.lol/?lnrxp={{ $currentUser->id ?? '0' }}</div>
+    <div id="LinkGeneratorOutput">https://www.neurosama.lol/?lnrxp={{ $currentUser->id ?? '0' }}</div>
 </div>
 <ul class="nav nav-pills">
     <li class="active" data-lrx-time="hourly"><a>Hourly</a></li>
@@ -367,7 +367,7 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
     <div class="separator-horizontal"></div>
     <h2>
         New Visitors
-        <img src="https://cdn.lunarix.lol/d3246f1ece35d773099f876a31a38e5a.png" class="tooltip" title="Number of people who clicked on your links who have never been on Lunarix before." />
+        <img src="https://cdn.neurosama.lol/d3246f1ece35d773099f876a31a38e5a.png" class="tooltip" title="Number of people who clicked on your links who have never been on Neurotic before." />
     </h2>
     <div class="separator-horizontal"></div>
     
@@ -390,7 +390,7 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
     <div class="separator-horizontal"></div>
     <h2>
         Signups
-        <img src="https://cdn.lunarix.lol/d3246f1ece35d773099f876a31a38e5a.png" class="tooltip" title="Number of new visitors from your links who signed up." />
+        <img src="https://cdn.neurosama.lol/d3246f1ece35d773099f876a31a38e5a.png" class="tooltip" title="Number of new visitors from your links who signed up." />
     </h2>
     <div class="separator-horizontal"></div>
 
@@ -413,7 +413,7 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
     <div class="separator-horizontal"></div>
     <h2>
         Promotional Revenue
-        <img src="https://cdn.lunarix.lol/d3246f1ece35d773099f876a31a38e5a.png" class="tooltip" title="Bytes earned through your promotional links." />
+        <img src="https://cdn.neurosama.lol/d3246f1ece35d773099f876a31a38e5a.png" class="tooltip" title="Bytes earned through your promotional links." />
     </h2>
     <div class="separator-horizontal"></div>
 
@@ -472,7 +472,7 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
     <div class="unifiedModalContent" style="min-height:385px;width:584px; padding:5px;margin: 0 auto;" >
         <div class="GenericModalErrorMessage status-error" style="display:none;"></div>
         <div class="LeftContentContainer" >
-            <div class="lunarix-avatar-image" data-user-id="" data-image-size="medium" data-se="trade-partner-avatar"></div>
+            <div class="neurotic-avatar-image" data-user-id="" data-image-size="medium" data-se="trade-partner-avatar"></div>
             <p class="TradeRequestText"></p>
             <p class="TradeExpiration">Expires <span id="TradeRequestExpiration" data-se="trade-expire"></span></p>
         </div>
@@ -509,19 +509,19 @@ Lunarix.Endpoints.Urls['/authentication/is-logged-in'] = 'https://www.lunarix.lo
             <div style="clear:both;"></div>
         </div>
         <div class="ReviewButtonContainer" style="height:50px;display:none">
-            <div lunarix-ok class="btn-large btn-neutral" data-se="trade-ok">OK</div>
+            <div neurotic-ok class="btn-large btn-neutral" data-se="trade-ok">OK</div>
             <div id="ButtonCancelTrade" class="btn-large btn-negative" data-se="trade-cancel">Cancel</div>
             <div style="clear:both;"></div>
         </div>
         <div class="ViewButtonContainer" style="height:50px;display:none">
-            <div lunarix-ok class="btn-large btn-neutral" data-se="trade-ok">OK</div>
+            <div neurotic-ok class="btn-large btn-neutral" data-se="trade-ok">OK</div>
             <div style="clear:both;"></div>
         </div>
         <div style="clear:both;"></div>
     </div>
     <script type="text/javascript">
         $(function () {
-         Lunarix.Trade.TradeRequestModal.initialize(4, true, 0.3);
+         Neurotic.Trade.TradeRequestModal.initialize(4, true, 0.3);
         });
     </script>
 

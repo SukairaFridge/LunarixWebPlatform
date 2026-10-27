@@ -20,6 +20,6 @@ class ViewVideo
         }
         $video->loadCount('views');
         $otherVideos = Video::approved()->where('visibility', 1)->where('id', '!=', $video->id)->withCount('views')->latest()->take(10)->get();
-        return view('videos.view', compact('video', 'otherVideos') + ['title' => $video->name . ' - Lunarix Videos']);
+        return view('videos.view', compact('video', 'otherVideos') + ['title' => $video->name . ' - Neurotic Videos']);
     }
 }

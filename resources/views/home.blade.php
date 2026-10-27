@@ -110,7 +110,7 @@
 <div class="section">
     <div class="section-header">
         <h3>Blog News</h3>
-        <a href="https://blog.lunarix.lol/" class="lrx-btn-control-xs btn-more">See More</a>
+        <a href="https://blog.neurosama.lol/" class="lrx-btn-control-xs btn-more">See More</a>
     </div>
     <ul class="blog-news">
         @forelse ($blogNews as $post)
@@ -118,7 +118,7 @@
                 <span class="lrx-icon-page"></span>
                 <span class="news-link">
                     <a href="{{ $post['link'] }}"
-                       class="lunarix-interstitial lrx-link lrx-article-title"
+                       class="neurotic-interstitial lrx-link lrx-article-title"
                        target="_blank" rel="noopener">
                        {{ html_entity_decode($post['title']['rendered']) }}
                     </a>
@@ -135,7 +135,7 @@
                             <div id="FacebookConnectCard" class="section">
               <center>
 <div style="width:75%;">
-<p>Link your Lunarix account with your Discord account to let your Discord friends see what you're doing on Lunarix!</p>
+<p>Link your Neurotic account with your Discord account to let your Discord friends see what you're doing on Neurotic!</p>
 </div>
 <center>
 <div id="connect-facebook">
@@ -162,14 +162,14 @@
                 <p class="lrx-control-label" id="statusMessage" style="display:none;"></p>
               </div>
                  <a type="button" class="lrx-btn-primary-sm" id="shareButton">Share</a>
-                 <img id="loadingImage" class="share-login" style="display: none;" alt="Sharing..." src="https://cdn.lunarix.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif" height="17" width="48" />
+                 <img id="loadingImage" class="share-login" style="display: none;" alt="Sharing..." src="https://cdn.neurosama.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif" height="17" width="48" />
             </div>
 <ul class="vlist feeds">
 {{-- <li class="list-item">
         <a href="/users/1/profile" class="list-header"><img class="header-thumb" src="https://{{ config('app.base_url_nohttp') }}/Thumbs/Avatar.ashx?userId=1" /></a>
         <div class="list-body">
             <p class="list-content">
-                <a href="/users/1/profile">Lunarix</a>
+                <a href="/users/1/profile">Neurotic</a>
         <br>
         <b>The feeds are currently in the works!</b>
                 <div class="feedtext linkify">still working on em</div>
@@ -197,7 +197,7 @@
         </a>
         <div class="list-body">
             <h2>Play Games</h2>
-            <p class="list-content">Nearly all Lunarix games are built by players like you.</p>
+            <p class="list-content">Nearly all Neurotic games are built by players like you.</p>
         </div>
     </li>
     <li class="list-item feed-creation">
@@ -208,10 +208,10 @@
             <h2>Customize Your Character</h2>
             <p class="list-content">Visit the <a href="/my/character.aspx"> Character page </a> to customize your character. Get new clothing in the <a href="/catalog/browse.aspx?CatalogContext=1&amp;Subcategory=1&amp;CreatorID=1&amp;CurrencyType=0&amp;pxMin=0&amp;pxMax=0&amp;SortType=4&amp;SortAggregation=3&amp;SortCurrency=0&amp;IncludeNotForSale=false&amp;LegendExpanded=true&amp;Category=1">catalog</a></p>
             <ul class="list-gallery">
-                <li><img src="/images/005a0f4d764d9c609ff4c37a2bb99006.png" alt="Lunarix Avatar" style="height:65px;"></li>
-                <li><img src="/images/e861c0c517df63e9f17e96685cc4bb14.png" alt="Lunarix Avatar" style="height:65px;"></li>
-                <li><img src="/images/7fd0bef40b29834e8add92234b352c3e.png" alt="Lunarix Avatar" style="height:65px;"></li>
-                <li><img src="/images/294ebb9ceaac3c5352de0ebecab909ec.png" alt="Lunarix Avatar" style="height:65px;"></li>
+                <li><img src="/images/005a0f4d764d9c609ff4c37a2bb99006.png" alt="Neurotic Avatar" style="height:65px;"></li>
+                <li><img src="/images/e861c0c517df63e9f17e96685cc4bb14.png" alt="Neurotic Avatar" style="height:65px;"></li>
+                <li><img src="/images/7fd0bef40b29834e8add92234b352c3e.png" alt="Neurotic Avatar" style="height:65px;"></li>
+                <li><img src="/images/294ebb9ceaac3c5352de0ebecab909ec.png" alt="Neurotic Avatar" style="height:65px;"></li>
             </ul>
         </div>
     </li>
@@ -221,7 +221,7 @@
         </a>
         <div class="list-body">
             <h2>Build Something</h2>
-            <p class="list-content">Builders will enjoy playing our multiplayer building game. Professional builders will want to check out Lunarix Studio, our game development environment on your <a href="/develop">Develop page</a>.</p>
+            <p class="list-content">Builders will enjoy playing our multiplayer building game. Professional builders will want to check out Neurotic Studio, our game development environment on your <a href="/develop">Develop page</a>.</p>
         </div>
     </li>
     <li class="list-item feed-social">

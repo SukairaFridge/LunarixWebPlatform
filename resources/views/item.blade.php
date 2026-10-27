@@ -7,11 +7,11 @@
 @include('layout.header')
 <script>String.format = function() {var s = arguments[0];for (var i = 0; i < arguments.length - 1; i++) {s = s.replace(new RegExp('\\{' + i + '\\}', 'gm'), arguments[i + 1]);} return s;};</script>
 <script type="text/javascript" src="/gigya.js"></script>
-<script src='http://js.lunarix.lol/50cb8c7590b75499925be4825ab1fb8f.js'></script>
-<script src='http://js.lunarix.lol/db95b7bf9a4587f82d242e5a2fc3fc30.js'></script>
-<script type='text/javascript'>Lunarix.config.externalResources = [];Lunarix.config.paths['Pages.Catalog'] = 'http://js.lunarix.lol/1612c57544c7977e19cd15c824f7ecc3.js';Lunarix.config.paths['Pages.CatalogShared'] = 'http://js.lunarix.lol/4eb48eec34ca711d5a7b08a4291ac753.js';Lunarix.config.paths['Pages.Messages'] = 'http://js.lunarix.lol/e8cbac58ab4f0d8d4c707700c9f97630.js';Lunarix.config.paths['Resources.Messages'] = 'http://js.lunarix.lol/fb9cb43a34372a004b06425a1c69c9c4.js';Lunarix.config.paths['Widgets.AvatarImage'] = 'http://js.lunarix.lol/bbaeb48f3312bad4626e00c90746ffc0.js';Lunarix.config.paths['Widgets.DropdownMenu'] = 'http://js.lunarix.lol/7b436bae917789c0b84f40fdebd25d97.js';Lunarix.config.paths['Widgets.GroupImage'] = 'http://js.lunarix.lol/33d82b98045d49ec5a1f635d14cc7010.js';Lunarix.config.paths['Widgets.HierarchicalDropdown'] = 'http://js.lunarix.lol/fbb86cf0752d23f389f983419d3085b4.js';Lunarix.config.paths['Widgets.ItemImage'] = 'http://js.lunarix.lol/838ec9c8067ba6fd6793a8bdbdb48a5c.js';Lunarix.config.paths['Widgets.PlaceImage'] = 'http://js.lunarix.lol/f2697119678d0851cfaa6c2270a727ed.js';Lunarix.config.paths['Widgets.SurveyModal'] = 'http://js.lunarix.lol/d6e979598c460090eafb6d38231159f6.js';</script><script type="text/javascript">
+<script src='http://js.neurosama.lol/50cb8c7590b75499925be4825ab1fb8f.js'></script>
+<script src='http://js.neurosama.lol/db95b7bf9a4587f82d242e5a2fc3fc30.js'></script>
+<script type='text/javascript'>Neurotic.config.externalResources = [];Neurotic.config.paths['Pages.Catalog'] = 'http://js.neurosama.lol/1612c57544c7977e19cd15c824f7ecc3.js';Neurotic.config.paths['Pages.CatalogShared'] = 'http://js.neurosama.lol/4eb48eec34ca711d5a7b08a4291ac753.js';Neurotic.config.paths['Pages.Messages'] = 'http://js.neurosama.lol/e8cbac58ab4f0d8d4c707700c9f97630.js';Neurotic.config.paths['Resources.Messages'] = 'http://js.neurosama.lol/fb9cb43a34372a004b06425a1c69c9c4.js';Neurotic.config.paths['Widgets.AvatarImage'] = 'http://js.neurosama.lol/bbaeb48f3312bad4626e00c90746ffc0.js';Neurotic.config.paths['Widgets.DropdownMenu'] = 'http://js.neurosama.lol/7b436bae917789c0b84f40fdebd25d97.js';Neurotic.config.paths['Widgets.GroupImage'] = 'http://js.neurosama.lol/33d82b98045d49ec5a1f635d14cc7010.js';Neurotic.config.paths['Widgets.HierarchicalDropdown'] = 'http://js.neurosama.lol/fbb86cf0752d23f389f983419d3085b4.js';Neurotic.config.paths['Widgets.ItemImage'] = 'http://js.neurosama.lol/838ec9c8067ba6fd6793a8bdbdb48a5c.js';Neurotic.config.paths['Widgets.PlaceImage'] = 'http://js.neurosama.lol/f2697119678d0851cfaa6c2270a727ed.js';Neurotic.config.paths['Widgets.SurveyModal'] = 'http://js.neurosama.lol/d6e979598c460090eafb6d38231159f6.js';</script><script type="text/javascript">
     $(function () {
-        Lunarix.JSErrorTracker.initialize({ 'suppressConsoleError': true});
+        Neurotic.JSErrorTracker.initialize({ 'suppressConsoleError': true});
     });
 </script>
         <div id="navContent" class="nav-content"><div class="nav-content-inner">
@@ -50,11 +50,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -64,18 +64,18 @@
             }
         }
 
-LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -84,7 +84,7 @@ LunarixEventManager.initialize(true);
 
 
 
-        <script type="text/javascript">Lunarix.FixedUI.gutterAdsEnabled=true;</script>
+        <script type="text/javascript">Neurotic.FixedUI.gutterAdsEnabled=true;</script>
 
         
 
@@ -122,20 +122,20 @@ LunarixEventManager.initialize(true);
     <div id="ItemContainer" class="text ">
         <div>
             @if(($asset->is_limited || $asset->is_limited_unique) ? $userOwnedCopies->isNotEmpty() : $userOwns)
-            <div id="ctl00_cphLunarix_GearDropDown" class="SetList ItemOptions" data-isdropdownhidden="True" data-isitemlimited="{{ $asset->is_limited ? 'True' : 'False' }}" data-isitemresellable="{{ $asset->is_limited ? 'True' : 'False' }}">
+            <div id="ctl00_cphNeurotic_GearDropDown" class="SetList ItemOptions" data-isdropdownhidden="True" data-isitemlimited="{{ $asset->is_limited ? 'True' : 'False' }}" data-isitemresellable="{{ $asset->is_limited ? 'True' : 'False' }}">
                 <a href="#" class="btn-dropdown">
-                    <img src="https://cdn.lunarix.lol/ea51d75440715fc531fc3ad281c722f3.png" />
+                    <img src="https://cdn.neurosama.lol/ea51d75440715fc531fc3ad281c722f3.png" />
                 </a>
                 <div class="clear"></div>
                 <div class="SetListDropDown">
                     <div class="SetListDropDownList invisible">
                         <div class="menu invisible">
-                            <div id="ctl00_cphLunarix_ItemOwnershipPanel">
+                            <div id="ctl00_cphNeurotic_ItemOwnershipPanel">
 	@if(!$asset->is_limited && !$asset->is_limited_unique && $userOwns)
-                                <a id="ctl00_cphLunarix_btnDelete" href="#">Delete from My Stuff</a>
+                                <a id="ctl00_cphNeurotic_btnDelete" href="#">Delete from My Stuff</a>
                             @endif
 @if(($asset->is_limited || $asset->is_limited_unique) && $asset->isSoldOut() && $userOwnedCopies->isNotEmpty())
-<a id="ctl00_cphLunarix_btnSell" href="#" onclick="$('#SellItemModalContainer').modal({escClose:true, overlayClose:true, opacity:80, overlayCss:{backgroundColor:'#000'}}); return false;">Sell My Collectible</a>
+<a id="ctl00_cphNeurotic_btnSell" href="#" onclick="$('#SellItemModalContainer').modal({escClose:true, overlayClose:true, opacity:80, overlayCss:{backgroundColor:'#000'}}); return false;">Sell My Collectible</a>
 @endif
 </div>
                         </div>
@@ -148,11 +148,11 @@ LunarixEventManager.initialize(true);
             </h1>
             <h3>
                 @if($asset->is_limited)
-                Lunarix {{ $asset->getTypeName() }} / Limited Edition
+                Neurotic {{ $asset->getTypeName() }} / Limited Edition
                 @elseif($asset->is_limited_unique)
-                Lunarix {{ $asset->getTypeName() }} / Collectible Item / Limited Edition
+                Neurotic {{ $asset->getTypeName() }} / Collectible Item / Limited Edition
                 @else
-                Lunarix {{ $asset->getTypeName() }}
+                Neurotic {{ $asset->getTypeName() }}
                 @endif
             </h3>
         </div>
@@ -165,7 +165,7 @@ LunarixEventManager.initialize(true);
                                 
 
 <div id="AssetThumbnail" class="thumbnail-holder" data-reset-enabled-every-page data-url="/Thumbs/Asset.ashx?assetId={{ $asset->id }}" style="width:320px; height:320px;">
-    <span class="thumbnail-span" data-3d-url="/asset-thumbnail-3d/json?assetId={{ $asset->id }}"  data-js-files='http://js.lunarix.lol/1b5ff54032ecaa6588a0c5f2ad7e1a4c.js' ><img  class='' src='/Thumbs/Asset.ashx?assetId={{ $asset->id }}' /></span>
+    <span class="thumbnail-span" data-3d-url="/asset-thumbnail-3d/json?assetId={{ $asset->id }}"  data-js-files='http://js.neurosama.lol/1b5ff54032ecaa6588a0c5f2ad7e1a4c.js' ><img  class='' src='/Thumbs/Asset.ashx?assetId={{ $asset->id }}' /></span>
 </div>
                                 @if($asset->is_limited_unique)
                                     <img src="/images/AssetIcons/overlay_limitedUnique_big.png" class="thumbnail-overlay" alt="Limited Unique" style="position:absolute;bottom:0;left:0;z-index:2;">
@@ -174,7 +174,7 @@ LunarixEventManager.initialize(true);
                                 @endif
                                 
                                 @if($asset->isNewArrival())
-                                <img src="https://cdn.lunarix.lol/8a25ded7fa07d098dac7f234e7b34cfd.png" id="ctl00_cphLunarix_ItemNewOverlay" class="thumbnail-overlay" alt="New" style="position: absolute; top: 0px; right: 0px;" />
+                                <img src="https://cdn.neurosama.lol/8a25ded7fa07d098dac7f234e7b34cfd.png" id="ctl00_cphNeurotic_ItemNewOverlay" class="thumbnail-overlay" alt="New" style="position: absolute; top: 0px; right: 0px;" />
                                 @endif
 								
 								
@@ -188,12 +188,12 @@ LunarixEventManager.initialize(true);
                         <div id="Creator" class="Creator">
                             <div class="Avatar">
                                 
-                                <a id="ctl00_cphLunarix_AvatarImage" class=" notranslate" class=" notranslate" title="{{ $asset->creator->username }}" href="/User.aspx?ID={{ $asset->creator_id }}" style="display:inline-block;height:70px;width:70px;cursor:pointer;"><img src="/Thumbs/Avatar.ashx?userId={{ $asset->creator_id }}" height="70" width="70" border="0" onerror="return Lunarix.Controls.Image.OnError(this)" alt="{{ $asset->creator->username }}" class=" notranslate" />@if($creatorBcOverlay) <img src="{{ $creatorBcOverlay }}" class="bcOverlay" align="left" style="position:relative;top:-19px;" /> @endif</a>
+                                <a id="ctl00_cphNeurotic_AvatarImage" class=" notranslate" class=" notranslate" title="{{ $asset->creator->username }}" href="/User.aspx?ID={{ $asset->creator_id }}" style="display:inline-block;height:70px;width:70px;cursor:pointer;"><img src="/Thumbs/Avatar.ashx?userId={{ $asset->creator_id }}" height="70" width="70" border="0" onerror="return Neurotic.Controls.Image.OnError(this)" alt="{{ $asset->creator->username }}" class=" notranslate" />@if($creatorBcOverlay) <img src="{{ $creatorBcOverlay }}" class="bcOverlay" align="left" style="position:relative;top:-19px;" /> @endif</a>
                             </div>
                         </div>
                         <div class="item-detail">
                             <span class="stat-label notranslate">Creator:</span>
-                            <a id="ctl00_cphLunarix_CreatorHyperLink" class="stat notranslate" href="User.aspx?ID={{ $asset->creator_id }}">{{ $asset->creator->username }}</a>
+                            <a id="ctl00_cphNeurotic_CreatorHyperLink" class="stat notranslate" href="User.aspx?ID={{ $asset->creator_id }}">{{ $asset->creator->username }}</a>
                             
                             <div>
                                 <span class="stat-label">Created:</span>
@@ -210,17 +210,17 @@ LunarixEventManager.initialize(true);
                                 
                                  
                         </div>
-                        <div id="ctl00_cphLunarix_DescriptionPanel" class="DescriptionPanel notranslate">
+                        <div id="ctl00_cphNeurotic_DescriptionPanel" class="DescriptionPanel notranslate">
 	
                             <pre class="Description Full text"> {{ $asset->description }} </pre>
                             <pre class="Description body text"><span class="description-content">{{ $asset->description }}</span><span class="description-more-container"></span></pre>
                         
 </div>
                         <div class="ReportAbuse">
-                            <div id="ctl00_cphLunarix_AbuseReportButton1_AbuseReportPanel" class="ReportAbuse">
+                            <div id="ctl00_cphNeurotic_AbuseReportButton1_AbuseReportPanel" class="ReportAbuse">
 	
-    <span class="AbuseIcon"><a id="ctl00_cphLunarix_AbuseReportButton1_ReportAbuseIconHyperLink" href="abusereport/asset?id={{ $asset->id }}&amp;RedirectUrl=item.aspx%3fseoname%3dThrowing-Knife-Pen%26id%3d{{ $asset->id }}"><img src="images/abuse.PNG?v=2" alt="Report Abuse" style="border-width:0px;" /></a></span>
-    <span class="AbuseButton"><a id="ctl00_cphLunarix_AbuseReportButton1_ReportAbuseTextHyperLink" href="abusereport/asset?id={{ $asset->id }}&amp;RedirectUrl=item.aspx%3fseoname%3dThrowing-Knife-Pen%26id%3d{{ $asset->id }}">Report Abuse</a></span>
+    <span class="AbuseIcon"><a id="ctl00_cphNeurotic_AbuseReportButton1_ReportAbuseIconHyperLink" href="abusereport/asset?id={{ $asset->id }}&amp;RedirectUrl=item.aspx%3fseoname%3dThrowing-Knife-Pen%26id%3d{{ $asset->id }}"><img src="images/abuse.PNG?v=2" alt="Report Abuse" style="border-width:0px;" /></a></span>
+    <span class="AbuseButton"><a id="ctl00_cphNeurotic_AbuseReportButton1_ReportAbuseTextHyperLink" href="abusereport/asset?id={{ $asset->id }}&amp;RedirectUrl=item.aspx%3fseoname%3dThrowing-Knife-Pen%26id%3d{{ $asset->id }}">Report Abuse</a></span>
 
 </div>
                         </div>
@@ -232,7 +232,7 @@ LunarixEventManager.initialize(true);
                         @if((int) $asset->type === \App\Models\Asset::TYPE_GEAR)
                         <div class="GearGenreContainer divider-top">
                             <div id="GenresDiv">
-                                <div id="ctl00_cphLunarix_Genres">
+                                <div id="ctl00_cphNeurotic_Genres">
 	
                                     <div class="stat-label">
                                         Genres:</div>
@@ -267,7 +267,7 @@ LunarixEventManager.initialize(true);
         
             
         
-            <div id="ctl00_cphLunarix_GenresDisplayTest_AssetGenreRepeater_ctl13_AssetGenreRepeaterPanel" class="AssetGenreRepeater_Container">
+            <div id="ctl00_cphNeurotic_GenresDisplayTest_AssetGenreRepeater_ctl13_AssetGenreRepeaterPanel" class="AssetGenreRepeater_Container">
 		
                 <div class="GamesInfoIcon Ninja"></div>
                 <div><a href="/fighting-catalog">Fighting</a></div>
@@ -282,7 +282,7 @@ LunarixEventManager.initialize(true);
                                 
 </div>
                             </div>
-                            <div id="ctl00_cphLunarix_GearAttributes" class="GearDiv">
+                            <div id="ctl00_cphNeurotic_GearAttributes" class="GearDiv">
 	
                                     <div class="stat-label">
                                         Gear Attributes:</div>
@@ -296,7 +296,7 @@ LunarixEventManager.initialize(true);
         
             
         
-            <div id="ctl00_cphLunarix_GearOptionsDisplay_AllowedGearRepeater_ctl02_AllowGearRepeaterPanel" class="AllowedGearRepeater_Container">
+            <div id="ctl00_cphNeurotic_GearOptionsDisplay_AllowedGearRepeater_ctl02_AllowGearRepeaterPanel" class="AllowedGearRepeater_Container">
 		
                 <div class="GamesInfoIcon Ranged"></div>
                 <div>Ranged Weapon</div>
@@ -339,7 +339,7 @@ LunarixEventManager.initialize(true);
                             
                             
                             @if(!$asset->isSoldOut() || !$asset->is_limited)
-                            <div id="ctl00_cphLunarix_RobuxPurchasePanel">
+                            <div id="ctl00_cphNeurotic_RobuxPurchasePanel">
                                 <div id="RobuxPurchase">
                                 @if($asset->is_limited || $asset->isSoldOut())
                                 <div class="urgent-text">{{ number_format($asset->remainingQuantity()) }} remaining</div>
@@ -352,9 +352,9 @@ LunarixEventManager.initialize(true);
                                     </div>
                                     <div id="BuyWithRobux">
                                     @if($userOwns)
-                                    <a class="btn-primary lunarix-buy-now btn-medium btn-disabled-primary" original-title="You already own this item." href="javascript: return false;">Buy Now <span class="btn-text">Buy Now</span></a>
+                                    <a class="btn-primary neurotic-buy-now btn-medium btn-disabled-primary" original-title="You already own this item." href="javascript: return false;">Buy Now <span class="btn-text">Buy Now</span></a>
                                     @elseif(!$asset->onsale || $asset->isSoldOut())
-                                    <a class="btn-primary lunarix-buy-now btn-medium btn-disabled-primary" original-title="This item is no longer for sale." href="javascript: return false;">Buy Now <span class="btn-text">Buy Now</span></a>
+                                    <a class="btn-primary neurotic-buy-now btn-medium btn-disabled-primary" original-title="This item is no longer for sale." href="javascript: return false;">Buy Now <span class="btn-text">Buy Now</span></a>
                                     @else
                                         <div data-expected-currency="1" data-asset-type="{{ $asset->getTypeName() }}" class="btn-primary btn-medium PurchaseButton " data-se="item-buyforrobux" data-item-name="{{ $asset->name }}" data-item-id="{{ $asset->id }}" data-expected-price="{{ $asset->robux }}" data-product-id="{{ $asset->id }}" data-expected-seller-id="{{ $asset->creator_id }}" data-bc-requirement="0" data-seller-name="{{ $asset->creator->username }}">
                                              {{ $asset->robux == 0 ? 'Take Now' : 'Buy with B$' }}
@@ -366,7 +366,7 @@ LunarixEventManager.initialize(true);
                             </div>
                             @else
                             @if($privateSales->isEmpty())
-                            <div id="ctl00_cphLunarix_PrivateSalesPurchasePanel" class="PrivateSalesPurchasePanel">
+                            <div id="ctl00_cphNeurotic_PrivateSalesPurchasePanel" class="PrivateSalesPurchasePanel">
                                 <span class='Price invisible'>
                                     Best Price: <span class="robux " data-se="item-privatesale-price">0</span>
                                 </span>
@@ -376,13 +376,13 @@ LunarixEventManager.initialize(true);
                                 <span class=''>No one is currently selling this item.</span>
                             </div>
                             @else
-                            <div id="ctl00_cphLunarix_PrivateSalesPurchasePanel" class="PrivateSalesPurchasePanel">
+                            <div id="ctl00_cphNeurotic_PrivateSalesPurchasePanel" class="PrivateSalesPurchasePanel">
                                 @php $bestSale = $bestPrivateSale; @endphp
                                 @if($bestSale)
                                 <span class='Price '>
                                     Best Price: <span class="robux " data-se="item-privatesale-price">{{ $bestSale->price }}</span>
                                 </span>
-                                <div data-expected-currency="1" data-asset-type="{{ $asset->getTypeName() }}" class="lunarix-buy-now btn-primary btn-medium PurchaseButton " data-se="item-privatesale-buyforbestprice" data-item-name="{{ $asset->name }}" data-item-id="{{ $asset->id }}" data-expected-price="{{ $bestSale->price }}" data-product-id="{{ $asset->id }}" data-expected-seller-id="{{ $bestSale->user_id }}" data-userasset-id="{{ $bestSale->guid }}" data-bc-requirement="0" data-seller-name="{{ $bestSale->seller->username }}">
+                                <div data-expected-currency="1" data-asset-type="{{ $asset->getTypeName() }}" class="neurotic-buy-now btn-primary btn-medium PurchaseButton " data-se="item-privatesale-buyforbestprice" data-item-name="{{ $asset->name }}" data-item-id="{{ $asset->id }}" data-expected-price="{{ $bestSale->price }}" data-product-id="{{ $asset->id }}" data-expected-seller-id="{{ $bestSale->user_id }}" data-userasset-id="{{ $bestSale->guid }}" data-bc-requirement="0" data-seller-name="{{ $bestSale->seller->username }}">
                                         Buy Now
                                 </div>
                                 <br />
@@ -402,7 +402,7 @@ LunarixEventManager.initialize(true);
                             <div class="footnote">
 	                            
                                 
-                                <div id="ctl00_cphLunarix_Sold">
+                                <div id="ctl00_cphNeurotic_Sold">
                                     (<span data-se="item-numbersold">{{ $asset->sales_count }}</span> 
                                     Sold)
                                 </div>
@@ -419,23 +419,23 @@ LunarixEventManager.initialize(true);
                         <div class="SocialMediaBar divider-top">
                                <p class="catchy-title ">
                                     <span>Share with your friends</span>
-                                    <span class="info-tool-tip tooltip" title="Share Lunarix with your friends and earn ROBUX every time they make a purchase.">&nbsp;</span>
+                                    <span class="info-tool-tip tooltip" title="Share Neurotic with your friends and earn ROBUX every time they make a purchase.">&nbsp;</span>
                                </p>
                                 <div id="social-media-bar-target"></div>
                             <script>
                                 var ua = new gigya.socialize.UserAction();
                                 ua.setLinkBack("https://{{ config('app.base_url_nohttp') }}/{{ $asset->getSlug() }}-item.aspx?id={{ $asset->id }}");
-                                ua.setTitle("Lunarix: {{ $asset->name }}");
+                                ua.setTitle("Neurotic: {{ $asset->name }}");
 
                                 var twitter_ua = new gigya.socialize.UserAction();
                                 twitter_ua.setLinkBack("https://{{ config('app.base_url_nohttp') }}/{{ $asset->getSlug() }}-item.aspx?id={{ $asset->id }}");
-                                twitter_ua.setTitle("{{ $asset->name }} via @LunarixRev");
+                                twitter_ua.setTitle("{{ $asset->name }} via @NeuroticRev");
 
                                 var shareButtons = [
                                     {
                                         'provider': "Twitter",
                                         'enableCount': "true",
-                                        'iconImgUp': "https://cdn.lunarix.lol/d75e7a07fd4db793d79060cc5976cb29.png",
+                                        'iconImgUp': "https://cdn.neurosama.lol/d75e7a07fd4db793d79060cc5976cb29.png",
                                         'userAction': twitter_ua
                                     }
                                 ];
@@ -485,8 +485,8 @@ LunarixEventManager.initialize(true);
                             @foreach($privateSales as $index => $sale)
                                 <tr Visible='True'>
                                     <td>
-                                        <a id="ctl00_cphLunarix_lstItemsForResale_ctrl{{ $index }}_AvatarImage2" class=" notranslate" title="{{ $sale->seller->username }}" href="/users/{{ $sale->seller->id }}/profile" style="display:inline-block;height:48px;width:48px;cursor:pointer;">
-                                            <img src="/Thumbs/Avatar.ashx?userId={{ $sale->seller->id }}" height="48" width="48" border="0" onerror="return Lunarix.Controls.Image.OnError(this)" alt="{{ $sale->seller->username }}" class=" notranslate" />
+                                        <a id="ctl00_cphNeurotic_lstItemsForResale_ctrl{{ $index }}_AvatarImage2" class=" notranslate" title="{{ $sale->seller->username }}" href="/users/{{ $sale->seller->id }}/profile" style="display:inline-block;height:48px;width:48px;cursor:pointer;">
+                                            <img src="/Thumbs/Avatar.ashx?userId={{ $sale->seller->id }}" height="48" width="48" border="0" onerror="return Neurotic.Controls.Image.OnError(this)" alt="{{ $sale->seller->username }}" class=" notranslate" />
                                         </a>
                                     </td>
                                     <td class="SellerNameAndSerial">
@@ -504,11 +504,11 @@ LunarixEventManager.initialize(true);
                                         </p>
                                         @endif
                                     </td>
-                                    <td id="ctl00_cphLunarix_lstItemsForResale_ctrl{{ $index }}_Td1" class="PriceBuyContainer">
+                                    <td id="ctl00_cphNeurotic_lstItemsForResale_ctrl{{ $index }}_Td1" class="PriceBuyContainer">
                                         @if(auth()->check() && auth()->id() === $sale->user_id)
-                                        <div class="btn-small btn-negative" onclick="Lunarix.Item.openTakeOffSale('{{ $sale->guid }}'); return false;">Take off</div>
+                                        <div class="btn-small btn-negative" onclick="Neurotic.Item.openTakeOffSale('{{ $sale->guid }}'); return false;">Take off</div>
                                         @else
-                                        <div class=" lunarix-buy-now btn-primary btn-small PurchaseButton "
+                                        <div class=" neurotic-buy-now btn-primary btn-small PurchaseButton "
                                          data-item-id="{{ $asset->id }}"
                                          data-item-name="{{ $asset->name }}"
                                          data-userasset-id="{{ $sale->guid }}"
@@ -526,7 +526,7 @@ LunarixEventManager.initialize(true);
                             </table>
                     @endif
                   <div class="pgItemsForResale">
-                      <span id="ctl00_cphLunarix_pgItemsForResale">
+                      <span id="ctl00_cphNeurotic_pgItemsForResale">
                           @if($privateSales->onFirstPage())
                           <a disabled="disabled">First</a>&nbsp;<a disabled="disabled">Previous</a>&nbsp;
                           @else
@@ -556,7 +556,7 @@ LunarixEventManager.initialize(true);
                       </span>
                   </div>
                 </div>
-                <div id="ctl00_cphLunarix_PriceGraph" class="PriceGraph divider-left ">
+                <div id="ctl00_cphNeurotic_PriceGraph" class="PriceGraph divider-left ">
                     
     @if($hasRapData)
     <div style="margin-left: 10px;">
@@ -729,7 +729,7 @@ LunarixEventManager.initialize(true);
                             </div>
                         
                     <div class="pgItemsForResale">
-                        <span id="ctl00_cphLunarix_pgItemsForResale"><a disabled="disabled">First</a>&nbsp;<a disabled="disabled">Previous</a>&nbsp;<a disabled="disabled">Next</a>&nbsp;<a disabled="disabled">Last</a>&nbsp;</span>
+                        <span id="ctl00_cphNeurotic_pgItemsForResale"><a disabled="disabled">First</a>&nbsp;<a disabled="disabled">Previous</a>&nbsp;<a disabled="disabled">Next</a>&nbsp;<a disabled="disabled">Last</a>&nbsp;</span>
                     </div>
                 </div>
                 
@@ -753,20 +753,20 @@ LunarixEventManager.initialize(true);
                         
 
     <div class="AssetRecommenderContainer">
-    <table id="ctl00_cphLunarix_AssetRec_dlAssets" cellspacing="0" align="Center" border="0" style="height:175px;width:800px;border-collapse:collapse;">
+    <table id="ctl00_cphNeurotic_AssetRec_dlAssets" cellspacing="0" align="Center" border="0" style="height:175px;width:800px;border-collapse:collapse;">
 	<tr>
         @foreach($recommendations->take(5) as $index => $rec)
 		<td>
             <div class="PortraitDiv" style="width: 140px;overflow: hidden;margin:auto;" visible="True" data-se="recommended-items-{{ $index }}">
                 <div class="AssetThumbnail">
-                    <a id="ctl00_cphLunarix_AssetRec_dlAssets_ctl00_AssetThumbnailHyperLink" class=" notranslate" title="{{ $rec->name }}" class=" notranslate" href="/{{ $rec->getSlug() }}-item?id={{ $rec->id }}" style="display:inline-block;height:110px;width:110px;cursor:pointer;"><img src="/Thumbs/Asset.ashx?assetId={{ $rec->id }}" height="110" width="110" border="0" onerror="return Lunarix.Controls.Image.OnError(this)" alt="{{ $rec->name }}" class=" notranslate" /></a>
+                    <a id="ctl00_cphNeurotic_AssetRec_dlAssets_ctl00_AssetThumbnailHyperLink" class=" notranslate" title="{{ $rec->name }}" class=" notranslate" href="/{{ $rec->getSlug() }}-item?id={{ $rec->id }}" style="display:inline-block;height:110px;width:110px;cursor:pointer;"><img src="/Thumbs/Asset.ashx?assetId={{ $rec->id }}" height="110" width="110" border="0" onerror="return Neurotic.Controls.Image.OnError(this)" alt="{{ $rec->name }}" class=" notranslate" /></a>
                 </div>
                 <div class="AssetDetails">
                     <div class="AssetName noTranslate">
-                        <a id="ctl00_cphLunarix_AssetRec_dlAssets_ctl00_AssetNameHyperLinkPortrait" href="/{{ $rec->getSlug() }}-item?id={{ $rec->id }}">{{ $rec->name }}</a>
+                        <a id="ctl00_cphNeurotic_AssetRec_dlAssets_ctl00_AssetNameHyperLinkPortrait" href="/{{ $rec->getSlug() }}-item?id={{ $rec->id }}">{{ $rec->name }}</a>
                     </div>
                     <div class="AssetCreator">
-                        <span class="stat-label">Creator:</span> <span class="Detail stat"><a id="ctl00_cphLunarix_AssetRec_dlAssets_ctl00_CreatorHyperLinkPortrait" class="notranslate" href="User.aspx?ID={{ $rec->creator_id }}">{{ $rec->creator->username }}</a></span>
+                        <span class="stat-label">Creator:</span> <span class="Detail stat"><a id="ctl00_cphNeurotic_AssetRec_dlAssets_ctl00_CreatorHyperLinkPortrait" class="notranslate" href="User.aspx?ID={{ $rec->creator_id }}">{{ $rec->creator->username }}</a></span>
                     </div>
                 </div>
             </div>
@@ -794,7 +794,7 @@ LunarixEventManager.initialize(true);
 
                     </div>
                     <div id="CommentaryTab" class="StandardPanelWhite TabContent " >
-                        <div id="ctl00_cphLunarix_CommentsPane_CommentsUpdatePanel">
+                        <div id="ctl00_cphNeurotic_CommentsPane_CommentsUpdatePanel">
 	
         <div id="AjaxCommentsPaneData"></div>
 
@@ -836,7 +836,7 @@ LunarixEventManager.initialize(true);
 </div>
 
 <script type="text/javascript">
-    Lunarix.CommentsPane.Resources = {
+    Neurotic.CommentsPane.Resources = {
         //<sl:translate>
         defaultMessage:         'Write a comment!',
         noCommentsFound:		'No comments found.',
@@ -854,22 +854,22 @@ LunarixEventManager.initialize(true);
         //</sl:translate>
        };
 
-       Lunarix.CommentsPane.Limits =
+       Neurotic.CommentsPane.Limits =
        [	{ limit: '10'
             , character: "\n"
-            , message: Lunarix.CommentsPane.Resources.tooManyNewlines
+            , message: Neurotic.CommentsPane.Resources.tooManyNewlines
             }
        ,	{ limit: '200'
             , character: undefined
-            , message: Lunarix.CommentsPane.Resources.tooManyCharacters
+            , message: Neurotic.CommentsPane.Resources.tooManyCharacters
             }
        ];
 
-       Lunarix.CommentsPane.FilterIsEnabled = true;
-       Lunarix.CommentsPane.FilterRegex = "(([a-zA-Z0-9-]+\\.[a-zA-Z]{2,4}[:\\#/\?]+)|([a-zA-Z0-9]\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,4}))";
-       Lunarix.CommentsPane.FilterCleanExistingComments = false;
+       Neurotic.CommentsPane.FilterIsEnabled = true;
+       Neurotic.CommentsPane.FilterRegex = "(([a-zA-Z0-9-]+\\.[a-zA-Z]{2,4}[:\\#/\?]+)|([a-zA-Z0-9]\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,4}))";
+       Neurotic.CommentsPane.FilterCleanExistingComments = false;
 
-    Lunarix.CommentsPane.initialize();
+    Neurotic.CommentsPane.initialize();
 </script>
 
                     </div>
@@ -905,21 +905,21 @@ LunarixEventManager.initialize(true);
         data-user-bc="{{ auth()->check() ? (int) auth()->user()->membership : '0' }}"
         data-continueshopping-url="/catalog"
         data-imageurl="/Thumbs/Asset.ashx?assetId={{ $asset->id }}" 
-        data-alerturl="https://cdn.lunarix.lol/cbb24e0c0f1fb97381a065bd1e056fcb.png"
-        data-bloxxerscluburl="https://cdn.lunarix.lol/ae345c0d59b00329758518edc104d573.png"
+        data-alerturl="https://cdn.neurosama.lol/cbb24e0c0f1fb97381a065bd1e056fcb.png"
+        data-bloxxerscluburl="https://cdn.neurosama.lol/ae345c0d59b00329758518edc104d573.png"
         data-has-currency-service-error="False"
         data-currency-service-error-message=""></div>
 
     <div id="ProcessingView" style="display:none">
         <div class="ProcessingModalBody">
-            <p style="margin:0px"><img src='https://cdn.lunarix.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif' alt="Processing..." /></p>
+            <p style="margin:0px"><img src='https://cdn.neurosama.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif' alt="Processing..." /></p>
             <p style="margin:7px 0px">Processing Transaction</p>
         </div>
     </div>
     
     <script type="text/javascript">
         //<sl:translate>
-        Lunarix.ItemPurchase.strings = {
+        Neurotic.ItemPurchase.strings = {
             insufficientFundsTitle : "Insufficient Funds",
             insufficientFundsText : "You need {0} more to purchase this item.",
             cancelText : "Cancel",
@@ -961,7 +961,7 @@ LunarixEventManager.initialize(true);
             </div>
             <div class="PurchaseModalMessageText">
                 <script type="text/javascript">
-                    Lunarix.Item.setMarketPlaceFee(0.3);
+                    Neurotic.Item.setMarketPlaceFee(0.3);
                 </script>
                 <div>
                     @if(($asset->is_limited || $asset->is_limited_unique) && $userOwnedCopies->count() > 1)
@@ -981,7 +981,7 @@ LunarixEventManager.initialize(true);
                     @elseif(($asset->is_limited || $asset->is_limited_unique) && $userOwnedCopies->count() === 1)
                     <input type="hidden" id="SerialSelect" value="{{ $userOwnedCopies->first()->guid }}">
                     @endif
-                    Price (minimum 1): <span class="robux notranslate"></span><input type="text" id="PriceInput" name="price" value="" style="width: 75px;" onkeyup="Lunarix.Item.validateResellInput()">
+                    Price (minimum 1): <span class="robux notranslate"></span><input type="text" id="PriceInput" name="price" value="" style="width: 75px;" onkeyup="Neurotic.Item.validateResellInput()">
                     <br />
                     Marketplace fee at 30%: <span class="lblCommision"></span>
                     <br />
@@ -993,7 +993,7 @@ LunarixEventManager.initialize(true);
             </div>
         </div>
         <div class="PurchaseModalButtonContainer">
-            <div class="btn-medium btn-primary" onclick="Lunarix.Item.confirmSell({{ $asset->id }})">
+            <div class="btn-medium btn-primary" onclick="Neurotic.Item.confirmSell({{ $asset->id }})">
                 Sell Now
             </div>
             <div class="btn-medium btn-negative" onclick="ModalClose('SellItemModalContainer')">
@@ -1015,7 +1015,7 @@ LunarixEventManager.initialize(true);
             </div>
             <div class="PurchaseModalMessageText">
                 <script type="text/javascript">
-                    Lunarix.Item.setMarketPlaceFee(0.3);
+                    Neurotic.Item.setMarketPlaceFee(0.3);
                 </script>
                 <div>
                     Only Bloxxers Club members
@@ -1054,7 +1054,7 @@ LunarixEventManager.initialize(true);
             </div>
         </div>
         <div class="PurchaseModalButtonContainer">
-            <div class="btn-medium btn-primary" onclick="Lunarix.Item.confirmTakeOffSale()">
+            <div class="btn-medium btn-primary" onclick="Neurotic.Item.confirmTakeOffSale()">
                 Confirm
             </div>
             <div class="btn-medium btn-negative" onclick="ModalClose('TakeOffSaleModalContainer')">
@@ -1067,7 +1067,7 @@ LunarixEventManager.initialize(true);
 @endif
     
 
-    <div id="ctl00_cphLunarix_CreateSetPanelDiv" class="createSetPanelPopup">
+    <div id="ctl00_cphNeurotic_CreateSetPanelDiv" class="createSetPanelPopup">
 	
         
     
@@ -1079,14 +1079,14 @@ LunarixEventManager.initialize(true);
     <div class="Title"></div>
     <div class="GenericModalBody">
         <div>
-            <div class="ImageContainer lunarix-item-image"  data-image-size="small" data-no-overlays data-no-click>
+            <div class="ImageContainer neurotic-item-image"  data-image-size="small" data-no-overlays data-no-click>
                 <img class="GenericModalImage" alt="generic image" />
             </div>
             <div class="Message"></div>  
             <div style="clear:both"></div>
         </div>
         <div class="GenericModalButtonContainer">
-            <a class="ImageButton btn-neutral btn-large lunarix-ok">OK</a> 
+            <a class="ImageButton btn-neutral btn-large neurotic-ok">OK</a> 
         </div>  
     </div>
 </div>
@@ -1102,7 +1102,7 @@ LunarixEventManager.initialize(true);
     </div>
     <div class="unifiedModalContent" style="padding-top:5px; margin-bottom: 3px; margin-left: 3px; margin-right: 3px">
         <div class="ImageContainer" >
-            <img class="GenericModalImage BCModalImage" alt="Builder's Club" src="https://cdn.lunarix.lol/ae345c0d59b00329758518edc104d573.png" />
+            <img class="GenericModalImage BCModalImage" alt="Builder's Club" src="https://cdn.neurosama.lol/ae345c0d59b00329758518edc104d573.png" />
             <div id="BCMessageDiv" class="BCMessage Message">
                 You need  to buy this item!
             </div>
@@ -1140,14 +1140,14 @@ LunarixEventManager.initialize(true);
     <div class="Title"></div>
     <div class="GenericModalBody">
         <div>
-            <div class="ImageContainer lunarix-item-image"  data-image-size="small" data-no-overlays data-no-click>
+            <div class="ImageContainer neurotic-item-image"  data-image-size="small" data-no-overlays data-no-click>
                 <img class="GenericModalImage" alt="generic image" />
             </div>
             <div class="Message"></div>  
             <div style="clear:both"></div>
         </div>
         <div class="GenericModalButtonContainer">
-            <a class="ImageButton btn-neutral btn-large lunarix-ok">OK</a> 
+            <a class="ImageButton btn-neutral btn-large neurotic-ok">OK</a> 
         </div>  
     </div>
 </div>
@@ -1155,21 +1155,21 @@ LunarixEventManager.initialize(true);
 
     <div id="InstallingPluginView" class="processing-view" style="display:none">
         <div class="ProcessingModalBody">
-            <p style="margin:0px"><img src='https://cdn.lunarix.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif' alt="Installing Plugin..." /></p>
+            <p style="margin:0px"><img src='https://cdn.neurosama.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif' alt="Installing Plugin..." /></p>
             <p class="processing-text" style="margin:7px 0px">Installing Plugin...</p>
         </div>
     </div>
     <div id="UpdatingPluginView" class="processing-view" style="display:none">
         <div class="ProcessingModalBody">
-            <p style="margin:0px"><img src='https://cdn.lunarix.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif' alt="Updating Plugin..." /></p>
+            <p style="margin:0px"><img src='https://cdn.neurosama.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif' alt="Updating Plugin..." /></p>
             <p class="processing-text" style="margin:7px 0px">Updating Plugin...</p>
         </div>
     </div>
     
     <script type="text/javascript">
-    Lunarix.Item = Lunarix.Item || {};
+    Neurotic.Item = Neurotic.Item || {};
 
-    Lunarix.Item.Resources = {
+    Neurotic.Item.Resources = {
         //<sl:translate>
         DisableBadgeTitle: 'Disable Badge'
         , DisableBadgeMessage: 'Are you sure you want to disable this Badge?'
@@ -1179,9 +1179,9 @@ LunarixEventManager.initialize(true);
     };
 </script>
 <script type="text/javascript">
-    Lunarix.Plugins = Lunarix.Plugins || {};
+    Neurotic.Plugins = Neurotic.Plugins || {};
 
-    Lunarix.Plugins.Resources = {
+    Neurotic.Plugins.Resources = {
         //<sl:translate>
         errorTitle: "Error Installing Plugin",
         errorBody: "There was a problem installing this plugin. Please try again later.",
@@ -1200,15 +1200,15 @@ LunarixEventManager.initialize(true);
 </script>
 
 <script type="text/javascript">
-    Lunarix.Item = Lunarix.Item || {};
+    Neurotic.Item = Neurotic.Item || {};
     (function () {
         var marketplaceFee = 0.3;
         var pendingTakeOffGuid = null;
 
-        Lunarix.Item.setMarketPlaceFee = function (fee) {
+        Neurotic.Item.setMarketPlaceFee = function (fee) {
             marketplaceFee = fee;
         };
-        Lunarix.Item.validateResellInput = function () {
+        Neurotic.Item.validateResellInput = function () {
             var priceVal = $("#SellItemModalContainer input[name=price]").val();
             var errEl = $("#SellItemModalContainer .error-message");
             if (isNaN(parseInt(priceVal)) || priceVal != parseInt(priceVal) + "" || priceVal <= 0) {
@@ -1225,7 +1225,7 @@ LunarixEventManager.initialize(true);
             $("#SellItemModalContainer .lblCommision").text(commission > 0 ? commission : "");
             $("#SellItemModalContainer .lblLeftover").text(leftover >= 0 ? leftover : "");
         };
-        Lunarix.Item.confirmSell = function (assetId) {
+        Neurotic.Item.confirmSell = function (assetId) {
             var priceVal = $("#SellItemModalContainer input[name=price]").val();
             var price = parseInt(priceVal);
             var guid = $("#SerialSelect").val();
@@ -1260,7 +1260,7 @@ LunarixEventManager.initialize(true);
                 }
             });
         };
-        Lunarix.Item.openTakeOffSale = function (guid) {
+        Neurotic.Item.openTakeOffSale = function (guid) {
             pendingTakeOffGuid = guid;
             $("#TakeOffSaleModalContainer").modal({
                 escClose: true,
@@ -1269,7 +1269,7 @@ LunarixEventManager.initialize(true);
                 overlayCss: { backgroundColor: "#000" }
             });
         };
-        Lunarix.Item.confirmTakeOffSale = function () {
+        Neurotic.Item.confirmTakeOffSale = function () {
             if (!pendingTakeOffGuid) {
                 return;
             }
@@ -1291,17 +1291,17 @@ LunarixEventManager.initialize(true);
                         msg = parsed.message || parsed.errorMsg || msg;
                     } catch (e) {}
                     ModalClose('TakeOffSaleModalContainer');
-                    Lunarix.GenericModal.open("Error", "/images/Icons/img-alert.png", msg, null, false);
+                    Neurotic.GenericModal.open("Error", "/images/Icons/img-alert.png", msg, null, false);
                 }
             });
         };
     })();
 </script>
     <script type="text/javascript">
-    Lunarix.Item = Lunarix.Item || {};
+    Neurotic.Item = Neurotic.Item || {};
 
-    Lunarix.Item.ShowAssetGrantedModal = false;
-    Lunarix.Item.ForwardToUrl = "";
+    Neurotic.Item.ShowAssetGrantedModal = false;
+    Neurotic.Item.ForwardToUrl = "";
         $(function() {
             var commentsLoaded = false;
 
@@ -1313,10 +1313,10 @@ LunarixEventManager.initialize(true);
 
                 var label = $.trim(nextTabElem.attr('contentid'));
                 if(label == "CommentaryTab" && !commentsLoaded) {
-                    Lunarix.CommentsPane.getComments(0);
+                    Neurotic.CommentsPane.getComments(0);
                     commentsLoaded = true;
-                    if(Lunarix.SuperSafePrivacyMode != undefined) {
-                        Lunarix.SuperSafePrivacyMode.initModals();
+                    if(Neurotic.SuperSafePrivacyMode != undefined) {
+                        Neurotic.SuperSafePrivacyMode.initModals();
                     }
                     return false;
                 }
@@ -1328,45 +1328,45 @@ LunarixEventManager.initialize(true);
             });
                   
             function confirmDelete() {
-                Lunarix.GenericConfirmation.open({
+                Neurotic.GenericConfirmation.open({
                     titleText: "Delete Item",
                     bodyContent: "Are you sure you want to permanently DELETE this item from your inventory?",
                     onAccept: function () {
                         $.ajax({
                             url: '/API/DeleteAsset.ashx',
                             type: 'POST',
-                            data: { assetId: Lunarix.Item.AssetId },
+                            data: { assetId: Neurotic.Item.AssetId },
                             success: function (response) {
                                 window.location.reload();
                             },
                             error: function (xhr) {
-                                {{-- Lunarix.GenericModal.open(Lunarix.GenericModal.Resources.ErrorText, "/images/Icons/img-alert.png", Lunarix.GenericModal.Resources.ErrorMessage, null, false); --}}
-                                Lunarix.GenericModal.open(Lunarix.GenericModal.Resources.ErrorText, "/images/Icons/img-alert.png", "This feature is still being worked on", null, false);
+                                {{-- Neurotic.GenericModal.open(Neurotic.GenericModal.Resources.ErrorText, "/images/Icons/img-alert.png", Neurotic.GenericModal.Resources.ErrorMessage, null, false); --}}
+                                Neurotic.GenericModal.open(Neurotic.GenericModal.Resources.ErrorText, "/images/Icons/img-alert.png", "This feature is still being worked on", null, false);
                             }
                         });
                     },
-                    acceptColor: Lunarix.GenericModal.blue,
+                    acceptColor: Neurotic.GenericModal.blue,
                     acceptText: "OK"
                 });
             }
 
             function confirmSubmit() {
-                Lunarix.GenericConfirmation.open({
+                Neurotic.GenericConfirmation.open({
                     //<sl:translate>
                     titleText: "Create New Badge Giver",
                     bodyContent: "This will add a new badge giver model to your inventory. Are you sure you want to do this?",
                     //</sl:translate>
                     onAccept: function () {
-                        window.location.href = $('#ctl00_cphLunarix_btnSubmit').attr('href');
+                        window.location.href = $('#ctl00_cphNeurotic_btnSubmit').attr('href');
                     },
-                    acceptColor: Lunarix.GenericConfirmation.blue,
+                    acceptColor: Neurotic.GenericConfirmation.blue,
                     //<sl:translate>
                     acceptText: "OK"
                     //</sl:translate>
                 });
             }
 
-            $(document).on('click', '#ctl00_cphLunarix_btnDelete', function (event) {
+            $(document).on('click', '#ctl00_cphNeurotic_btnDelete', function (event) {
                 event.preventDefault();
                 event.stopPropagation();
                 confirmDelete();

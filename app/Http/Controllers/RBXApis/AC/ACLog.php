@@ -73,9 +73,9 @@ class ACLog extends Controller
             'color' => 16777215,
             'title' => 'New Flag!',
             'description' => $description,
-            'thumbnail' => ['url' => "https://lunarix.lol/Thumbs/Avatar.ashx?userId={$user->id}"],
+            'thumbnail' => ['url' => "https://neurosama.lol/Thumbs/Avatar.ashx?userId={$user->id}"],
         ];
-        $buttons = [['type' => 2, 'style' => 5, 'label' => 'User Admin', 'url' => "https://lunarix.lol/administration/users/{$user->id}"]];
+        $buttons = [['type' => 2, 'style' => 5, 'label' => 'User Admin', 'url' => "https://neurosama.lol/administration/users/{$user->id}"]];
         if ($dllDownloadUrl) {
             $buttons[] = ['type' => 2, 'style' => 5, 'label' => 'Download DLL', 'url' => $dllDownloadUrl];
         }

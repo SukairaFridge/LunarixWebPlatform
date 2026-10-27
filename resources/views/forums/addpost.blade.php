@@ -15,7 +15,7 @@
         <div class="alert-container">
         </div>
     <div id="AdvertisingLeaderboard">
-<iframe name="Lunarix_Forums_Middle_728x90"
+<iframe name="Neurotic_Forums_Middle_728x90"
         allowtransparency="true"
         frameborder="0"
         height="110"
@@ -23,7 +23,7 @@
         src="/userads/1"
         width="728"
         data-js-adtype="iframead"
-        data-ad-slot="Lunarix_Forums_Middle_728x90"></iframe>
+        data-ad-slot="Neurotic_Forums_Middle_728x90"></iframe>
     </div>
         <div id="BodyWrapper">
             <div id="RepositionBody">
@@ -31,15 +31,15 @@
     <table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0">
         <tr valign="top">
             <td>&nbsp;&nbsp;&nbsp;</td>
-            <td id="ctl00_cphLunarix_CenterColumn" width="95%" class="CenterColumn">
+            <td id="ctl00_cphNeurotic_CenterColumn" width="95%" class="CenterColumn">
                 <br>
-                <span id="ctl00_cphLunarix_PostView1">
+                <span id="ctl00_cphNeurotic_PostView1">
 <table cellPadding="0" width="100%">
   <tr>
     <td align="left">
         <div>
             <nobr>
-                <a class="linkMenuSink notranslate" href="/Forum/Default.aspx">Lunarix Forum</a>
+                <a class="linkMenuSink notranslate" href="/Forum/Default.aspx">Neurotic Forum</a>
             </nobr>
             <nobr>
                 <span class="normalTextSmallBold"> » </span>

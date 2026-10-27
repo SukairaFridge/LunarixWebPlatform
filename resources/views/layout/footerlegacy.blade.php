@@ -6,13 +6,13 @@
     <div class="FooterNav">
         <a href="/info/Privacy.aspx">Privacy Policy</a>
         &nbsp;|&nbsp;
-        <a href="http://{{ $legacyFooterHost }}/about" class="lunarix-interstitial">About us</a>
+        <a href="http://{{ $legacyFooterHost }}/about" class="neurotic-interstitial">About us</a>
         &nbsp;|&nbsp;
-        <a href="http://blog.{{ $legacyFooterHost }}" class="lunarix-interstitial">Contact Us</a>
+        <a href="http://blog.{{ $legacyFooterHost }}" class="neurotic-interstitial">Contact Us</a>
     </div>
     <div class="legal">
         <p class="Legalese">
-            Lunarix, "Be Anything, Build Anything" is an independent community-made platform made by <a target="_blank" href="#" class="lrx-link lunarix-interstitial">Sukaira's Fridge</a>. Lunarix is not sponsored, authorized or endorsed by corporations or companies in any way, shape or form. Use of this site signifies your acceptance of the <a href="/info/terms-of-service" target="_blank" class="lrx-link">Terms and Conditions</a>.
+            Neurotic, "Be Anything, Build Anything" is an independent community-made platform made by <a target="_blank" href="#" class="lrx-link neurotic-interstitial">Sukaira's Fridge</a>. Neurotic is not sponsored, authorized or endorsed by corporations or companies in any way, shape or form. Use of this site signifies your acceptance of the <a href="/info/terms-of-service" target="_blank" class="lrx-link">Terms and Conditions</a>.
         </p>
         <div class="clear"></div>
     </div>
@@ -29,7 +29,7 @@
 
 <script type="text/javascript">
 //<![CDATA[
-$(function() { LunarixEventManager.triggerEvent('lrx_evt_newuser', {}); });//]]>
+$(function() { NeuroticEventManager.triggerEvent('lrx_evt_newuser', {}); });//]]>
 </script>
 </form>
 
@@ -37,23 +37,23 @@ $(function() { LunarixEventManager.triggerEvent('lrx_evt_newuser', {}); });//]]>
     <div class="ph-installinstructions">
         <div class="ph-modal-header">
             <span class="lrx-icon-close simplemodal-close"></span>
-            <h3>Thanks for playing Lunarix</h3>
+            <h3>Thanks for playing Neurotic</h3>
         </div>
         <div class="ph-installinstructions-body">
                 <div class="ph-install-step ph-installinstructions-step1-of4">
                     <h1>1</h1>
-                    <p class="larger-font-size">Click LunarixPlayerLauncher.exe to run the Lunarix installer, which just downloaded via your web browser.</p>
-                    <img width="230" height="180" src="https://cdn.lunarix.lol/22ff09393bb9dc4093b85439f420a531.png" />
+                    <p class="larger-font-size">Click NeuroticPlayerLauncher.exe to run the Neurotic installer, which just downloaded via your web browser.</p>
+                    <img width="230" height="180" src="https://cdn.neurosama.lol/22ff09393bb9dc4093b85439f420a531.png" />
                 </div>
                 <div class="ph-install-step ph-installinstructions-step2-of4">
                     <h1>2</h1>
                     <p class="larger-font-size">Click <strong>Run</strong> when prompted by your computer to begin the installation process.</p>
-                    <img width="230" height="180" src="https://cdn.lunarix.lol/4a3f96d30df0f7879abde4ed837446c6.png" />
+                    <img width="230" height="180" src="https://cdn.neurosama.lol/4a3f96d30df0f7879abde4ed837446c6.png" />
                 </div>
                 <div class="ph-install-step ph-installinstructions-step3-of4">
                     <h1>3</h1>
-                    <p class="larger-font-size">Click <strong>Ok</strong> once you've successfully installed Lunarix.</p>
-                    <img width="230" height="180" src="https://cdn.lunarix.lol/1889460e8475fd0bc24c6b57992b31d4.png" />
+                    <p class="larger-font-size">Click <strong>Ok</strong> once you've successfully installed Neurotic.</p>
+                    <img width="230" height="180" src="https://cdn.neurosama.lol/1889460e8475fd0bc24c6b57992b31d4.png" />
                 </div>
                 <div class="ph-install-step ph-installinstructions-step4-of4">
                     <h1>4</h1>
@@ -64,7 +64,7 @@ $(function() { LunarixEventManager.triggerEvent('lrx_evt_newuser', {}); });//]]>
                 </div>
         </div>
         <div class="lrx-font-sm lrx-text-notes">
-            The Lunarix installer should download shortly. If it doesn’t, <a href="#" onclick="Lunarix.ProtocolHandlerClientInterface.startDownload(); return false;">start the download now.</a>
+            The Neurotic installer should download shortly. If it doesn’t, <a href="#" onclick="Neurotic.ProtocolHandlerClientInterface.startDownload(); return false;">start the download now.</a>
         </div>
     </div>
 </div>
@@ -76,22 +76,22 @@ $(function() { LunarixEventManager.triggerEvent('lrx_evt_newuser', {}); });//]]>
 <iframe id="downloadInstallerIFrame" style="visibility:hidden;height:0;width:1px;position:absolute"></iframe>
 
 <script type="text/javascript">
-    Lunarix.Client._skip = null;
-    Lunarix.Client._CLSID = '76D50904-6780-4c8b-8986-1A7EE0B1716D';
-    Lunarix.Client._installHost = 'setup.lunarix.lol';
-    Lunarix.Client.ImplementsProxy = true;
-    Lunarix.Client._silentModeEnabled = true;
-    Lunarix.Client._bringAppToFrontEnabled = false;
-    Lunarix.Client._currentPluginVersion = '';
-    Lunarix.Client._eventStreamLoggingEnabled = true;
+    Neurotic.Client._skip = null;
+    Neurotic.Client._CLSID = '76D50904-6780-4c8b-8986-1A7EE0B1716D';
+    Neurotic.Client._installHost = 'setup.neurosama.lol';
+    Neurotic.Client.ImplementsProxy = true;
+    Neurotic.Client._silentModeEnabled = true;
+    Neurotic.Client._bringAppToFrontEnabled = false;
+    Neurotic.Client._currentPluginVersion = '';
+    Neurotic.Client._eventStreamLoggingEnabled = true;
 
         
-        Lunarix.Client._installSuccess = function() {
+        Neurotic.Client._installSuccess = function() {
             if(GoogleAnalyticsEvents){
                 GoogleAnalyticsEvents.ViewVirtual('InstallSuccess');
                 GoogleAnalyticsEvents.FireEvent(['Plugin','Install Success']);
-                if (Lunarix.Client._eventStreamLoggingEnabled && typeof Lunarix.GamePlayEvents != "undefined") {
-                    Lunarix.GamePlayEvents.SendInstallSuccess(Lunarix.Client._launchMode, play_placeId);
+                if (Neurotic.Client._eventStreamLoggingEnabled && typeof Neurotic.GamePlayEvents != "undefined") {
+                    Neurotic.GamePlayEvents.SendInstallSuccess(Neurotic.Client._launchMode, play_placeId);
                 }
             }
         }
@@ -101,12 +101,12 @@ $(function() { LunarixEventManager.triggerEvent('lrx_evt_newuser', {}); });//]]>
             window.location.hash = '';
             var continuation = '(' + $.cookie('chromeInstall') + ')';
             play_placeId = $.cookie('chromeInstallPlaceId');
-            Lunarix.GamePlayEvents.lastContext = $.cookie('chromeInstallLaunchMode');
+            Neurotic.GamePlayEvents.lastContext = $.cookie('chromeInstallLaunchMode');
             $.cookie('chromeInstallPlaceId', null);
             $.cookie('chromeInstallLaunchMode', null);
             $.cookie('chromeInstall', null);
-            LunarixLaunch._GoogleAnalyticsCallback = function() { var isInsideLunarixIDE = 'website'; if (Lunarix && Lunarix.Client && Lunarix.Client.isIDE && Lunarix.Client.isIDE()) { isInsideLunarixIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideLunarixIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Play']);EventTracker.fireEvent('GameLaunchAttempt_Win32', 'GameLaunchAttempt_Win32_Plugin'); if (typeof Lunarix.GamePlayEvents != 'undefined') { Lunarix.GamePlayEvents.SendClientStartAttempt(null, play_placeId); }  }; 
-            Lunarix.Client.ResumeTimer(eval(continuation));
+            NeuroticLaunch._GoogleAnalyticsCallback = function() { var isInsideNeuroticIDE = 'website'; if (Neurotic && Neurotic.Client && Neurotic.Client.isIDE && Neurotic.Client.isIDE()) { isInsideNeuroticIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Plugin Location', 'Launch Attempt', isInsideNeuroticIDE]);GoogleAnalyticsEvents.FireEvent(['Plugin', 'Launch Attempt', 'Play']);EventTracker.fireEvent('GameLaunchAttempt_Win32', 'GameLaunchAttempt_Win32_Plugin'); if (typeof Neurotic.GamePlayEvents != 'undefined') { Neurotic.GamePlayEvents.SendClientStartAttempt(null, play_placeId); }  }; 
+            Neurotic.Client.ResumeTimer(eval(continuation));
         }
         
 </script>
@@ -118,17 +118,17 @@ $(function() { LunarixEventManager.triggerEvent('lrx_evt_newuser', {}); });//]]>
      data-is-protocol-handler-launch-enabled="True"
      data-is-user-logged-in="False"
      data-os-name="Windows"
-     data-protocol-name-for-client="lunarix-player"
-     data-protocol-name-for-studio="lunarix-studio"
+     data-protocol-name-for-client="neurotic-player"
+     data-protocol-name-for-studio="neurotic-studio"
      data-protocol-url-includes-launchtime="true"
      data-protocol-detection-enabled="true">
     <div class="modalPopup blueAndWhite PlaceLauncherModal" style="min-height: 160px">
         <div id="Spinner" class="Spinner" style="padding:20px 0;">
-            <img src="https://cdn.lunarix.lol/e998fb4c03e8c2e30792f2f3436e9416.gif" height="32" width="32" alt="Progress" />
+            <img src="https://cdn.neurosama.lol/e998fb4c03e8c2e30792f2f3436e9416.gif" height="32" width="32" alt="Progress" />
         </div>
         <div id="status" style="min-height:40px;text-align:center;margin:5px 20px">
             <div id="Starting" class="PlaceLauncherStatus MadStatusStarting" style="display:block">
-                Starting Lunarix...
+                Starting Neurotic...
             </div>
             <div id="Waiting" class="PlaceLauncherStatus MadStatusField">Connecting to Players...</div>
             <div id="StatusBackBuffer" class="PlaceLauncherStatus PlaceLauncherStatusBackBuffer MadStatusBackBuffer"></div>
@@ -148,10 +148,10 @@ $(function() { LunarixEventManager.triggerEvent('lrx_evt_newuser', {}); });//]]>
         </div>
         <div class="ph-areyouinstalleddialog-content">
             <p class="larger-font-size">
-                Lunarix is now loading. Get ready to play!
+                Neurotic is now loading. Get ready to play!
             </p>
             <div class="ph-startingdialog-spinner-row">
-                <img src="https://cdn.lunarix.lol/4bed93c91f909002b1f17f05c0ce13d1.gif" width="82" height="24" />
+                <img src="https://cdn.neurosama.lol/4bed93c91f909002b1f17f05c0ce13d1.gif" width="82" height="24" />
             </div>
         </div>
     </div>
@@ -174,7 +174,7 @@ $(function() { LunarixEventManager.triggerEvent('lrx_evt_newuser', {}); });//]]>
                 </button>
             </div>
             <div class="lrx-small lrx-text-notes">
-                <a href="https://en.help.lunarix.lol/hc/en-us/articles/204473560" class="lrx-link" target="_blank">Click here for help</a>
+                <a href="https://en.help.neurosama.lol/hc/en-us/articles/204473560" class="lrx-link" target="_blank">Click here for help</a>
             </div>
 
         </div>
@@ -183,7 +183,7 @@ $(function() { LunarixEventManager.triggerEvent('lrx_evt_newuser', {}); });//]]>
 <div id="ProtocolHandlerClickAlwaysAllowed" class="ph-clickalwaysallowed" style="display:none;">
     <p class="larger-font-size">
         <span class="lrx-icon-moreinfo"></span>
-        Check <b>Remember my choice</b> and click <img src="https://cdn.lunarix.lol/7c8d7a39b4335931221857cca2b5430b.png" alt="Launch Application" />  in the dialog box above to join games faster in the future!
+        Check <b>Remember my choice</b> and click <img src="https://cdn.neurosama.lol/7c8d7a39b4335931221857cca2b5430b.png" alt="Launch Application" />  in the dialog box above to join games faster in the future!
     </p>
 </div>
 
@@ -207,30 +207,30 @@ $(function() { LunarixEventManager.triggerEvent('lrx_evt_newuser', {}); });//]]>
     </div>
     <script type="text/javascript">
         $(function () {
-            if (Lunarix.VideoPreRoll) {
-                Lunarix.VideoPreRoll.showVideoPreRoll = false;
-                Lunarix.VideoPreRoll.isPrerollShownEveryXMinutesEnabled = true;
-                Lunarix.VideoPreRoll.loadingBarMaxTime = 33000;
-                Lunarix.VideoPreRoll.videoOptions.key = "lunarixcorporation"; 
-                    Lunarix.VideoPreRoll.videoOptions.categories = "AgeUnknown,GenderUnknown";
-                                     Lunarix.VideoPreRoll.videoOptions.id = "games";
-                Lunarix.VideoPreRoll.videoLoadingTimeout = 11000;
-                Lunarix.VideoPreRoll.videoPlayingTimeout = 41000;
-                Lunarix.VideoPreRoll.videoLogNote = "Guest";
-                Lunarix.VideoPreRoll.logsEnabled = true;
-                Lunarix.VideoPreRoll.excludedPlaceIds = "32373412";
-                Lunarix.VideoPreRoll.adTime = 15;
+            if (Neurotic.VideoPreRoll) {
+                Neurotic.VideoPreRoll.showVideoPreRoll = false;
+                Neurotic.VideoPreRoll.isPrerollShownEveryXMinutesEnabled = true;
+                Neurotic.VideoPreRoll.loadingBarMaxTime = 33000;
+                Neurotic.VideoPreRoll.videoOptions.key = "neuroticcorporation"; 
+                    Neurotic.VideoPreRoll.videoOptions.categories = "AgeUnknown,GenderUnknown";
+                                     Neurotic.VideoPreRoll.videoOptions.id = "games";
+                Neurotic.VideoPreRoll.videoLoadingTimeout = 11000;
+                Neurotic.VideoPreRoll.videoPlayingTimeout = 41000;
+                Neurotic.VideoPreRoll.videoLogNote = "Guest";
+                Neurotic.VideoPreRoll.logsEnabled = true;
+                Neurotic.VideoPreRoll.excludedPlaceIds = "32373412";
+                Neurotic.VideoPreRoll.adTime = 15;
                     
-                Lunarix.VideoPreRoll.specificAdOnPlacePageEnabled = true;
-                Lunarix.VideoPreRoll.specificAdOnPlacePageId = 192800;
-                Lunarix.VideoPreRoll.specificAdOnPlacePageCategory = "stooges";
+                Neurotic.VideoPreRoll.specificAdOnPlacePageEnabled = true;
+                Neurotic.VideoPreRoll.specificAdOnPlacePageId = 192800;
+                Neurotic.VideoPreRoll.specificAdOnPlacePageCategory = "stooges";
                 
                                     
-                Lunarix.VideoPreRoll.specificAdOnPlacePage2Enabled = true;
-                Lunarix.VideoPreRoll.specificAdOnPlacePage2Id = 2370766;
-                Lunarix.VideoPreRoll.specificAdOnPlacePage2Category = "lego";
+                Neurotic.VideoPreRoll.specificAdOnPlacePage2Enabled = true;
+                Neurotic.VideoPreRoll.specificAdOnPlacePage2Id = 2370766;
+                Neurotic.VideoPreRoll.specificAdOnPlacePage2Category = "lego";
                 
-                $(Lunarix.VideoPreRoll.checkEligibility);
+                $(Neurotic.VideoPreRoll.checkEligibility);
             }
         });
     </script>
@@ -259,17 +259,17 @@ $(function() { LunarixEventManager.triggerEvent('lrx_evt_newuser', {}); });//]]>
     </div>
 </div>
 <script type="text/javascript">
-    function checkLunarixInstall() {
-             return LunarixLaunch.CheckLunarixInstall('/install/download.aspx');
+    function checkNeuroticInstall() {
+             return NeuroticLaunch.CheckNeuroticInstall('/install/download.aspx');
     }
 
 </script>
 
 <script type="text/javascript">
-    var Lunarix = Lunarix || {};
-    Lunarix.UpsellAdModal = Lunarix.UpsellAdModal || {};
+    var Neurotic = Neurotic || {};
+    Neurotic.UpsellAdModal = Neurotic.UpsellAdModal || {};
 
-    Lunarix.UpsellAdModal.Resources = {
+    Neurotic.UpsellAdModal.Resources = {
         //<sl:translate>
         title: "Remove Ads Like This",
         body: "Bloxxers Club members do not see external ads like these.",
@@ -284,25 +284,25 @@ $(function() { LunarixEventManager.triggerEvent('lrx_evt_newuser', {}); });//]]>
     <div class="Title"></div>
     <div class="GenericModalBody">
         <div class="TopBody">
-            <div class="ImageContainer lunarix-item-image"  data-image-size="small" data-no-overlays data-no-click>
+            <div class="ImageContainer neurotic-item-image"  data-image-size="small" data-no-overlays data-no-click>
                 <img class="GenericModalImage" alt="generic image" />
             </div>
             <div class="Message"></div>
         </div>
         <div class="ConfirmationModalButtonContainer">
-            <a href id="lunarix-confirm-btn"><span></span></a>
-            <a href id="lunarix-decline-btn"><span></span></a>
+            <a href id="neurotic-confirm-btn"><span></span></a>
+            <a href id="neurotic-decline-btn"><span></span></a>
         </div>
         <div class="ConfirmationModalFooter">
         
         </div>  
     </div>   
     <script type="text/javascript">
-        Lunarix = Lunarix || {};
-        Lunarix.Resources = Lunarix.Resources || {};
+        Neurotic = Neurotic || {};
+        Neurotic.Resources = Neurotic.Resources || {};
 
         //<sl:translate>
-        Lunarix.Resources.GenericConfirmation = {
+        Neurotic.Resources.GenericConfirmation = {
             yes: "Yes",
             No: "No",
             Confirm: "Confirm",
@@ -313,7 +313,7 @@ $(function() { LunarixEventManager.triggerEvent('lrx_evt_newuser', {}); });//]]>
 </div>
         <script>
             $(function () {
-                Lunarix.DeveloperConsoleWarning.showWarning();
+                Neurotic.DeveloperConsoleWarning.showWarning();
             });
         </script>
     

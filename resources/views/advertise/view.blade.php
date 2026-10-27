@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=page___335c7b8a45e52c280387f93bc1a3a19c_m.css">
 @endpush
 @push('js')
-<script src="https://js.lunarix.lol/c6b47ce9ee4cd0423d35c985917d2b4e.js"></script>
+<script src="https://js.neurosama.lol/c6b47ce9ee4cd0423d35c985917d2b4e.js"></script>
 @endpush
 @section('content')
 @include('layout.header')
@@ -44,11 +44,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -62,18 +62,18 @@
 
 
     
-        LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+        NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -82,7 +82,7 @@
 
 
 
-        <script type="text/javascript">Lunarix.FixedUI.gutterAdsEnabled=false;</script>
+        <script type="text/javascript">Neurotic.FixedUI.gutterAdsEnabled=false;</script>
 
         
 
@@ -100,7 +100,7 @@
         <h2>Instructions</h2>
         <div style="display:flex;flex-direction:column;">
         <p id="adUploadErrorWrap" style="display:none;margin:0;margin-top:12px;margin-bottom:12px;"><span class="status-error" id="adUploadError"></span></p>
-        <label>On Lunarix, users can bid an amount of Bytes to buy advertising for their places, groups, clothing and models.</label>
+        <label>On Neurotic, users can bid an amount of Bytes to buy advertising for their places, groups, clothing and models.</label>
         <p style="margin:0;margin-top:12px;">Download, Edit and upload one of the following templates:</p>
         </div>
         <p>• 728 x 90 Banner <a href="/img/ads/templates/banner.png" style="margin-left:29px;" class="btn-small btn-neutral">Download</a></p>

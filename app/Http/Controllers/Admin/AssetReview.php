@@ -103,7 +103,7 @@ class AssetReview
             $version = DB::table('asset_versions')->where('asset_id', $asset->id)->latest('created_at')->first();
             abort_unless($version, 404);
             $path = ltrim($version->path, '/');
-            return redirect()->away('https://asset.lunarix.lol/' . $path);
+            return redirect()->away('https://asset.neurosama.lol/' . $path);
         }
         $render = DB::table('asset_renders')->where('asset_id', $asset->id)->latest('created_at')->first();
         if ($render) {
@@ -111,7 +111,7 @@ class AssetReview
             $path = preg_replace('#^https?://[^/]+/#i', '', $path);
             $path = preg_replace('#^(?:Thumbs/)?synvo\.live/#i', '', $path);
             $path = ltrim($path, '/');
-            return redirect()->away('https://cdn.lunarix.lol/' . $path);
+            return redirect()->away('https://cdn.neurosama.lol/' . $path);
         }
         return redirect('/img/ph/user_placeholder.png');
     }

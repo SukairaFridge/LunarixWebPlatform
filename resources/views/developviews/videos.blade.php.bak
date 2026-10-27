@@ -16,7 +16,7 @@
 											<p>Thumbnail: <input name="videoThumbItem" accept="image/png" id="itemVideoThumb" type="file"></p>
 											<p>Video Name: <input style="margin-left: 28px;" id="itemName" type="text" class="inputItemName-0-2-57"></p>
 											<div class="header-together" style="margin-left: 10px;"><a href="#" id="CreateVideo" data-upload-url="/api/video/upload" class="btn-medium btn-primary">Upload</a>
-												<div class="status-confirm lunarix-message-confirm" style="display: none;"></div></div>
+												<div class="status-confirm neurotic-message-confirm" style="display: none;"></div></div>
 										</div>
 									</div>
 									<div class="items-container games-container">
@@ -66,7 +66,7 @@ $(document).ready(function () {
         var $statusError = $uploadBtn.siblings('.status-error');
         function showError(msg) {
             if ($statusError.length === 0) {
-                $statusError = $('<div class="status-error lunarix-message-error"></div>').insertAfter($uploadBtn);
+                $statusError = $('<div class="status-error neurotic-message-error"></div>').insertAfter($uploadBtn);
             }
             $statusError.text(msg).show();
         }

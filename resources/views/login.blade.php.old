@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=page___92fc433fdbc3efa2a6026f7b0fafa0d8_m.css">
 @endpush
 @push('js')
-<script type='text/javascript' src='https://js.lunarix.com/7b03296f79d4f43b71668039b3ed5a19.js'></script>
+<script type='text/javascript' src='https://js.neurotic.com/7b03296f79d4f43b71668039b3ed5a19.js'></script>
 @endpush
 @section('content')
 @include('layout.header')
@@ -50,11 +50,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -64,18 +64,18 @@
             }
         }
 
-LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -98,9 +98,9 @@ LunarixEventManager.initialize(true);
     }
 </style>
 <![endif]-->
-<h1>Login to Lunarix</h1>
+<h1>Login to Neurotic</h1>
 @if (session('error'))
-<div class="status-error lunarix-message-error">{{ session('error') }}</div>
+<div class="status-error neurotic-message-error">{{ session('error') }}</div>
 @endif
 <div>
 
@@ -115,7 +115,7 @@ LunarixEventManager.initialize(true);
         </div>
         <div class="clear"></div>
         <div id="GenericModalButtonContainer" class="GenericModalButtonContainer">
-            <a class="ImageButton btn-neutral btn-large lunarix-ok">OK</a>
+            <a class="ImageButton btn-neutral btn-large neurotic-ok">OK</a>
         </div>
     </div>
 </div>
@@ -140,9 +140,9 @@ LunarixEventManager.initialize(true);
                             <div id="forgotPasswordPanel">
                                 <a class="text-link" href="/Login/ResetPasswordRequest.aspx" target="_blank">Forgot your password?</a>
                             </div>
-                            <div id="signInButtonPanel" data-use-apiproxy-signin="False" data-sign-on-api-path="https://lunarix.pw/login/v1">
-                                <a  lunarix-js-onclick class="btn-medium btn-neutral">Sign In</a>
-                                <a  lunarix-js-oncancel class="btn-medium btn-negative">Cancel</a>
+                            <div id="signInButtonPanel" data-use-apiproxy-signin="False" data-sign-on-api-path="https://neurotic.pw/login/v1">
+                                <a  neurotic-js-onclick class="btn-medium btn-neutral">Sign In</a>
+                                <a  neurotic-js-oncancel class="btn-medium btn-negative">Cancel</a>
                             </div>
                             <div class="clearFloats">
                             </div>
@@ -169,20 +169,20 @@ LunarixEventManager.initialize(true);
                     <div id="signUpPanel" class="FrontPageLoginBox">
                         <p class="text">Not a member?</p>
                         <h2>Sign Up to Build & Make Friends</h2>
-<a  lunarix-js-onsignup class="btn-medium btn-primary">Sign Up</a>                    </div>
+<a  neurotic-js-onsignup class="btn-medium btn-primary">Sign Up</a>                    </div>
                 </div>
             </div>
 <input id="ReturnUrl" name="ReturnUrl" type="hidden" value="" /></form>
 </div>
 <script type="text/javascript">
-    if (typeof Lunarix === "undefined") {
-        Lunarix = {};
+    if (typeof Neurotic === "undefined") {
+        Neurotic = {};
     }
-    if (typeof Lunarix.Login === "undefined") {
-        Lunarix.Login = {};
+    if (typeof Neurotic.Login === "undefined") {
+        Neurotic.Login = {};
     }
 
-    Lunarix.Login.Resources = {
+    Neurotic.Login.Resources = {
         //<sl:translate>
         january: "January"
     , february: "February"

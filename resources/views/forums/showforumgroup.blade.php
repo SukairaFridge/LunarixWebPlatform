@@ -29,14 +29,14 @@
 			<!-- left column -->
 			<td class="LeftColumn">&nbsp;&nbsp;&nbsp;</td>
             <!-- center column -->
-			<td id="ctl00_cphLunarix_CenterColumn" width="95%" class="CenterColumn">
+			<td id="ctl00_cphNeurotic_CenterColumn" width="95%" class="CenterColumn">
 				<br>
-            	<span id="ctl00_cphLunarix_NavigationMenu2">
+            	<span id="ctl00_cphNeurotic_NavigationMenu2">
 <div id="forum-nav" style="text-align: right">
-	<a id="ctl00_cphLunarix_NavigationMenu2_ctl00_HomeMenu" class="menuTextLink first" href="/Forum/Default.aspx">Home</a>
-	<a id="ctl00_cphLunarix_NavigationMenu2_ctl00_SearchMenu" class="menuTextLink" href="/Forum/Search/default.aspx">Search</a>
+	<a id="ctl00_cphNeurotic_NavigationMenu2_ctl00_HomeMenu" class="menuTextLink first" href="/Forum/Default.aspx">Home</a>
+	<a id="ctl00_cphNeurotic_NavigationMenu2_ctl00_SearchMenu" class="menuTextLink" href="/Forum/Search/default.aspx">Search</a>
 	@auth
-	<a id="ctl00_cphLunarix_NavigationMenu2_ctl00_MyForumsMenu" class="menuTextLink" href="/Forum/User/MyForums.aspx">MyForums</a>
+	<a id="ctl00_cphNeurotic_NavigationMenu2_ctl00_MyForumsMenu" class="menuTextLink" href="/Forum/User/MyForums.aspx">MyForums</a>
 	@endauth
 </div>
 </span>
@@ -45,11 +45,11 @@
 					<Tr>
 						<td align="left">
 						    <nobr>
-						        <a id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami1_ctl00_LinkHome" class="linkMenuSink notranslate" href="/Forum/Default.aspx">Lunarix Forum</a>
+						        <a id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami1_ctl00_LinkHome" class="linkMenuSink notranslate" href="/Forum/Default.aspx">Neurotic Forum</a>
 						    </nobr>
 						    <nobr>
-						        <span id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami1_ctl00_ForumGroupSeparator" class="normalTextSmallBold"> » </span>
-						        <a id="ctl00_cphLunarix_ThreadView1_ctl00_Whereami1_ctl00_LinkForumGroup" class="linkMenuSink notranslate" href="/Forum/ShowForumGroup.aspx?ForumGroupID={{ $group->id }}">{{ $group->name }}</a>
+						        <span id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami1_ctl00_ForumGroupSeparator" class="normalTextSmallBold"> » </span>
+						        <a id="ctl00_cphNeurotic_ThreadView1_ctl00_Whereami1_ctl00_LinkForumGroup" class="linkMenuSink notranslate" href="/Forum/ShowForumGroup.aspx?ForumGroupID={{ $group->id }}">{{ $group->name }}</a>
 						    </nobr>
 						</td>
 						<td align="right">
@@ -84,7 +84,7 @@
 			</td>
 			<td class="CenterColumn">&nbsp;&nbsp;&nbsp;</td>
             <!-- right column -->
-			<td id="ctl00_cphLunarix_RightColumn" nowrap="nowrap" width="160" class="RightColumn" style="padding-top:88px;">
+			<td id="ctl00_cphNeurotic_RightColumn" nowrap="nowrap" width="160" class="RightColumn" style="padding-top:88px;">
     <iframe allowtransparency="true"
             frameborder="0"
             height="612"

@@ -6,10 +6,11 @@
     @production
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     @endproduction
-    <title>{{ $title ?? 'Lunarix Administration' }}</title>
+    <title>{{ $title ?? 'Neurotic Administration' }}</title>
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=admin___pm5axiwg70znrzn36it6bltdk0ckfgir_m.css">
     <link rel="stylesheet" href="/css/admin.css">
@@ -17,11 +18,10 @@
     <script>window.jQuery || document.write("<script src='/js/jquery/jquery-1.11.1.js'><\/script>")</script>
     <script src="//ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.2.1.min.js"></script>
     <script>window.jQuery || document.write("<script src='/js/jquery/jquery-migrate-1.2.1.js'><\/script>")</script>
-    <script src="https://js.lunarix.lol/35442da4b07e6a0ed6b085424d1a52cb.js"></script>
-    <script src="https://js.lunarix.lol/10cc00d9523cce67f7bdbbb8805d84e5.js"></script>
+    <script src="https://js.neurosama.lol/35442da4b07e6a0ed6b085424d1a52cb.js"></script>
+    <script src="https://js.neurosama.lol/10cc00d9523cce67f7bdbbb8805d84e5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-elastic/2.5.1/elastic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.7.1/angular-local-storage.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     @stack('css')
 </head>
 <body>

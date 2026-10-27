@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=page___f386236eb92fc39e7cfca335daa6762d_m.css">
 @endpush
 @push('js')
-<script type='text/javascript' src='https://js.lunarix.lol/5b6134e2b8991b4d1c09d0ebd98cbe0b.js'></script>
+<script type='text/javascript' src='https://js.neurosama.lol/5b6134e2b8991b4d1c09d0ebd98cbe0b.js'></script>
 @endpush
 @section('content')
 @include('layout.header')
@@ -50,11 +50,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -68,18 +68,18 @@
 
 
     
-        LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+        NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -113,7 +113,7 @@
         <input id="people-search-keyword" autofocus autocomplete="off" name="name" type="text" class="text-box text-box-large people-search-textbox" placeholder="Search for users..." value="{{ $keyword }}" />
         <span class="search-button-image-container">
             <a class="btn-small btn-primary" id="peoplesearch-search-button">Search Users</a>
-            <img id="peoplesearch-search-loading" style="display: none" src="https://cdn.lunarix.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif" />
+            <img id="peoplesearch-search-loading" style="display: none" src="https://cdn.neurosama.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif" />
         </span>
     </div>
     <div>
@@ -129,7 +129,7 @@
                     <div class="text-container text">
                         <div class="notranslate">
                             @if ($user->presenceState === \App\Models\Presence::OFFLINE)
-                                <img alt="offline" src="https://cdn.lunarix.lol/3a3aa21b169be06d20de7586e56e3739.png" title="Offline" />
+                                <img alt="offline" src="https://cdn.neurosama.lol/3a3aa21b169be06d20de7586e56e3739.png" title="Offline" />
                             @elseif ($user->presenceState === \App\Models\Presence::IN_GAME)
                                 <img alt="ingame" src="/images/online.png" title="In Game" />
                             @else
@@ -171,7 +171,7 @@
 
 <div id="ProcessingView" style="display:none">
     <div class="ProcessingModalBody">
-        <p class="processing-indicator"><img src='https://cdn.lunarix.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif' alt="Searching..." /></p>
+        <p class="processing-indicator"><img src='https://cdn.neurosama.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif' alt="Searching..." /></p>
     </div>
 </div>
                                 <div style="clear:both"></div>

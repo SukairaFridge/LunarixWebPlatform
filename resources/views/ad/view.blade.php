@@ -5,7 +5,7 @@
 <html>
     <head>
         <title>
-            Lunarix - a kids, parents, and family activity site for building toy amusement
+            Neurotic - a kids, parents, and family activity site for building toy amusement
             parks, rc cars, clothing, and electronic devices out of construction blocks that
             are as realistic as a movie or tv show
         </title>

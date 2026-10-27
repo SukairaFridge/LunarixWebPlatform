@@ -12,6 +12,6 @@ class Friends
         $currentUser = $authController->getAuthenticatedUser($request);
         $vieweduser = DB::table('users')->select('id', 'username')->where('id', $id)->first();
         abort_if(! $vieweduser, 404);
-        return view('friends', ['vieweduser' => $vieweduser, 'currentUser' => $currentUser, 'title' => 'Friends - Lunarix']);
+        return view('friends', ['vieweduser' => $vieweduser, 'currentUser' => $currentUser, 'title' => 'Friends - Neurotic']);
     }
 }

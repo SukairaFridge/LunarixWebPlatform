@@ -6,7 +6,7 @@
 @endpush
 
 @push('js')
-    <script src="http://js.lunarix.lol/sr9ca0ffd8430e3fhk9a7830e527d67e.js"></script>
+    <script src="http://js.neurosama.lol/sr9ca0ffd8430e3fhk9a7830e527d67e.js"></script>
 @endpush
 
 @section('content')
@@ -260,29 +260,29 @@
 <script type="text/javascript">
     $(function() {
 
-        Lunarix.SearchBox = {};
-        Lunarix.SearchBox.Resources = {
+        Neurotic.SearchBox = {};
+        Neurotic.SearchBox.Resources = {
             //<sl:translate>
             search: "Search",
             zeroResults: "No Search Results Found"
             //</sl:translate>
         };
-        Lunarix.VideosPageContainerBehavior.Resources = {
+        Neurotic.VideosPageContainerBehavior.Resources = {
             //<sl:translate>
-            pageTitle: "Lunarix Videos - Browse our selection of videos uploaded by our users!"
+            pageTitle: "Neurotic Videos - Browse our selection of videos uploaded by our users!"
             //</sl:translate>
         };
 
         var defaultVideosListsCsv = "1,8,11,16,3";
-        Lunarix.VideosPageContainerBehavior.FilterValueToVideosListsIdSuffixMapping = {"default": defaultVideosListsCsv.split(',')};
+        Neurotic.VideosPageContainerBehavior.FilterValueToVideosListsIdSuffixMapping = {"default": defaultVideosListsCsv.split(',')};
 
-        Lunarix.VideosPageContainerBehavior.IsUserLoggedIn = {{ auth()->check() ? 'true' : 'false' }};
-        Lunarix.VideosPageContainerBehavior.adRefreshRateMilliSeconds = 3000;
-        Lunarix.VideosPageContainerBehavior.DeviceTypeId = 1;
-        Lunarix.VideosPageContainerBehavior.isCreateNewAd = true;
-        Lunarix.VideosPageContainerBehavior.setIntervalId = null;
-        Lunarix.VideosListBehavior.RefreshAdsInVideosPageEnabled = true;
-        Lunarix.VideosListBehavior.isUserEligibleForMultirowFirstSort = false;
+        Neurotic.VideosPageContainerBehavior.IsUserLoggedIn = {{ auth()->check() ? 'true' : 'false' }};
+        Neurotic.VideosPageContainerBehavior.adRefreshRateMilliSeconds = 3000;
+        Neurotic.VideosPageContainerBehavior.DeviceTypeId = 1;
+        Neurotic.VideosPageContainerBehavior.isCreateNewAd = true;
+        Neurotic.VideosPageContainerBehavior.setIntervalId = null;
+        Neurotic.VideosListBehavior.RefreshAdsInVideosPageEnabled = true;
+        Neurotic.VideosListBehavior.isUserEligibleForMultirowFirstSort = false;
 
     })
 

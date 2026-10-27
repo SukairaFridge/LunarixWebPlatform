@@ -104,7 +104,7 @@ class AuthController extends Controller
         }
         $request->session()->regenerate();
         $user = Auth::user();
-        return response()->json(['Status' => 'OK', 'UserInfo' => ['UserID' => $user->id, 'UserName' => $user->username, 'RobuxBalance' => (int) $user->moons, 'TicketsBalance' => 0, 'IsAnyBuildersClubMember' => $user->membership >= 1, 'ThumbnailUrl' => 'https://lunarix.lol/Thumbs/Avatar.ashx?userId=' . $user->id]]);
+        return response()->json(['Status' => 'OK', 'UserInfo' => ['UserID' => $user->id, 'UserName' => $user->username, 'RobuxBalance' => (int) $user->moons, 'TicketsBalance' => 0, 'IsAnyBuildersClubMember' => $user->membership >= 1, 'ThumbnailUrl' => 'https://neurosama.lol/Thumbs/Avatar.ashx?userId=' . $user->id]]);
     }
 
     public function isAuthenticated(Request $request)

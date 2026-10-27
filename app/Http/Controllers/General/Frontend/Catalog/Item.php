@@ -65,7 +65,7 @@ class Item
             $listedGuids = PrivateSale::where('asset_id', $asset->id)->where('user_id', auth()->id())->pluck('guid');
             $userOwnedCopies = Inventory::query()->where('user_id', auth()->id())->where('asset_id', $asset->id)->whereNotIn('guid', $listedGuids)->orderBy('serial_number')->get(['guid', 'serial_number']);
         }
-        return view('item', array_merge(['title' => $asset->name.', a '.$asset->getTypeName().' by '.$asset->creator->username.' - Lunarix (updated '.$asset->updated_at->format('n/j/Y g:i:s A').')'], compact('asset', 'recommendations', 'userOwns', 'creatorBcOverlay', 'freeItems', 'privateSales', 'currentRap', 'priceGraphData', 'volumeGraphData', 'percentChange30', 'percentChange90', 'percentChange180', 'volume30', 'volume90', 'volume180', 'hasRapData', 'bestPrivateSale', 'userOwnedCopies')));
+        return view('item', array_merge(['title' => $asset->name.', a '.$asset->getTypeName().' by '.$asset->creator->username.' - Neurotic (updated '.$asset->updated_at->format('n/j/Y g:i:s A').')'], compact('asset', 'recommendations', 'userOwns', 'creatorBcOverlay', 'freeItems', 'privateSales', 'currentRap', 'priceGraphData', 'volumeGraphData', 'percentChange30', 'percentChange90', 'percentChange180', 'volume30', 'volume90', 'volume180', 'hasRapData', 'bestPrivateSale', 'userOwnedCopies')));
     }
 
     // note from sukaira: don't add this on routes or anywhere, it's related to item()

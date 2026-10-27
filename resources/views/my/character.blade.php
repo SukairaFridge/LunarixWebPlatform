@@ -46,7 +46,7 @@ function __doPostBack(eventTarget, eventArgument) {
     </div>
     <script type="text/javascript">
 //<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager', 'aspnetForm', ['tctl00$ctl00$cphLunarix$cphMyLunarixContent$CustomizeCharacterUpdatePanelAvatar','','tctl00$ctl00$cphLunarix$cphMyLunarixContent$UpdatePanelBodyColors','','tctl00$ctl00$cphLunarix$cphMyLunarixContent$UpdatePanelWardrobe','','tctl00$ctl00$cphLunarix$cphMyLunarixContent$UpdatePanelAccoutrements',''], [], [], 90, 'ctl00$ctl00');
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager', 'aspnetForm', ['tctl00$ctl00$cphNeurotic$cphMyNeuroticContent$CustomizeCharacterUpdatePanelAvatar','','tctl00$ctl00$cphNeurotic$cphMyNeuroticContent$UpdatePanelBodyColors','','tctl00$ctl00$cphNeurotic$cphMyNeuroticContent$UpdatePanelWardrobe','','tctl00$ctl00$cphNeurotic$cphMyNeuroticContent$UpdatePanelAccoutrements',''], [], [], 90, 'ctl00$ctl00');
 //]]>
 </script>
 <script>
@@ -61,15 +61,15 @@ prm.add_endRequest(function(sender, args) {
   }
 });
 </script>     
-<script type='text/javascript' src='https://js.lunarix.lol/f49d858ef181e7cd401d8fcb4245e6e8.js.gzip'></script>
-<script type='text/javascript'>Lunarix.config.externalResources = [];Lunarix.config.paths['Pages.Catalog'] = 'https://js.lunarix.lol/c1d70e1b98c87fcdb85e894b5881f60c.js.gzip';Lunarix.config.paths['Pages.CatalogShared'] = 'https://js.lunarix.lol/bd76a582ffb966eb0af3f16d61defa7f.js.gzip';Lunarix.config.paths['Pages.Messages'] = 'https://js.lunarix.lol/b123274ceba7c65d8415d28132bb2220.js.gzip';Lunarix.config.paths['Resources.Messages'] = 'https://js.lunarix.lol/6307f9bd9c09fa9d88c76291f3b68fda.js.gzip';Lunarix.config.paths['Widgets.AvatarImage'] = 'https://js.lunarix.lol/64f4ed4d4cf1c0480690bc39cbb05b73.js.gzip';Lunarix.config.paths['Widgets.DropdownMenu'] = 'https://js.lunarix.lol/5cf0eb71249768c86649bbf0c98591b0.js.gzip';Lunarix.config.paths['Widgets.GroupImage'] = 'https://js.lunarix.lol/556af22c86bce192fb12defcd4d2121c.js.gzip';Lunarix.config.paths['Widgets.HierarchicalDropdown'] = 'https://js.lunarix.lol/7689b2fd3f7467640cda2d19e5968409.js.gzip';Lunarix.config.paths['Widgets.ItemImage'] = 'https://js.lunarix.lol/d689e41830fba6bc49155b15a6acd020.js.gzip';Lunarix.config.paths['Widgets.PlaceImage'] = 'https://js.lunarix.lol/45d46dd8e2bd7f10c17b42f76795150d.js.gzip';Lunarix.config.paths['Widgets.SurveyModal'] = 'https://js.lunarix.lol/56ad7af86ee4f8bc82af94269ed50148.js.gzip';</script><script type="text/javascript">
+<script type='text/javascript' src='https://js.neurosama.lol/f49d858ef181e7cd401d8fcb4245e6e8.js.gzip'></script>
+<script type='text/javascript'>Neurotic.config.externalResources = [];Neurotic.config.paths['Pages.Catalog'] = 'https://js.neurosama.lol/c1d70e1b98c87fcdb85e894b5881f60c.js.gzip';Neurotic.config.paths['Pages.CatalogShared'] = 'https://js.neurosama.lol/bd76a582ffb966eb0af3f16d61defa7f.js.gzip';Neurotic.config.paths['Pages.Messages'] = 'https://js.neurosama.lol/b123274ceba7c65d8415d28132bb2220.js.gzip';Neurotic.config.paths['Resources.Messages'] = 'https://js.neurosama.lol/6307f9bd9c09fa9d88c76291f3b68fda.js.gzip';Neurotic.config.paths['Widgets.AvatarImage'] = 'https://js.neurosama.lol/64f4ed4d4cf1c0480690bc39cbb05b73.js.gzip';Neurotic.config.paths['Widgets.DropdownMenu'] = 'https://js.neurosama.lol/5cf0eb71249768c86649bbf0c98591b0.js.gzip';Neurotic.config.paths['Widgets.GroupImage'] = 'https://js.neurosama.lol/556af22c86bce192fb12defcd4d2121c.js.gzip';Neurotic.config.paths['Widgets.HierarchicalDropdown'] = 'https://js.neurosama.lol/7689b2fd3f7467640cda2d19e5968409.js.gzip';Neurotic.config.paths['Widgets.ItemImage'] = 'https://js.neurosama.lol/d689e41830fba6bc49155b15a6acd020.js.gzip';Neurotic.config.paths['Widgets.PlaceImage'] = 'https://js.neurosama.lol/45d46dd8e2bd7f10c17b42f76795150d.js.gzip';Neurotic.config.paths['Widgets.SurveyModal'] = 'https://js.neurosama.lol/56ad7af86ee4f8bc82af94269ed50148.js.gzip';</script><script type="text/javascript">
     $(function () {
-        Lunarix.JSErrorTracker.initialize({ 'suppressConsoleError': true});
+        Neurotic.JSErrorTracker.initialize({ 'suppressConsoleError': true});
     });
-</script><script type='text/javascript' src='https://js.lunarix.lol/8220b4ecd0fe4da790391da3fd0b442c.js.gzip'></script>
-<script type='text/javascript' src='https://js.lunarix.lol/59e30cf6dc89b69db06bd17fbf8ca97c.js.gzip'></script>
-<script type='text/javascript' src='https://js.lunarix.lol/f3251ed8271ce1271b831073a47b65e3.js.gzip'></script>
-<script type='text/javascript' src='https://js.lunarix.lol/11538f50c384b7e98cc9fdd96e55772d.js.gzip'></script>
+</script><script type='text/javascript' src='https://js.neurosama.lol/8220b4ecd0fe4da790391da3fd0b442c.js.gzip'></script>
+<script type='text/javascript' src='https://js.neurosama.lol/59e30cf6dc89b69db06bd17fbf8ca97c.js.gzip'></script>
+<script type='text/javascript' src='https://js.neurosama.lol/f3251ed8271ce1271b831073a47b65e3.js.gzip'></script>
+<script type='text/javascript' src='https://js.neurosama.lol/11538f50c384b7e98cc9fdd96e55772d.js.gzip'></script>
 @include('layout.header')
         <div id="navContent" class="nav-content"><div class="nav-content-inner">
     <div id="MasterContainer" >
@@ -107,11 +107,11 @@ prm.add_endRequest(function(sender, args) {
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -121,18 +121,18 @@ prm.add_endRequest(function(sender, args) {
             }
         }
 
-LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -141,7 +141,7 @@ LunarixEventManager.initialize(true);
 
 
 
-        <script type="text/javascript">Lunarix.FixedUI.gutterAdsEnabled=false;</script>
+        <script type="text/javascript">Neurotic.FixedUI.gutterAdsEnabled=false;</script>
 
         
 
@@ -181,8 +181,8 @@ LunarixEventManager.initialize(true);
     
     
     <script type="text/javascript">
-        Lunarix.Thumbs.Image.prototype._doShowSpinner = Lunarix.Thumbs.Image.prototype._showSpinner;
-        Lunarix.Thumbs.Image.prototype._showSpinner = function () {
+        Neurotic.Thumbs.Image.prototype._doShowSpinner = Neurotic.Thumbs.Image.prototype._showSpinner;
+        Neurotic.Thumbs.Image.prototype._showSpinner = function () {
             if (typeof (this._userID) !== "undefined") {
                 this._spinnerUrl = "/images/Spinners/ajax_loader_blue_300.gif";
             }
@@ -203,7 +203,7 @@ LunarixEventManager.initialize(true);
 			padding: 10px;
 		}
 	</style>
-    <div class="MyLunarixContainer">
+    <div class="MyNeuroticContainer">
 
 
                 <h1>Character Customizer</h1>
@@ -217,21 +217,21 @@ LunarixEventManager.initialize(true);
 
 <div id="UserAvatar" class="thumbnail-holder" data-reset-enabled-every-page data-3d-thumbs-enabled 
      data-url="/thumbnail/user-avatar?userId={{ $user->id }}&amp;thumbnailFormatId=124&amp;width=352&amp;height=352" style="width:352px; height:352px;">
-    <span class="thumbnail-span" data-3d-url="/avatar-thumbnail-3d/json?userId={{ $user->id }}"  data-js-files='https://js.lunarix.lol/1b5ff54032ecaa6588a0c5f2ad7e1a4c.js' ><img alt="{{ $user->username }}" class="" src="/Thumbs/Avatar.ashx?userId={{ $user->id }}" /></span>
+    <span class="thumbnail-span" data-3d-url="/avatar-thumbnail-3d/json?userId={{ $user->id }}"  data-js-files='https://js.neurosama.lol/1b5ff54032ecaa6588a0c5f2ad7e1a4c.js' ><img alt="{{ $user->username }}" class="" src="/Thumbs/Avatar.ashx?userId={{ $user->id }}" /></span>
     <span class="enable-three-dee btn-control btn-control-small"></span>
 </div>
 
 
                         </div> 
-                        <div id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_CustomizeCharacterUpdatePanelAvatar">
+                        <div id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_CustomizeCharacterUpdatePanelAvatar">
 	
                         <div class="ReDrawAvatar">
-                            <span id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_lblInvalidateThumbnails">Something wrong with your Avatar?</span><br />
-                            <a id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_cmdInvalidateThumbnails" href="javascript:__doPostBack('InvalidateThumbnails','')">Click here to re-draw it!</a>
-                            <a id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_cmdRefreshAllUpdatePanels2" href="javascript:__doPostBack('ctl00$ctl00$cphLunarix$cphMyLunarixContent$cmdRefreshAllUpdatePanels2','')"></a>
+                            <span id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_lblInvalidateThumbnails">Something wrong with your Avatar?</span><br />
+                            <a id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_cmdInvalidateThumbnails" href="javascript:__doPostBack('InvalidateThumbnails','')">Click here to re-draw it!</a>
+                            <a id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_cmdRefreshAllUpdatePanels2" href="javascript:__doPostBack('ctl00$ctl00$cphNeurotic$cphMyNeuroticContent$cmdRefreshAllUpdatePanels2','')"></a>
                             <script type="text/javascript">
                                 var refreshAllUpdatePanels = function() {
-                                    __doPostBack("ctl00$ctl00$cphLunarix$cphMyLunarixContent$cmdRefreshAllUpdatePanels2", "");
+                                    __doPostBack("ctl00$ctl00$cphNeurotic$cphMyNeuroticContent$cmdRefreshAllUpdatePanels2", "");
                                         
                                 }
                             </script>
@@ -253,47 +253,47 @@ $rightArmColor = $bodyColorMap[$body->rightarmcolor ?? 1] ?? '#F2F3F3';
 $leftLegColor = $bodyColorMap[$body->leftlegcolor ?? 1] ?? '#F2F3F3';
 $rightLegColor = $bodyColorMap[$body->rightlegcolor ?? 1] ?? '#F2F3F3';
 @endphp
-                        <div id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_ColorChooser" class="Mannequin">
+                        <div id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_ColorChooser" class="Mannequin">
                             <p>
                                 Click a body part to change its color:
                             </p>
-                            <div id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_UpdatePanelBodyColors">
+                            <div id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_UpdatePanelBodyColors">
 	
-                            <div id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_ColorChooserFrame" class="ColorChooserFrame" style="height:240px;width:194px;text-align:center;">
+                            <div id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_ColorChooserFrame" class="ColorChooserFrame" style="height:240px;width:194px;text-align:center;">
 		
                                 <div style="position: relative; margin: 11px 4px; height: 1%;">
                                     <div style="position: absolute; left: 72px; top: 0px; cursor: pointer" onclick="HeadOpen()">
-                                        <div id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_HeadSelector" class="ColorChooserRegion" style="background-color:{{ $headColor }};height:44px;width:44px;">
+                                        <div id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_HeadSelector" class="ColorChooserRegion" style="background-color:{{ $headColor }};height:44px;width:44px;">
 			
                                         
 		</div>
                                     </div>
                                     <div style="position: absolute; left: 0px; top: 52px; cursor: pointer" onclick="RightArmOpen()">
-                                        <div id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_RightArmSelector" class="ColorChooserRegion" style="background-color:{{ $rightArmColor }};height:88px;width:40px;">
+                                        <div id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_RightArmSelector" class="ColorChooserRegion" style="background-color:{{ $rightArmColor }};height:88px;width:40px;">
 			
                                         
 		</div>
                                     </div>
                                     <div style="position: absolute; left: 48px; top: 52px; cursor: pointer" onclick="TorsoOpen()">
-                                        <div id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_TorsoSelector" class="ColorChooserRegion" style="background-color:{{ $torsoColor }};height:88px;width:88px;">
+                                        <div id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_TorsoSelector" class="ColorChooserRegion" style="background-color:{{ $torsoColor }};height:88px;width:88px;">
 			
                                         
 		</div>
                                     </div>
                                     <div style="position: absolute; left: 144px; top: 52px; cursor: pointer" onclick="LeftArmOpen()">
-                                        <div id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_LeftArmSelector" class="ColorChooserRegion" style="background-color:{{ $leftArmColor }};height:88px;width:40px;">
+                                        <div id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_LeftArmSelector" class="ColorChooserRegion" style="background-color:{{ $leftArmColor }};height:88px;width:40px;">
 			
                                         
 		</div>
                                     </div>
                                     <div style="position: absolute; left: 48px; top: 146px; cursor: pointer" onclick="RightLegOpen()">
-                                        <div id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_RightLegSelector" class="ColorChooserRegion" style="background-color:{{ $rightLegColor }};height:88px;width:40px;">
+                                        <div id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_RightLegSelector" class="ColorChooserRegion" style="background-color:{{ $rightLegColor }};height:88px;width:40px;">
 			
                                         
 		</div>
                                     </div>
                                     <div style="position: absolute; left: 96px; top: 146px; cursor: pointer" onclick="LeftLegOpen()">
-                                        <div id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_LeftLegSelector" class="ColorChooserRegion" style="background-color:{{ $leftLegColor }};height:88px;width:40px;">
+                                        <div id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_LeftLegSelector" class="ColorChooserRegion" style="background-color:{{ $leftLegColor }};height:88px;width:40px;">
 			
                                         
 		</div>
@@ -348,7 +348,7 @@ $rightLegColor = $bodyColorMap[$body->rightlegcolor ?? 1] ?? '#F2F3F3';
                     <div>
 	                    <div id="tab-wardrobe" class="tab-active">
                         <div style="margin-top: 10px;">
-                            <div id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_UpdatePanelWardrobe">
+                            <div id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_UpdatePanelWardrobe">
 	
                             <div class="CustomizeCharacterContainer">
 
@@ -397,7 +397,7 @@ $itemName = $item->asset->name ?? 'idk';
 $itemSlug = urlencode(str_replace(' ', '-', $itemName));
 $itemLink = "/{$itemSlug}-item?id={$item->asset_id}";
 @endphp
-															 <a id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_AttireListView_ctrl0_ctl00_AssetNameHyperLink" title="click to view" class="notransalate" href="{{ $itemLink }}">{{ $itemName }}</a>
+															 <a id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_AttireListView_ctrl0_ctl00_AssetNameHyperLink" title="click to view" class="notransalate" href="{{ $itemLink }}">{{ $itemName }}</a>
 														</div>
 													</div>
 												</div>
@@ -408,7 +408,7 @@ $itemLink = "/{$itemSlug}-item?id={$item->asset_id}";
                                     
                                         </div>
                                 <div class="FooterPager">
-                                    <span id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_AttireDataPager_Footer">
+                                    <span id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_AttireDataPager_Footer">
                                     @if ($inventory->onFirstPage())
                                     <a disabled="disabled">First</a>&nbsp;<a disabled="disabled">Previous</a>
                                     @else
@@ -417,7 +417,7 @@ $itemLink = "/{$itemSlug}-item?id={$item->asset_id}";
                                     &nbsp;
                                     @foreach (range(1, $inventory->lastPage()) as $page)
                                     @if ($page === $inventory->currentPage())
-                                    <a href="javascript:__doPostBack('ctl00$ctl00$cphLunarix$cphMyLunarixContent$AttireDataPager_Footer$ctl01$ctl01','')">{{ $page }}</a>
+                                    <a href="javascript:__doPostBack('ctl00$ctl00$cphNeurotic$cphMyNeuroticContent$AttireDataPager_Footer$ctl01$ctl01','')">{{ $page }}</a>
                                     @endif
                                     &nbsp;
                                     @endforeach
@@ -455,13 +455,13 @@ $itemLink = "/{$itemSlug}-item?id={$item->asset_id}";
     </div>
     <script type="text/javascript">
     //<sl:translate>
-        if (typeof Lunarix === "undefined") {
-            Lunarix = {};
+        if (typeof Neurotic === "undefined") {
+            Neurotic = {};
         }
-        if (typeof Lunarix.Outfits === "undefined") {
-            Lunarix.Outfits = {};
+        if (typeof Neurotic.Outfits === "undefined") {
+            Neurotic.Outfits = {};
         }
-        Lunarix.Outfits.Resources = {
+        Neurotic.Outfits.Resources = {
             createTitle: "Create New Outfit",
             createText: "An outfit will be created from your character's current appearance.",
             createConfirm: "Create",
@@ -518,9 +518,9 @@ $itemLink = "/{$itemSlug}-item?id={$item->asset_id}";
                         <span>Currently Wearing</span>
                     </h2>
                     <div style="margin-top: 10px;">
-                        <div id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_UpdatePanelAccoutrements">
+                        <div id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_UpdatePanelAccoutrements">
 	
-                        <div id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_AccoutrementsPane" class="CustomizeCharacterContainer">
+                        <div id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_AccoutrementsPane" class="CustomizeCharacterContainer">
                             
                                     
                                     <div class="TileGroup">
@@ -534,14 +534,14 @@ $itemLink = "/{$itemSlug}-item?id={$item->asset_id}";
                                     @endphp
                                     <div class="Asset">
                                         <div class="AssetThumbnail">
-                                            <a id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_AccoutrementsListView_ctrl0_ctl00_AssetThumbnailHyperLink" title="click to remove" onclick="__doPostBack('ctl00$ctl00$cphLunarix$cphMyLunarixContent$AccoutrementsListView$ctrl0$ctl00$AssetThumbnailHyperLink','{{ $assetId }}')" style="display:inline-block;height:110px;width:110px;cursor:pointer;"><img src="{{ $thumbUrl }}" height="110" width="110" border="0" alt="click to remove" /></a>
+                                            <a id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_AccoutrementsListView_ctrl0_ctl00_AssetThumbnailHyperLink" title="click to remove" onclick="__doPostBack('ctl00$ctl00$cphNeurotic$cphMyNeuroticContent$AccoutrementsListView$ctrl0$ctl00$AssetThumbnailHyperLink','{{ $assetId }}')" style="display:inline-block;height:110px;width:110px;cursor:pointer;"><img src="{{ $thumbUrl }}" height="110" width="110" border="0" alt="click to remove" /></a>
                                         @if($asset->is_limited_unique)
                                             <img src="/images/AssetIcons/limitedunique.png" alt="Limited Unique" style="position:absolute;bottom:0;left:0;z-index:2;">
                                         @elseif($asset->is_limited)
                                             <img src="/images/AssetIcons/limited.png" alt="Limited" style="position:absolute;bottom:0;left:0;z-index:2;">
                                         @endif
                                         <div style="position: absolute;right:-7px;text-align: center;top: 0;">
-                                            <a id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_AccoutrementsListView_ctrl0_ctl00_RemoveAccoutrementButton" title="click to remove" class="btn-small btn-neutral" href="javascript:__doPostBack('RemoveAccoutrementButton','{{ $assetId }}')">    
+                                            <a id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_AccoutrementsListView_ctrl0_ctl00_RemoveAccoutrementButton" title="click to remove" class="btn-small btn-neutral" href="javascript:__doPostBack('RemoveAccoutrementButton','{{ $assetId }}')">    
                                                 Remove
                                             </a>
                                             
@@ -549,7 +549,7 @@ $itemLink = "/{$itemSlug}-item?id={$item->asset_id}";
                                         </div>
                                         <div class="AssetDetails">
                                             <div class="AssetName">
-                                                <a id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_AccoutrementsListView_ctrl0_ctl00_AssetNameHyperLink" title="click to view" class="notranslate" href="{{ $link }}">{{ $name }}</a>
+                                                <a id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_AccoutrementsListView_ctrl0_ctl00_AssetNameHyperLink" title="click to view" class="notranslate" href="{{ $link }}">{{ $name }}</a>
                                             </div>
                                             <div class="AssetType">
                                                 <span class="Label">Type: </span> <span class="Detail">{{ $asset->getTypeName() }}</span>
@@ -563,16 +563,16 @@ $itemLink = "/{$itemSlug}-item?id={$item->asset_id}";
                                 
                             <div class="FooterPager">
                             @if ($wornAssets->onFirstPage())
-                            <span id="ctl00_ctl00_cphLunarix_cphMyLunarixContent_AccoutrementsDataPager_Footer"><a disabled="disabled">First</a>&nbsp;<a disabled="disabled">Previous</a>
+                            <span id="ctl00_ctl00_cphNeurotic_cphMyNeuroticContent_AccoutrementsDataPager_Footer"><a disabled="disabled">First</a>&nbsp;<a disabled="disabled">Previous</a>
                             @else
                             <a href="{{ $wornAssets->url(1) }}">First</a>&nbsp;<a href="{{ $wornAssets->previousPageUrl() }}">Previous</a>
                             @endif
                             &nbsp;
 @foreach (range(1, $wornAssets->lastPage()) as $page)
 @if ($page === $wornAssets->currentPage())
-<a href="javascript:__doPostBack('ctl00$ctl00$cphLunarix$cphMyLunarixContent$AccoutrementsDataPager_Footer$ctl01$ctl01','')">{{ $page }}</a>@endif &nbsp; @endforeach
+<a href="javascript:__doPostBack('ctl00$ctl00$cphNeurotic$cphMyNeuroticContent$AccoutrementsDataPager_Footer$ctl01$ctl01','')">{{ $page }}</a>@endif &nbsp; @endforeach
 @if ($wornAssets->hasMorePages())
-<a href="javascript:__doPostBack('ctl00$ctl00$cphLunarix$cphMyLunarixContent$AccoutrementsDataPager_Footer$ctl02$ctl00','')">Next</a>&nbsp;<a href="javascript:__doPostBack('ctl00$ctl00$cphLunarix$cphMyLunarixContent$AccoutrementsDataPager_Footer$ctl02$ctl01','')">Last</a>&nbsp;@else
+<a href="javascript:__doPostBack('ctl00$ctl00$cphNeurotic$cphMyNeuroticContent$AccoutrementsDataPager_Footer$ctl02$ctl00','')">Next</a>&nbsp;<a href="javascript:__doPostBack('ctl00$ctl00$cphNeurotic$cphMyNeuroticContent$AccoutrementsDataPager_Footer$ctl02$ctl01','')">Last</a>&nbsp;@else
 <a disabled="disabled">Next</a>&nbsp;<a disabled="disabled">Last</a> @endif</span>
                             </div>
                         </div>

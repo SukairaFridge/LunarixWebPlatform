@@ -8,7 +8,7 @@
     <div id="navContent" style="background-color:#fff;" class="nav-content  ">
         <div class="nav-content-inner">
             <div id="MasterContainer">
-                    <script type='text/javascript' src='http://js.lunarix.lol/77026e0e8875389783edcd7224c6e72b.js.gzip'></script>
+                    <script type='text/javascript' src='http://js.neurosama.lol/77026e0e8875389783edcd7224c6e72b.js.gzip'></script>
                     <script type="text/javascript">
                         if (top.location != self.location) {
                             top.location = self.location.href;
@@ -48,11 +48,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -62,18 +62,18 @@
             }
         }
 
-LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -101,24 +101,24 @@ LunarixEventManager.initialize(true);
                             <div id="Body" style="width:970px">
                                 
     <script type="text/javascript">
-        var Lunarix = Lunarix || {};
-        Lunarix.messagesModel = {};
-        Lunarix.messagesModel = {
+        var Neurotic = Neurotic || {};
+        Neurotic.messagesModel = {};
+        Neurotic.messagesModel = {
             totalAnnouncements: {{ $notificationCount }},
             maxPrivateMessageLength : "9000",
             minimumAdRefreshInterval: "1000",
             lastAdRefresh: new Date()
         }
     </script>
-    <div ng-modules="lunarixApp, messages">
-        <div class="lunarix-messages-container" ng-controller="messagesController">
+    <div ng-modules="neuroticApp, messages">
+        <div class="neurotic-messages-container" ng-controller="messagesController">
             <div lrx-tabs></div>
             <div class="tab-content-container tab-active" ui-view></div><!-- ng-controller="messagesContentController"-->
         </div>
     </div>
     <script type="text/javascript">
-    var Lunarix = Lunarix || {};
-    Lunarix.websiteTemplates = {
+    var Neurotic = Neurotic || {};
+    Neurotic.websiteTemplates = {
         avatarTemplate : "/viewapp/common/thumbnail.html",
         tabsTemplate : "/viewapp/common/tabs.html",
         messagesNavTemplate: "/viewapp/pages/messages/directives/messagesNav.html",
@@ -127,7 +127,7 @@ LunarixEventManager.initialize(true);
         messageTemplate: "/viewapp/pages/messages/controllers/message.html",
         notificationTemplate: "/viewapp/pages/messages/controllers/notification.html"
         };
-        Lunarix.websiteLinks = {
+        Neurotic.websiteLinks = {
         GetFormattedMessagesJsonLink: "/messages/api/get-messages",
         GetFormattedNotificationsJsonLink: "/notifications/api/get-notifications",
         ArchiveMessagesLink: "/messages/api/archive-messages",
@@ -137,11 +137,11 @@ LunarixEventManager.initialize(true);
         SendMessageJsonResultLink: "/messages/api/send-message",
         GetMyUnreadMessagesCountLink: "/messages/api/get-my-unread-messages-count"
     };
-    Lunarix.messageDefaults = {
-        lunarixUserId: 1,
-        lunarixUserName: "Lunarix",
-        lunarixUserThumbnail: "/Thumbs/Avatar.ashx?userId=1",
-        lunarixUserAbsoluteUrl: "/users/1/profile"
+    Neurotic.messageDefaults = {
+        neuroticUserId: 1,
+        neuroticUserName: "Neurotic",
+        neuroticUserThumbnail: "/Thumbs/Avatar.ashx?userId=1",
+        neuroticUserAbsoluteUrl: "/users/1/profile"
     };
     </script>
 			<div style="clear:both"></div>

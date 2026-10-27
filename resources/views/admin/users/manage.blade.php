@@ -257,7 +257,7 @@
                 <p>Select the content that should be replaced:</p>
                 <label class="d-flex gap-3 align-items-start border border-secondary rounded p-3 mb-2">
                     <input class="form-check-input mt-1" type="checkbox" name="delete_username" value="1">
-                    <span><strong>Username</strong><span class="d-block admin-muted">Replace with [ LunarixUser ({{ $targetUser->id }}) ]</span></span>
+                    <span><strong>Username</strong><span class="d-block admin-muted">Replace with [ NeuroticUser ({{ $targetUser->id }}) ]</span></span>
                 </label>
                 <label class="d-flex gap-3 align-items-start border border-secondary rounded p-3">
                     <input class="form-check-input mt-1" type="checkbox" name="delete_blurb" value="1">
@@ -352,7 +352,7 @@
             @csrf
             <div class="modal-header border-secondary"><h2 class="modal-title h5">Message {{ $targetUser->username }}</h2><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
             <div class="modal-body">
-                <p class="admin-muted">This will appear under Notifications as an official message from the Lunarix Team.</p>
+                <p class="admin-muted">This will appear under Notifications as an official message from the Neurotic Team.</p>
                 <label for="messageSubject" class="form-label">Subject</label><input id="messageSubject" name="subject" value="{{ old('subject') }}" maxlength="255" class="form-control bg-dark border-secondary text-light mb-3" required>
                 <label for="messageBody" class="form-label">Message</label><textarea id="messageBody" name="body" rows="7" maxlength="5000" class="form-control bg-dark border-secondary text-light" required>{{ old('body') }}</textarea>
             </div>

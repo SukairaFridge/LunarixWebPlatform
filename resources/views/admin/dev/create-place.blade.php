@@ -7,7 +7,7 @@
     <main class="admin-content">
         <div class="admin-page-header">
             <h1>Create Place</h1>
-            <p>Publish a Lunarix game.</p>
+            <p>Publish a Neurotic game.</p>
         </div>
 
         @if(session('success'))

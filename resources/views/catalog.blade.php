@@ -4,15 +4,15 @@
 <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=page___72bfd34566399e07045ed3a0ac82455f_m.css">
 @endpush
 @push('js')
-<script type='text/javascript' src='http://js.lunarix.lol/453a3526187103f27673584103a84bc7.js'></script>
+<script type='text/javascript' src='http://js.neurosama.lol/453a3526187103f27673584103a84bc7.js'></script>
 @endpush
 @section('content')
 @include('layout.header')
-<script type='text/javascript'>Lunarix.config.externalResources = [];Lunarix.config.paths['Pages.Catalog'] = 'http://js.lunarix.lol/1612c57544c7977e19cd15c824f7ecc3.js';Lunarix.config.paths['Pages.CatalogShared'] = 'http://js.lunarix.lol/209f2b781ea84e8d0332648ddf547d57.js';Lunarix.config.paths['Pages.Messages'] = 'http://js.lunarix.lol/e8cbac58ab4f0d8d4c707700c9f97630.js';Lunarix.config.paths['Resources.Messages'] = 'http://js.lunarix.lol/fb9cb43a34372a004b06425a1c69c9c4.js';Lunarix.config.paths['Widgets.AvatarImage'] = 'http://js.lunarix.lol/bbaeb48f3312bad4626e00c90746ffc0.js';Lunarix.config.paths['Widgets.DropdownMenu'] = 'http://js.lunarix.lol/7b436bae917789c0b84f40fdebd25d97.js';Lunarix.config.paths['Widgets.GroupImage'] = 'http://js.lunarix.lol/33d82b98045d49ec5a1f635d14cc7010.js';Lunarix.config.paths['Widgets.HierarchicalDropdown'] = 'http://js.lunarix.lol/fbb86cf0752d23f389f983419d3085b4.js';Lunarix.config.paths['Widgets.ItemImage'] = 'http://js.lunarix.lol/8babd891cf420dfe3999b3824a0154cb.js';Lunarix.config.paths['Widgets.PlaceImage'] = 'http://js.lunarix.lol/f2697119678d0851cfaa6c2270a727ed.js';Lunarix.config.paths['Widgets.SurveyModal'] = 'http://js.lunarix.lol/d6e979598c460090eafb6d38231159f6.js';</script><script type="text/javascript">
+<script type='text/javascript'>Neurotic.config.externalResources = [];Neurotic.config.paths['Pages.Catalog'] = 'http://js.neurosama.lol/1612c57544c7977e19cd15c824f7ecc3.js';Neurotic.config.paths['Pages.CatalogShared'] = 'http://js.neurosama.lol/209f2b781ea84e8d0332648ddf547d57.js';Neurotic.config.paths['Pages.Messages'] = 'http://js.neurosama.lol/e8cbac58ab4f0d8d4c707700c9f97630.js';Neurotic.config.paths['Resources.Messages'] = 'http://js.neurosama.lol/fb9cb43a34372a004b06425a1c69c9c4.js';Neurotic.config.paths['Widgets.AvatarImage'] = 'http://js.neurosama.lol/bbaeb48f3312bad4626e00c90746ffc0.js';Neurotic.config.paths['Widgets.DropdownMenu'] = 'http://js.neurosama.lol/7b436bae917789c0b84f40fdebd25d97.js';Neurotic.config.paths['Widgets.GroupImage'] = 'http://js.neurosama.lol/33d82b98045d49ec5a1f635d14cc7010.js';Neurotic.config.paths['Widgets.HierarchicalDropdown'] = 'http://js.neurosama.lol/fbb86cf0752d23f389f983419d3085b4.js';Neurotic.config.paths['Widgets.ItemImage'] = 'http://js.neurosama.lol/8babd891cf420dfe3999b3824a0154cb.js';Neurotic.config.paths['Widgets.PlaceImage'] = 'http://js.neurosama.lol/f2697119678d0851cfaa6c2270a727ed.js';Neurotic.config.paths['Widgets.SurveyModal'] = 'http://js.neurosama.lol/d6e979598c460090eafb6d38231159f6.js';</script><script type="text/javascript">
     $(function () {
-        Lunarix.JSErrorTracker.initialize({ 'suppressConsoleError': true});
+        Neurotic.JSErrorTracker.initialize({ 'suppressConsoleError': true});
     });
-</script><script type='text/javascript' src='http://js.lunarix.lol/b3bb47d913a29004bf50d9a896f46b4a.js'></script>
+</script><script type='text/javascript' src='http://js.neurosama.lol/b3bb47d913a29004bf50d9a896f46b4a.js'></script>
         <div id="navContent" class="nav-content"><div class="nav-content-inner">
     <div id="MasterContainer" >
         
@@ -49,11 +49,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -63,18 +63,18 @@
             }
         }
 
-LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -83,7 +83,7 @@ LunarixEventManager.initialize(true);
 
 
 
-        <script type="text/javascript">Lunarix.FixedUI.gutterAdsEnabled=true;</script>
+        <script type="text/javascript">Neurotic.FixedUI.gutterAdsEnabled=true;</script>
 
         
 
@@ -159,7 +159,7 @@ LunarixEventManager.initialize(true);
 
     <div class="browseDropdownHeader"></div>
 
-<div id="dropdown" class="splashdropdownsplashdropdown lunarix-hierarchicaldropdown">
+<div id="dropdown" class="splashdropdownsplashdropdown neurotic-hierarchicaldropdown">
     <ul id="dropdownUl" class="clearfix">
 
             <li class="subcategories" data-delay="never">
@@ -241,23 +241,23 @@ LunarixEventManager.initialize(true);
         <h3>Legend</h3>
     </div>
     <div id="legendcontent" style="overflow: hidden; ">
-        <img src="https://cdn.lunarix.lol/4fc3a98692c7ea4d17207f1630885f68.png" style="margin-left: -13px" />
+        <img src="https://cdn.neurosama.lol/4fc3a98692c7ea4d17207f1630885f68.png" style="margin-left: -13px" />
         <div class="legendText"><b>Bloxxers Club Only</b><br/>
         Only purchasable by Bloxxers Club members.</div>
 
-        <img src="https://cdn.lunarix.lol/793dc1fd7562307165231ca2b960b19a.png" style="margin-left: -13px" />
+        <img src="https://cdn.neurosama.lol/793dc1fd7562307165231ca2b960b19a.png" style="margin-left: -13px" />
         <div class="legendText"><b>Limited Items</b><br/>
         Owners of these discontinued items can re-sell them to other users at any price.</div>
         
-        <img src="https://cdn.lunarix.lol/d649b9c54a08dcfa76131d123e7d8acc.png" style="margin-left: -13px" />
+        <img src="https://cdn.neurosama.lol/d649b9c54a08dcfa76131d123e7d8acc.png" style="margin-left: -13px" />
         <div class="legendText"><b>Limited Unique Items</b><br/>
-        A limited supply originally sold by Lunarix. Each unit is labeled with a serial number. Once sold out, owners can re-sell them to other users.
+        A limited supply originally sold by Neurotic. Each unit is labeled with a serial number. Once sold out, owners can re-sell them to other users.
         </div>
     </div>
 </div>                           
     </div>
     <div class="right-content divider-left">
-        <h2>Featured Items on Lunarix</h2>
+        <h2>Featured Items on Neurotic</h2>
         <div style="clear:both;"></div>
         
         
@@ -268,17 +268,17 @@ LunarixEventManager.initialize(true);
 <div class="CatalogItemOuter {{ $big ? 'BigOuter' : 'SmallOuter' }}">
 <div class="SmallCatalogItemView {{ $big ? 'BigView' : 'SmallView' }}">
 <div class="CatalogItemInner {{ $big ? 'BigInner' : 'SmallInner' }}">    
-        <div class="lunarix-item-image {{ $big ? 'image-large' : 'image-small' }}" data-item-id="{{ $asset->id }}" data-image-size="{{ $big ? 'large' : 'small' }}" >
+        <div class="neurotic-item-image {{ $big ? 'image-large' : 'image-small' }}" data-item-id="{{ $asset->id }}" data-image-size="{{ $big ? 'large' : 'small' }}" >
             <div class="item-image-wrapper">
                 <a href="/{{ $asset->getSlug() }}-item?id={{ $asset->id }}">
                     <img title="{{ $asset->name }}" alt="{{ $asset->name }}" class="original-image " width="110" src="/Thumbs/Asset.ashx?assetId={{ $asset->id }}"/>
                                             @if($asset->is_limited_unique)
-                                            <img src="https://cdn.lunarix.lol/38db481d8e9c04ce960b4f49cbf94af2.png" alt="Limited Unique" class="limited-overlay">
+                                            <img src="https://cdn.neurosama.lol/38db481d8e9c04ce960b4f49cbf94af2.png" alt="Limited Unique" class="limited-overlay">
                                             @elseif($asset->is_limited)
-                                            <img src="https://cdn.lunarix.lol/793dc1fd7562307165231ca2b960b19a.png" alt="Limited" class="limited-overlay">
+                                            <img src="https://cdn.neurosama.lol/793dc1fd7562307165231ca2b960b19a.png" alt="Limited" class="limited-overlay">
                                             @endif
                                             @if($asset->isNewArrival())
-                                            <img src="https://cdn.lunarix.lol/b84cdb8c0e7c6cbe58e91397f91b8be8.png" alt="New" />
+                                            <img src="https://cdn.neurosama.lol/b84cdb8c0e7c6cbe58e91397f91b8be8.png" alt="New" />
                                             @endif
                 </a>
             </div>
@@ -320,13 +320,13 @@ LunarixEventManager.initialize(true);
 
 <script type="text/javascript">
     $(function () {
-        Lunarix.require('Pages.Catalog', function (catalog) {
+        Neurotic.require('Pages.Catalog', function (catalog) {
             var pagestate = { "Category": 1, "CurrencyType": 0, "SortType": 0, "SortAggregation": 3, "SortCurrency": 0, "AssetTypes": null, "Gears": null, "Genres": null, "Keyword": null, "PageNumber": 1, "Creator": null, "PxMin": 0, "PxMax": 0 };
             catalog.init(pagestate, 1);
         });
 
-            Lunarix.CatalogValues = Lunarix.CatalogValues || {};
-            Lunarix.CatalogValues.CatalogContext = 1;
+            Neurotic.CatalogValues = Neurotic.CatalogValues || {};
+            Neurotic.CatalogValues.CatalogContext = 1;
 
         
     });

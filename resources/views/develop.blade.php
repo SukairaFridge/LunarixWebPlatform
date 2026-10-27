@@ -7,11 +7,11 @@
 @include('layout.header')
 <script>String.format = function() {var s = arguments[0];for (var i = 0; i < arguments.length - 1; i++) {s = s.replace(new RegExp('\\{' + i + '\\}', 'gm'), arguments[i + 1]);} return s;};</script>
 <script type="text/javascript" src="/gigya.js"></script>
-<script src='http://js.lunarix.lol/50cb8c7590b75499925be4825ab1fb8f.js'></script>
-<script src='https://js.lunarix.lol/c5827143734572fa7bd8fcc79c3c126b.js.gzip'></script>
-<script type='text/javascript'>Lunarix.config.externalResources = [];Lunarix.config.paths['Pages.Catalog'] = 'http://js.lunarix.lol/1612c57544c7977e19cd15c824f7ecc3.js';Lunarix.config.paths['Pages.CatalogShared'] = 'http://js.lunarix.lol/4eb48eec34ca711d5a7b08a4291ac753.js';Lunarix.config.paths['Pages.Messages'] = 'http://js.lunarix.lol/e8cbac58ab4f0d8d4c707700c9f97630.js';Lunarix.config.paths['Resources.Messages'] = 'http://js.lunarix.lol/fb9cb43a34372a004b06425a1c69c9c4.js';Lunarix.config.paths['Widgets.AvatarImage'] = 'http://js.lunarix.lol/bbaeb48f3312bad4626e00c90746ffc0.js';Lunarix.config.paths['Widgets.DropdownMenu'] = 'http://js.lunarix.lol/7b436bae917789c0b84f40fdebd25d97.js';Lunarix.config.paths['Widgets.GroupImage'] = 'http://js.lunarix.lol/33d82b98045d49ec5a1f635d14cc7010.js';Lunarix.config.paths['Widgets.HierarchicalDropdown'] = 'http://js.lunarix.lol/fbb86cf0752d23f389f983419d3085b4.js';Lunarix.config.paths['Widgets.ItemImage'] = 'http://js.lunarix.lol/838ec9c8067ba6fd6793a8bdbdb48a5c.js';Lunarix.config.paths['Widgets.PlaceImage'] = 'http://js.lunarix.lol/f2697119678d0851cfaa6c2270a727ed.js';Lunarix.config.paths['Widgets.SurveyModal'] = 'http://js.lunarix.lol/d6e979598c460090eafb6d38231159f6.js';</script><script type="text/javascript">
+<script src='http://js.neurosama.lol/50cb8c7590b75499925be4825ab1fb8f.js'></script>
+<script src='https://js.neurosama.lol/c5827143734572fa7bd8fcc79c3c126b.js.gzip'></script>
+<script type='text/javascript'>Neurotic.config.externalResources = [];Neurotic.config.paths['Pages.Catalog'] = 'http://js.neurosama.lol/1612c57544c7977e19cd15c824f7ecc3.js';Neurotic.config.paths['Pages.CatalogShared'] = 'http://js.neurosama.lol/4eb48eec34ca711d5a7b08a4291ac753.js';Neurotic.config.paths['Pages.Messages'] = 'http://js.neurosama.lol/e8cbac58ab4f0d8d4c707700c9f97630.js';Neurotic.config.paths['Resources.Messages'] = 'http://js.neurosama.lol/fb9cb43a34372a004b06425a1c69c9c4.js';Neurotic.config.paths['Widgets.AvatarImage'] = 'http://js.neurosama.lol/bbaeb48f3312bad4626e00c90746ffc0.js';Neurotic.config.paths['Widgets.DropdownMenu'] = 'http://js.neurosama.lol/7b436bae917789c0b84f40fdebd25d97.js';Neurotic.config.paths['Widgets.GroupImage'] = 'http://js.neurosama.lol/33d82b98045d49ec5a1f635d14cc7010.js';Neurotic.config.paths['Widgets.HierarchicalDropdown'] = 'http://js.neurosama.lol/fbb86cf0752d23f389f983419d3085b4.js';Neurotic.config.paths['Widgets.ItemImage'] = 'http://js.neurosama.lol/838ec9c8067ba6fd6793a8bdbdb48a5c.js';Neurotic.config.paths['Widgets.PlaceImage'] = 'http://js.neurosama.lol/f2697119678d0851cfaa6c2270a727ed.js';Neurotic.config.paths['Widgets.SurveyModal'] = 'http://js.neurosama.lol/d6e979598c460090eafb6d38231159f6.js';</script><script type="text/javascript">
     $(function () {
-        Lunarix.JSErrorTracker.initialize({ 'suppressConsoleError': true});
+        Neurotic.JSErrorTracker.initialize({ 'suppressConsoleError': true});
     });
 </script>
         <div id="navContent" class="nav-content"><div class="nav-content-inner">
@@ -50,11 +50,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -68,18 +68,18 @@
 
 
     
-        LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+        NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
         
 
     
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
         
 
     });
@@ -88,7 +88,7 @@
 
 
 
-        <script type="text/javascript">Lunarix.FixedUI.gutterAdsEnabled=true;</script>
+        <script type="text/javascript">Neurotic.FixedUI.gutterAdsEnabled=true;</script>
 
         
 
@@ -146,7 +146,7 @@
                     <a href="/develop?View=videos" class="tab-item @if($activeView === 'videos') tab-item-selected @endif">Videos</a>
                     <div id="StudioWidget">
 											<div class="widget-name">
-												<h3>Lunarix Studio</h3>
+												<h3>Neurotic Studio</h3>
 											</div>
 											<div class="content">
 												<div id="LeftColumn">
@@ -154,7 +154,7 @@
 												</div>
 												<div id="RightColumn">
 													<ul>
-														<li><a href="//setup.lunarix.lol/LunarixStudioLauncherBeta.exe" class="studio-launch" download="//setup.lunarix.lol/LunarixStudioLauncherBeta.exe">Download</a></li>
+														<li><a href="//setup.neurosama.lol/NeuroticStudioLauncherBeta.exe" class="studio-launch" download="//setup.neurosama.lol/NeuroticStudioLauncherBeta.exe">Download</a></li>
 														<li><a href="/Forum/default.aspx">Forum</a></li>
 													</ul>
 												</div>
@@ -192,7 +192,7 @@
                   </div>
                   <div class="place-selector template" title="Place" style="display:none">
                     <div class="place-image" data-retry-url-template="/asset-thumbnail/json?height=100&amp;width=160&amp;format=jpeg&amp;returnAutoGenerated=True">
-                      <img alt="^_^" class="item-image" src="https://cdn.lunarix.lol/ec5c01d220bf1b73403fa51519267742.gif">
+                      <img alt="^_^" class="item-image" src="https://cdn.neurosama.lol/ec5c01d220bf1b73403fa51519267742.gif">
                     </div>
                     <div class="InfoContainer">
                       <div class="place-name"></div>
@@ -208,8 +208,8 @@
             </div>
             <script>
               $(function() {
-                Lunarix.PlaceSelector.Init();
-                Lunarix.PlaceSelector.Resources = {
+                Neurotic.PlaceSelector.Init();
+                Neurotic.PlaceSelector.Resources = {
                   anErrorOccurred: 'An error occurred, please try again.'
                 };
               });
@@ -224,14 +224,14 @@
                   <div class="Message"></div>
                 </div>
                 <div class="GenericModalButtonContainer">
-                  <a class="ImageButton btn-neutral btn-large lunarix-ok">OK</a>
+                  <a class="ImageButton btn-neutral btn-large neurotic-ok">OK</a>
                 </div>
               </div>
             </div>
             <script>
-              Lunarix = Lunarix || {};
-              Lunarix.BuildPage = Lunarix.BuildPage || {};
-              Lunarix.BuildPage.AlertURL = "https://cdn.lunarix.lol/43ac54175f3f3cd403536fedd9170c10.png";
+              Neurotic = Neurotic || {};
+              Neurotic.BuildPage = Neurotic.BuildPage || {};
+              Neurotic.BuildPage.AlertURL = "https://cdn.neurosama.lol/43ac54175f3f3cd403536fedd9170c10.png";
             </script>
           </div>
           <div class="Ads_WideSkyscraper">
@@ -245,19 +245,19 @@
 
           </div>
           <script>
-            if (typeof Lunarix === "undefined") {
-              Lunarix = {};
+            if (typeof Neurotic === "undefined") {
+              Neurotic = {};
             }
-            if (typeof Lunarix.BuildPage === "undefined") {
-              Lunarix.BuildPage = {};
+            if (typeof Neurotic.BuildPage === "undefined") {
+              Neurotic.BuildPage = {};
             }
-            Lunarix.BuildPage.Resources = {
+            Neurotic.BuildPage.Resources = {
                 active: "Active",
                 inactive: "Inactive",
                 activatePlace: "Activate Place",
                 editGame: "Edit Game",
                 ok: "OK",
-                lunarixStudio: "Lunarix Studio",
+                neuroticStudio: "Neurotic Studio",
                 openIn: "To edit this game, open to this page in ",
                 placeInactive: "Place Inactive",
                 toBuileHere: "To build here, please activate this place by clicking the ",
@@ -304,14 +304,14 @@
                   <div class="Message"></div>
                 </div>
                 <div class="GenericModalButtonContainer">
-                  <a class="ImageButton btn-neutral btn-large lunarix-ok">OK</a>
+                  <a class="ImageButton btn-neutral btn-large neurotic-ok">OK</a>
                 </div>
               </div>
             </div>
             <script>
-              Lunarix = Lunarix || {};
-              Lunarix.BuildPage = Lunarix.BuildPage || {};
-              Lunarix.BuildPage.AlertURL = "https://cdn.lunarix.lol/43ac54175f3f3cd403536fedd9170c10.png";
+              Neurotic = Neurotic || {};
+              Neurotic.BuildPage = Neurotic.BuildPage || {};
+              Neurotic.BuildPage.AlertURL = "https://cdn.neurosama.lol/43ac54175f3f3cd403536fedd9170c10.png";
             </script>
           </div>
           <div class="Ads_WideSkyscraper">
@@ -326,19 +326,19 @@
                 </div>
           </div>
           <script>
-            if (typeof Lunarix === "undefined") {
-              Lunarix = {};
+            if (typeof Neurotic === "undefined") {
+              Neurotic = {};
             }
-            if (typeof Lunarix.BuildPage === "undefined") {
-              Lunarix.BuildPage = {};
+            if (typeof Neurotic.BuildPage === "undefined") {
+              Neurotic.BuildPage = {};
             }
-            Lunarix.BuildPage.Resources = {
+            Neurotic.BuildPage.Resources = {
                 active: "Active",
                 inactive: "Inactive",
                 activatePlace: "Activate Place",
                 editGame: "Edit Game",
                 ok: "OK",
-                lunarixStudio: "Lunarix Studio",
+                neuroticStudio: "Neurotic Studio",
                 openIn: "To edit this game, open to this page in ",
                 placeInactive: "Place Inactive",
                 toBuileHere: "To build here, please activate this place by clicking the ",
@@ -375,7 +375,7 @@
         </div>
         <div id="LibraryTab">
           <div class="loading" id="LibraryLoadingIndicatorContainer">
-            <img id="LibraryLoadingIndicator" src="https://cdn.lunarix.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif" alt="Progress">
+            <img id="LibraryLoadingIndicator" src="https://cdn.neurosama.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif" alt="Progress">
           </div>
         </div>
 
@@ -386,15 +386,15 @@
         </div>
       </div>
       <script>
-        Lunarix.CatalogValues = Lunarix.CatalogValues || {};
-        Lunarix.CatalogValues.CatalogContentsUrl = "/catalog/contents";
-        Lunarix.CatalogValues.CatalogContext = 2;
-        Lunarix.CatalogValues.CatalogContextDevelopOnly = 2;
-        Lunarix.CatalogValues.ContainerID = "LibraryTab";
+        Neurotic.CatalogValues = Neurotic.CatalogValues || {};
+        Neurotic.CatalogValues.CatalogContentsUrl = "/catalog/contents";
+        Neurotic.CatalogValues.CatalogContext = 2;
+        Neurotic.CatalogValues.CatalogContextDevelopOnly = 2;
+        Neurotic.CatalogValues.ContainerID = "LibraryTab";
         $(function() {
-          if (Lunarix && Lunarix.AdsHelper && Lunarix.AdsHelper.AdRefresher) {
-            Lunarix.AdsHelper.AdRefresher.globalCreateNewAdEnabled = true;
-            Lunarix.AdsHelper.AdRefresher.adRefreshRateInMilliseconds = 3000;
+          if (Neurotic && Neurotic.AdsHelper && Neurotic.AdsHelper.AdRefresher) {
+            Neurotic.AdsHelper.AdRefresher.globalCreateNewAdEnabled = true;
+            Neurotic.AdsHelper.AdRefresher.adRefreshRateInMilliseconds = 3000;
           }
         });
       </script>

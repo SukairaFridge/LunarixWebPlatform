@@ -6,7 +6,7 @@
 @else
 <script>
     $(function () {
-        Lunarix.GenericModal.open("Notice", "/images/Icons/img-alert.png", @json(session('discord_notice')), null, false);
+        Neurotic.GenericModal.open("Notice", "/images/Icons/img-alert.png", @json(session('discord_notice')), null, false);
     });
 </script>
 @endif

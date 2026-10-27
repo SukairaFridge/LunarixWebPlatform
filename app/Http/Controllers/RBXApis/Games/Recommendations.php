@@ -43,7 +43,7 @@ class Recommendations extends Controller
                         'totalUpVotes' => 8070793,
                         'totalDownVotes' => 1322654,
                         'universeId' => 1,
-                        'name' => 'Lunarix Hangout',
+                        'name' => 'Neurotic Hangout',
                         'rootPlaceId' => 1,
                         'description' => null,
                         'playerCount' => 11121212,

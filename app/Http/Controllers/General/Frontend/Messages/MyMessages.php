@@ -12,6 +12,6 @@ class MyMessages
             return redirect('/login');
         }
         $notificationCount = DB::table('user_messages')->where('user_id', $user->id)->where('is_system_message', true)->count();
-        return view('my.messages', ['notificationCount' => $notificationCount, 'title' => 'My Messages - Lunarix']);
+        return view('my.messages', ['notificationCount' => $notificationCount, 'title' => 'My Messages - Neurotic']);
     }
 }

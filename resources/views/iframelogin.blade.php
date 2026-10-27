@@ -5,14 +5,14 @@
 <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=page___5a8ff58299be0fe55dfc145a90d39e8c_m.css">
 @endpush
 @push('js')
-<script type='text/javascript' src='https://js.lunarix.lol/fbf1ee7f87e15b4da11fda4617461836.js'></script>
+<script type='text/javascript' src='https://js.neurosama.lol/fbf1ee7f87e15b4da11fda4617461836.js'></script>
 @endpush
 @section('content')
 <div id="TwoStepVerificationApiPaths"
-     data-request-code-unauthenticated="https://api.lunarix.lol/twostepverification/request-unauthenticated"
-     data-request-code="https://api.lunarix.lol/twostepverification/request"
-     data-verify-code-unauthenticated="https://api.lunarix.lol/twostepverification/verify-unauthenticated"
-     data-verify-code="https://api.lunarix.lol/twostepverification/verify">
+     data-request-code-unauthenticated="https://api.neurosama.lol/twostepverification/request-unauthenticated"
+     data-request-code="https://api.neurosama.lol/twostepverification/request"
+     data-verify-code-unauthenticated="https://api.neurosama.lol/twostepverification/verify-unauthenticated"
+     data-verify-code="https://api.neurosama.lol/twostepverification/verify">
 </div>
  <div id="NotLoggedInPanel" class="lrx-login-form">
 	<form name="FacebookLoginForm" method="post" action="/Login/iFrameLogin.aspx" id="FacebookLoginForm" class="lrx-form-horizontal" role="form">
@@ -36,7 +36,7 @@
 					<a class="lrx-btn-control-sm" href="/login?returnUrl=" target="_top">Sign up</a>
                 </div>
 				<span id="LoggingInStatus" class="lrx-login-status">
-					<img src="https://cdn.lunarix.lol/6ec6fa292c1dcdb130dcf316ac050719.gif" alt="" />
+					<img src="https://cdn.neurosama.lol/6ec6fa292c1dcdb130dcf316ac050719.gif" alt="" />
 					<span>Logging in...</span>
 				</span>
             </div>
@@ -76,7 +76,7 @@
   </div>
 	<script type="text/javascript">
 	    $(function () {
-	        Lunarix.iFrameLogin.Resources = {
+	        Neurotic.iFrameLogin.Resources = {
 	            //<sl:translate>
 	            invalidCaptchaEntry: 'Invalid Captcha entry',
 	            //</sl:translate>
@@ -90,7 +90,7 @@
 	            verifyEmailMessage: 'You do not have a verified email address. Please contact customer support.',
                 unknownTwoStepErrorMessage: 'Sorry, an unknown error has occurred.'
 	        };
-	        Lunarix.iFrameLogin.init();
+	        Neurotic.iFrameLogin.init();
 	    });
 	</script>
 @endsection

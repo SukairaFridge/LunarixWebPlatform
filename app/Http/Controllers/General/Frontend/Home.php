@@ -23,6 +23,6 @@ class Home
             $feed->created_at = \Carbon\Carbon::parse($feed->created_at);
             return $feed;
         });
-        return view('home', ['title' => 'Home - Lunarix', 'currentUser' => $currentUser, 'feeds' => $feeds]);
+        return view('home', ['title' => 'Home - Neurotic', 'currentUser' => $currentUser, 'feeds' => $feeds]);
     }
 }

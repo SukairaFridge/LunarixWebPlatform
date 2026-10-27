@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=page___452br4cbc7337a5afeba9cc2bd101d17_m.css">
 @endpush
 @push('js')
-<script src='https://js.lunarix.lol/10cc00d9523cce67f7bdbbb8805d84e5.js'></script>
-<script src='https://js.lunarix.lol/73b46924uk97ff66166r6989832455f5.js'></script>
+<script src='https://js.neurosama.lol/10cc00d9523cce67f7bdbbb8805d84e5.js'></script>
+<script src='https://js.neurosama.lol/73b46924uk97ff66166r6989832455f5.js'></script>
 @endpush
 @section('content')
 @include('layout.header')
@@ -62,7 +62,7 @@
         <h3>Comments</h3>
         <div class="AddAComment">
             <div class="comment-form">
-                <div class="Avatar lunarix-avatar-image" data-user-id="{{ auth()->id() ?? -1 }}" data-image-size="small"></div>
+                <div class="Avatar neurotic-avatar-image" data-user-id="{{ auth()->id() ?? -1 }}" data-image-size="small"></div>
                 <form class="lrx-form-horizontal ng-pristine ng-valid" role="form">
                     <div class="lrx-form-group" style="width:calc(75% - 7px);">
                         <textarea class="form-control lrx-input-field lrx-comment-input blur" placeholder="Write a comment!" rows="1"></textarea>
@@ -99,7 +99,7 @@
 </div>
 <script>
     $(document).ready(function () {
-        Lunarix.Comments.Resources = {
+        Neurotic.Comments.Resources = {
             //<sl:translate>
             defaultMessage: 'Write a comment!',
             noCommentsFound: 'No comments found.',
@@ -117,27 +117,27 @@
             //</sl:translate>
         };
     
-        Lunarix.Comments.Limits =
+        Neurotic.Comments.Limits =
         [
             {
                 limit: '10',
                 character: "\n",
-                message: Lunarix.Comments.Resources.tooManyNewlines
+                message: Neurotic.Comments.Resources.tooManyNewlines
             },
             {
                 limit: '200',
                 character: undefined,
-                message: Lunarix.Comments.Resources.tooManyCharacters
+                message: Neurotic.Comments.Resources.tooManyCharacters
             }
         ];
 
-        Lunarix.Comments.FilterIsEnabled = true;
-        Lunarix.Comments.FilterRegex = "(([a-zA-Z0-9-]+\\.[a-zA-Z]{2,4}[:\\#/\?]+)|([a-zA-Z0-9]\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,4}))";
-        Lunarix.Comments.FilterCleanExistingComments = false ;
+        Neurotic.Comments.FilterIsEnabled = true;
+        Neurotic.Comments.FilterRegex = "(([a-zA-Z0-9-]+\\.[a-zA-Z]{2,4}[:\\#/\?]+)|([a-zA-Z0-9]\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,4}))";
+        Neurotic.Comments.FilterCleanExistingComments = false ;
 
 
     
-    Lunarix.Comments.initialize();
+    Neurotic.Comments.initialize();
     });
 </script>
         </div>

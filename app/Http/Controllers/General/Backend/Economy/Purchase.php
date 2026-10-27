@@ -76,12 +76,12 @@ class Purchase
                 if ($lockedAsset->robux > 0) {
                     $lockedUser->decrement('moons', $lockedAsset->robux);
                     $sellerCut = (int) floor($lockedAsset->robux * 0.70);
-                    $lunarixCut = $lockedAsset->robux - $sellerCut;
+                    $neuroticCut = $lockedAsset->robux - $sellerCut;
                     if ($lockedAsset->creator_id === 1) {
                         User::where('id', 1)->increment('moons', $lockedAsset->robux);
                     } else {
                         User::where('id', $lockedAsset->creator_id)->increment('moons', $sellerCut);
-                        User::where('id', 1)->increment('moons', $lunarixCut);
+                        User::where('id', 1)->increment('moons', $neuroticCut);
                     }
                 }
                 $nextSaleNumber = $lockedAsset->sales_count + 1;
@@ -180,9 +180,9 @@ class Purchase
                 if ($lockedListing->price > 0) {
                     $lockedBuyer->decrement('moons', $lockedListing->price);
                     $sellerCut = (int) floor($lockedListing->price * 0.70);
-                    $lunarixCut = $lockedListing->price - $sellerCut;
+                    $neuroticCut = $lockedListing->price - $sellerCut;
                     $lockedSeller->increment('moons', $sellerCut);
-                    User::where('id', 1)->increment('moons', $lunarixCut);
+                    User::where('id', 1)->increment('moons', $neuroticCut);
                 }
                 $updated = DB::table('user_inventory')->where('user_id', $lockedListing->user_id)->where('asset_id', $asset->id)->where('guid', $lockedListing->guid)->update(['user_id' => $lockedBuyer->id, 'obtained_at' => now()]);
                 if ($updated !== 1) {

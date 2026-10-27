@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=page___335c7b8a45e52c280387f93bc1a3a19c_m.css">
 @endpush
 @push('js')
-<script src="https://js.lunarix.lol/c6b47ce9ee4cd0423d35c985917d2b4e.js"></script>
+<script src="https://js.neurosama.lol/c6b47ce9ee4cd0423d35c985917d2b4e.js"></script>
 <script src="/js/ConfigureAsset.js"></script>
 @endpush
 @section('content')
@@ -44,11 +44,11 @@
 
             var daysSinceFirstVisit = dayDiff(new Date(), new Date(cookie.ts));
             if (daysSinceFirstVisit == 1 && typeof cookie.odr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_odr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_odr', {});
                 cookie.odr = 1;
             }
             if (daysSinceFirstVisit >= 1 && daysSinceFirstVisit <= 7 && typeof cookie.sdr === "undefined") {
-                LunarixEventManager.triggerEvent('lrx_evt_sdr', {});
+                NeuroticEventManager.triggerEvent('lrx_evt_sdr', {});
                 cookie.sdr = 1;
             }
             try {
@@ -59,19 +59,19 @@
         }
 
         GoogleListener.init();
-        LunarixEventManager.initialize(true);
-        LunarixEventManager.triggerEvent('lrx_evt_pageview');
+        NeuroticEventManager.initialize(true);
+        NeuroticEventManager.triggerEvent('lrx_evt_pageview');
         trackReturns();
-        LunarixEventManager._idleInterval = 450000;
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_ftp');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
-        LunarixEventManager.registerCookieStoreEvent('lrx_evt_fmp');
-        LunarixEventManager.startMonitor();
+        NeuroticEventManager._idleInterval = 450000;
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_start');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_ftp');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_initial_install_success');
+        NeuroticEventManager.registerCookieStoreEvent('lrx_evt_fmp');
+        NeuroticEventManager.startMonitor();
     });
 </script>
 
-        <script type="text/javascript">Lunarix.FixedUI.gutterAdsEnabled=false;</script>
+        <script type="text/javascript">Neurotic.FixedUI.gutterAdsEnabled=false;</script>
 
         <div id="Container"></div>
 
@@ -105,7 +105,7 @@
                     <div id="Sell">
                         <div id="playerAccess" style="display: block;">
                         <div style="display:flex;flex-direction:column;gap:6px;">
-                        <label>Check the box and enter a price if you want to sell this item in the Lunarix catalog. Uncheck the box to remove the item from the catalog.</label>
+                        <label>Check the box and enter a price if you want to sell this item in the Neurotic catalog. Uncheck the box to remove the item from the catalog.</label>
                         <label style="margin-left:8px;"><input type="checkbox" name="sellcheckbox" id="SellCheckbox" {{ $asset->onsale ? 'checked' : '' }}>Sell this Item</label>
                         <div id="SellDetails" style="display:{{ $asset->onsale ? 'flex' : 'none' }};flex-direction:column;gap:15px;">
                         <label style="margin-left:8px;">Price: <span class="robux notranslate"><input type="text" id="PriceInput" name="price" value="{{ $price }}" style="width: 75px;"></span>
@@ -140,7 +140,7 @@
 </div>
         <div id="ProcessingView" class="ProcessingView" style="display:none">
             <div class="ProcessingModalBody">
-                <p style="margin:0px"><img src='https://cdn.lunarix.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif' alt="Processing..." /></p>
+                <p style="margin:0px"><img src='https://cdn.neurosama.lol/ec4e85b0c4396cf753a06fade0a8d8af.gif' alt="Processing..." /></p>
                 <p style="margin:7px 0px">Configuring Asset...</p>
             </div>
         </div>

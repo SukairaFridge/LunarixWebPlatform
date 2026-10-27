@@ -48,6 +48,6 @@ class Develop
         }
         $viewInt = (int) $view;
         $assets = Asset::where('creator_id', $user->id)->where('type', $viewInt)->notGhosted()->latest('updated_at')->get();
-        return view('develop', ['title' => 'Develop - Lunarix', 'contentView' => $bladePath, 'activeView' => $viewInt, 'assets' => $assets, 'isGamesView' => $viewInt === Asset::TYPE_PLACE]);
+        return view('develop', ['title' => 'Develop - Neurotic', 'contentView' => $bladePath, 'activeView' => $viewInt, 'assets' => $assets, 'isGamesView' => $viewInt === Asset::TYPE_PLACE]);
     }
 }

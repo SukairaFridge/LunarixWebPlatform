@@ -6,8 +6,8 @@
 @endpush
 
 @push('js')
-    <script src="https://js.lunarix.lol/aa490490f6ad512989da8d22ff4063bd.js"></script>
-    <script src="https://js.lunarix.lol/a6884ac8be9e22d9c093544abd554144.js.gzip"></script>
+    <script src="https://js.neurosama.lol/aa490490f6ad512989da8d22ff4063bd.js"></script>
+    <script src="https://js.neurosama.lol/a6884ac8be9e22d9c093544abd554144.js.gzip"></script>
 @endpush
 
 @section('content')
@@ -26,8 +26,8 @@
 
 
 <script type="text/javascript">
-    var Lunarix = Lunarix || {};
-    Lunarix.uiBootstrap = {
+    var Neurotic = Neurotic || {};
+    Neurotic.uiBootstrap = {
         tabTemplateLink: "/viewapp/common/template/tabs/tab.html",
         tabsetTemplateLink: "/viewapp/common/template/tabs/tabset.html"
     };
@@ -62,7 +62,7 @@
      >
 </div>
 
-    <div class="row page-content" ng-modules="lunarixApp, ui.bootstrap, assetsExplorer, recommendations, lunarixApp.helpers">
+    <div class="row page-content" ng-modules="neuroticApp, ui.bootstrap, assetsExplorer, recommendations, neuroticApp.helpers">
 <h1>
     @if($user && $user->id === $vieweduser->id)
         My Inventory

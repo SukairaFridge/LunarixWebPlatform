@@ -49,7 +49,7 @@ XML;
             return response('Missing userId', 400);
         }
         $urls = [];
-        $urls[] = "http://lunarix.lol/Asset/BodyColors.ashx?userId={$userId}";
+        $urls[] = "http://neurosama.lol/Asset/BodyColors.ashx?userId={$userId}";
         $assets = DB::table('user_equippedassets')->where('userid', $userId)->first();
         if ($assets && is_string($assets->assets)) {
             foreach (explode(';', $assets->assets) as $assetId) {

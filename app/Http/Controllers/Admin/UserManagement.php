@@ -82,7 +82,7 @@ class UserManagement
         if (! $deleteUsername && ! $deleteBlurb) {
             throw ValidationException::withMessages(['content' => 'Select at least one piece of content to delete.']);
         }
-        $replacementUsername = '[ LunarixUser ('.$user->id.') ]';
+        $replacementUsername = '[ NeuroticUser ('.$user->id.') ]';
         DB::transaction(function () use ($request, $user, $replacementUsername, $deleteUsername, $deleteBlurb) {
             $lockedUser = User::whereKey($user->id)->lockForUpdate()->firstOrFail();
             $updates = [];
@@ -209,7 +209,7 @@ class UserManagement
     {
         $this->ensureManageable($request, $user);
         abort_unless($user->discord_id, 422, 'This user has no linked Discord account.');
-        $bot->sendApproval($user, (string) $user->discord_id, 'password_reset', 'A Lunarix staff member requested a password reset for '.$user->username.' ('.$user->id.').');
+        $bot->sendApproval($user, (string) $user->discord_id, 'password_reset', 'A Neurotic staff member requested a password reset for '.$user->username.' ('.$user->id.').');
         $this->recordAction($request, $user, 'discord.password_reset_sent');
         return back()->with(['success' => 'A password reset link was sent to the user\'s Discord account.', 'discord_notice' => 'Password reset link sent. Ask the user to check their Discord DMs.']);
     }
@@ -220,7 +220,7 @@ class UserManagement
         $validated = $request->validate(['discord_id' => ['required', 'regex:/^[0-9]{17,20}$/']]);
         abort_if(User::where('discord_id', $validated['discord_id'])->where('id', '!=', $user->id)->exists(), 422, 'That Discord account is already linked.');
         $bot->user($validated['discord_id']);
-        $bot->sendApproval($user, $validated['discord_id'], 'link', 'A Lunarix staff member requested to link this Discord account to '.$user->username.' ('.$user->id.').');
+        $bot->sendApproval($user, $validated['discord_id'], 'link', 'A Neurotic staff member requested to link this Discord account to '.$user->username.' ('.$user->id.').');
         $this->recordAction($request, $user, 'discord.link_requested', ['discord_id' => $validated['discord_id']]);
         return back()->with(['success' => 'The Discord account was sent an approval link.', 'discord_notice' => 'Approval link sent. The Discord user must check their DMs to continue linking.']);
     }
@@ -229,7 +229,7 @@ class UserManagement
     {
         $this->ensureManageable($request, $user);
         abort_unless($user->discord_id, 422, 'This user has no linked Discord account.');
-        $bot->sendApproval($user, (string) $user->discord_id, 'unlink', 'A Lunarix staff member requested to unlink this Discord account from '.$user->username.' ('.$user->id.').');
+        $bot->sendApproval($user, (string) $user->discord_id, 'unlink', 'A Neurotic staff member requested to unlink this Discord account from '.$user->username.' ('.$user->id.').');
         $this->recordAction($request, $user, 'discord.unlink_requested');
         return back()->with(['success' => 'The linked Discord account was sent an unlink approval link.', 'discord_notice' => 'Unlink approval sent. The user must check their Discord DMs to continue.']);
     }

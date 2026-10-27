@@ -29,6 +29,6 @@ class CharacterCustomizer
                 })->with('asset')->orderBy('obtained_at', 'desc');
             $inventory = $inventoryQuery->paginate($inventoryPerPage, ['*'], 'inventory_page', $inventoryPage)->appends(request()->except('inventory_page'));
         }
-        return view('my.character', array_merge(['title' => 'Avatar - Lunarix'], compact('user', 'wornAssets', 'inventory', 'currentCategory')));
+        return view('my.character', array_merge(['title' => 'Avatar - Neurotic'], compact('user', 'wornAssets', 'inventory', 'currentCategory')));
     }
 }

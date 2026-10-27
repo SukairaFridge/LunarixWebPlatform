@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=page___52e1333032abbfe57232ff9286d273ad_m.css">
 @endpush
 @push('js')
-    <script src="http://js.lunarix.lol/bf9ca0ffd8520e3fe69a55b0e527d67e.js"></script>
+    <script src="http://js.neurosama.lol/bf9ca0ffd8520e3fe69a55b0e527d67e.js"></script>
 @endpush
 @section('content')
 <div id="fb-root"></div>
@@ -95,7 +95,7 @@
                         <li 
                             
                             data-value="14">
-                            <a href="#">Lunarix Classics</a>
+                            <a href="#">Neurotic Classics</a>
                         </li> 
                         <li 
                             data-value="11">
@@ -265,7 +265,7 @@
      data-gamefilter="1"
      data-minbclevel="0">
     <div class="games-list-header games-filter-changer">
-            <h3>Lunarix Classics</h3>
+            <h3>Neurotic Classics</h3>
 
     </div>
     <div class="show-in-multiview-mode-only">
@@ -564,29 +564,29 @@
 <script type="text/javascript">
     $(function() {
 
-        Lunarix.SearchBox = {};
-        Lunarix.SearchBox.Resources = {
+        Neurotic.SearchBox = {};
+        Neurotic.SearchBox.Resources = {
             //<sl:translate>
             search: "Search",
             zeroResults: "No Search Results Found"
             //</sl:translate>
         };
-        Lunarix.GamesPageContainerBehavior.Resources = {
+        Neurotic.GamesPageContainerBehavior.Resources = {
             //<sl:translate>
-            pageTitle: "Lunarix Games - Browse our selection of free online games"
+            pageTitle: "Neurotic Games - Browse our selection of free online games"
             //</sl:translate>
         };
 
         var defaultGamesListsCsv = "1,8,14,11,16,3";
-        Lunarix.GamesPageContainerBehavior.FilterValueToGamesListsIdSuffixMapping = {"default": defaultGamesListsCsv.split(',')};
+        Neurotic.GamesPageContainerBehavior.FilterValueToGamesListsIdSuffixMapping = {"default": defaultGamesListsCsv.split(',')};
 
-        Lunarix.GamesPageContainerBehavior.IsUserLoggedIn = {{ auth()->check() ? 'true' : 'false' }};
-        Lunarix.GamesPageContainerBehavior.adRefreshRateMilliSeconds = 3000;
-        Lunarix.GamesPageContainerBehavior.DeviceTypeId = 1;
-        Lunarix.GamesPageContainerBehavior.isCreateNewAd = true;
-        Lunarix.GamesPageContainerBehavior.setIntervalId = null;
-        Lunarix.GamesListBehavior.RefreshAdsInGamesPageEnabled = true;
-        Lunarix.GamesListBehavior.isUserEligibleForMultirowFirstSort = false;
+        Neurotic.GamesPageContainerBehavior.IsUserLoggedIn = {{ auth()->check() ? 'true' : 'false' }};
+        Neurotic.GamesPageContainerBehavior.adRefreshRateMilliSeconds = 3000;
+        Neurotic.GamesPageContainerBehavior.DeviceTypeId = 1;
+        Neurotic.GamesPageContainerBehavior.isCreateNewAd = true;
+        Neurotic.GamesPageContainerBehavior.setIntervalId = null;
+        Neurotic.GamesListBehavior.RefreshAdsInGamesPageEnabled = true;
+        Neurotic.GamesListBehavior.isUserEligibleForMultirowFirstSort = false;
 
     })
 

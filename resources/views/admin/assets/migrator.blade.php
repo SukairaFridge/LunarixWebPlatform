@@ -6,7 +6,7 @@
     <main class="admin-content">
         <div class="admin-page-header">
             <h1>Migrate Asset</h1>
-            <p>Migrate a Lunarix asset to Lunarix.</p>
+            <p>Migrate a Neurotic asset to Neurotic.</p>
         </div>
         @if(session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
@@ -18,7 +18,7 @@
             <form method="POST" action="{{ route('admin.assets.migrate-roblox') }}" class="row g-3 align-items-end">
                 @csrf
                 <div class="col-md-8">
-                    <label for="migrateAsset" class="form-label">Lunarix Catalog URL or Asset ID</label>
+                    <label for="migrateAsset" class="form-label">Neurotic Catalog URL or Asset ID</label>
                     <input id="migrateAsset" type="text" name="url" value="{{ old('url') }}" class="form-control bg-dark border-secondary text-light" required>
                 </div>
                 <div class="col-md-4 d-grid">

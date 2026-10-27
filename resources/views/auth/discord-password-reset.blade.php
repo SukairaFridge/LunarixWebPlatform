@@ -31,7 +31,7 @@
                             <div id="loginarea" class="divider-bottom">
                                 <div id="leftArea">
                                     <div id="loginPanel">
-                                        <p class="text">If you did not request this password reset please ignore this page. Contact Lunarix staff and reset your current password.</p>
+                                        <p class="text">If you did not request this password reset please ignore this page. Contact Neurotic staff and reset your current password.</p>
                                         <table id="logintable">
                                             <tr>
                                                 <td><label class="form-label" for="Password">New password:</label></td>

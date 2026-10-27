@@ -15,7 +15,7 @@ class UserInfo
         return response()->json([
             'Id' => $user->id,
             'Username' => $user->username,
-            'AvatarUri' => $render ? "//cdn.lunarix.lol/{$render->render_path}" : '',
+            'AvatarUri' => $render ? "//cdn.neurosama.lol/{$render->render_path}" : '',
             'AvatarFinal' => $render ? !$render->outdated : false,
             'IsOnline' => $user->last_activity ? $user->last_activity->gt(now()->subMinutes(1)) : false,
         ]);

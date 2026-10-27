@@ -14,7 +14,7 @@ $chunks = array_chunk(array_keys($colors), 8, true);
                 <tr>
                     @foreach ($row as $colorId)
                         <td>
-                            <div class="ColorPickerItem" onclick="__doPostBack('ctl00$ctl00$cphLunarix$cphMyLunarixContent$ColorChooser{{ $part }}$DataListColors$ctl63$LinkButton1','{{ $colorId }}')" style="display:inline-block; background-color:{{ $colors[$colorId] }}; height:40px; width:40px;">
+                            <div class="ColorPickerItem" onclick="__doPostBack('ctl00$ctl00$cphNeurotic$cphMyNeuroticContent$ColorChooser{{ $part }}$DataListColors$ctl63$LinkButton1','{{ $colorId }}')" style="display:inline-block; background-color:{{ $colors[$colorId] }}; height:40px; width:40px;">
                             </div>
                         </td>
                     @endforeach
